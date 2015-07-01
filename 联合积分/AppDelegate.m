@@ -21,7 +21,6 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     RootViewController *root =[[RootViewController alloc]init];
-    
     UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:root];
     self.window.rootViewController = nav;
     

@@ -44,7 +44,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor =[UIColor whiteColor];
-    
+    logdebug(@"修改了");
     [self createNa];
     [self createUI];
     [self createData];
