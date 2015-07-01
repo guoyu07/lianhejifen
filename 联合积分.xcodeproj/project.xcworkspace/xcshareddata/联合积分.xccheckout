@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B03984B7-9368-4EA3-9061-EF0085CF4761</string>
+	<key>IDESourceControlProjectName</key>
+	<string>联合积分</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BEF2C5C3BE8E1ED38FABC4E3EE385D5C26AEB1AD</key>
+		<string>https://github.com/arongkuaile/lianhejifen.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>联合积分.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BEF2C5C3BE8E1ED38FABC4E3EE385D5C26AEB1AD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/arongkuaile/lianhejifen.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BEF2C5C3BE8E1ED38FABC4E3EE385D5C26AEB1AD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BEF2C5C3BE8E1ED38FABC4E3EE385D5C26AEB1AD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>lianhejifen</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -166,6 +166,21 @@
 		726FA20A1B42306000D1A2DE /* u1153.png in Resources */ = {isa = PBXBuildFile; fileRef = 726FA1791B42306000D1A2DE /* u1153.png */; };
 		726FA20D1B42360E00D1A2DE /* TlistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA20C1B42360E00D1A2DE /* TlistCell.m */; };
 		726FA20F1B42362100D1A2DE /* TlistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726FA20E1B42362100D1A2DE /* TlistCell.xib */; };
+		726FA2311B43B57E00D1A2DE /* CardbagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA22C1B43B57E00D1A2DE /* CardbagViewController.m */; };
+		726FA2321B43B57E00D1A2DE /* OrderDetaikViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA22E1B43B57E00D1A2DE /* OrderDetaikViewController.m */; };
+		726FA2331B43B57E00D1A2DE /* TradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA2301B43B57E00D1A2DE /* TradeViewController.m */; };
+		726FA23F1B43B59400D1A2DE /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA2351B43B59400D1A2DE /* CardCell.m */; };
+		726FA2401B43B59400D1A2DE /* GoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA2371B43B59400D1A2DE /* GoodsCell.m */; };
+		726FA2411B43B59400D1A2DE /* GoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726FA2381B43B59400D1A2DE /* GoodsCell.xib */; };
+		726FA2421B43B59400D1A2DE /* MoneyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA23A1B43B59400D1A2DE /* MoneyCell.m */; };
+		726FA2431B43B59400D1A2DE /* MoneyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726FA23B1B43B59400D1A2DE /* MoneyCell.xib */; };
+		726FA2441B43B59400D1A2DE /* VolumeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA23D1B43B59400D1A2DE /* VolumeCell.m */; };
+		726FA2451B43B59400D1A2DE /* VolumeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726FA23E1B43B59400D1A2DE /* VolumeCell.xib */; };
+		726FA24A1B43B5B300D1A2DE /* CardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA2471B43B5B300D1A2DE /* CardModel.m */; };
+		726FA24B1B43B5B300D1A2DE /* GoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA2491B43B5B300D1A2DE /* GoodsModel.m */; };
+		726FA24E1B43B5CB00D1A2DE /* 卡包.png in Resources */ = {isa = PBXBuildFile; fileRef = 726FA24C1B43B5CB00D1A2DE /* 卡包.png */; };
+		726FA24F1B43B5CB00D1A2DE /* 更多.png in Resources */ = {isa = PBXBuildFile; fileRef = 726FA24D1B43B5CB00D1A2DE /* 更多.png */; };
+		726FA2511B43B5DB00D1A2DE /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 726FA2501B43B5DB00D1A2DE /* bg.png */; };
 		729F9D261B3FFEF200741CC5 /* leftItem.png in Resources */ = {isa = PBXBuildFile; fileRef = 729F9D241B3FFEF200741CC5 /* leftItem.png */; };
 		729F9D271B3FFEF200741CC5 /* rightItem.png in Resources */ = {isa = PBXBuildFile; fileRef = 729F9D251B3FFEF200741CC5 /* rightItem.png */; };
 		72F37E261B3BAA73001D8A58 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F37E021B3BAA73001D8A58 /* AFHTTPRequestOperation.m */; };
@@ -371,6 +386,30 @@
 		726FA20B1B42360E00D1A2DE /* TlistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TlistCell.h; sourceTree = "<group>"; };
 		726FA20C1B42360E00D1A2DE /* TlistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TlistCell.m; sourceTree = "<group>"; };
 		726FA20E1B42362100D1A2DE /* TlistCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TlistCell.xib; sourceTree = "<group>"; };
+		726FA22B1B43B57E00D1A2DE /* CardbagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardbagViewController.h; sourceTree = "<group>"; };
+		726FA22C1B43B57E00D1A2DE /* CardbagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardbagViewController.m; sourceTree = "<group>"; };
+		726FA22D1B43B57E00D1A2DE /* OrderDetaikViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDetaikViewController.h; sourceTree = "<group>"; };
+		726FA22E1B43B57E00D1A2DE /* OrderDetaikViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDetaikViewController.m; sourceTree = "<group>"; };
+		726FA22F1B43B57E00D1A2DE /* TradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeViewController.h; sourceTree = "<group>"; };
+		726FA2301B43B57E00D1A2DE /* TradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeViewController.m; sourceTree = "<group>"; };
+		726FA2341B43B59400D1A2DE /* CardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCell.h; sourceTree = "<group>"; };
+		726FA2351B43B59400D1A2DE /* CardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCell.m; sourceTree = "<group>"; };
+		726FA2361B43B59400D1A2DE /* GoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsCell.h; sourceTree = "<group>"; };
+		726FA2371B43B59400D1A2DE /* GoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsCell.m; sourceTree = "<group>"; };
+		726FA2381B43B59400D1A2DE /* GoodsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsCell.xib; sourceTree = "<group>"; };
+		726FA2391B43B59400D1A2DE /* MoneyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyCell.h; sourceTree = "<group>"; };
+		726FA23A1B43B59400D1A2DE /* MoneyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyCell.m; sourceTree = "<group>"; };
+		726FA23B1B43B59400D1A2DE /* MoneyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoneyCell.xib; sourceTree = "<group>"; };
+		726FA23C1B43B59400D1A2DE /* VolumeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeCell.h; sourceTree = "<group>"; };
+		726FA23D1B43B59400D1A2DE /* VolumeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumeCell.m; sourceTree = "<group>"; };
+		726FA23E1B43B59400D1A2DE /* VolumeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VolumeCell.xib; sourceTree = "<group>"; };
+		726FA2461B43B5B300D1A2DE /* CardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardModel.h; sourceTree = "<group>"; };
+		726FA2471B43B5B300D1A2DE /* CardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardModel.m; sourceTree = "<group>"; };
+		726FA2481B43B5B300D1A2DE /* GoodsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsModel.h; sourceTree = "<group>"; };
+		726FA2491B43B5B300D1A2DE /* GoodsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsModel.m; sourceTree = "<group>"; };
+		726FA24C1B43B5CB00D1A2DE /* 卡包.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "卡包.png"; sourceTree = "<group>"; };
+		726FA24D1B43B5CB00D1A2DE /* 更多.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多.png"; sourceTree = "<group>"; };
+		726FA2501B43B5DB00D1A2DE /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		729F9D241B3FFEF200741CC5 /* leftItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftItem.png; sourceTree = "<group>"; };
 		729F9D251B3FFEF200741CC5 /* rightItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightItem.png; sourceTree = "<group>"; };
 		72F37E011B3BAA73001D8A58 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -527,6 +566,17 @@
 				726FA20B1B42360E00D1A2DE /* TlistCell.h */,
 				726FA20C1B42360E00D1A2DE /* TlistCell.m */,
 				726FA20E1B42362100D1A2DE /* TlistCell.xib */,
+				726FA2341B43B59400D1A2DE /* CardCell.h */,
+				726FA2351B43B59400D1A2DE /* CardCell.m */,
+				726FA2361B43B59400D1A2DE /* GoodsCell.h */,
+				726FA2371B43B59400D1A2DE /* GoodsCell.m */,
+				726FA2381B43B59400D1A2DE /* GoodsCell.xib */,
+				726FA2391B43B59400D1A2DE /* MoneyCell.h */,
+				726FA23A1B43B59400D1A2DE /* MoneyCell.m */,
+				726FA23B1B43B59400D1A2DE /* MoneyCell.xib */,
+				726FA23C1B43B59400D1A2DE /* VolumeCell.h */,
+				726FA23D1B43B59400D1A2DE /* VolumeCell.m */,
+				726FA23E1B43B59400D1A2DE /* VolumeCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -536,6 +586,12 @@
 			children = (
 				726266C81B39653100B3302D /* RootViewController.h */,
 				726266C91B39653100B3302D /* RootViewController.m */,
+				726FA22B1B43B57E00D1A2DE /* CardbagViewController.h */,
+				726FA22C1B43B57E00D1A2DE /* CardbagViewController.m */,
+				726FA22D1B43B57E00D1A2DE /* OrderDetaikViewController.h */,
+				726FA22E1B43B57E00D1A2DE /* OrderDetaikViewController.m */,
+				726FA22F1B43B57E00D1A2DE /* TradeViewController.h */,
+				726FA2301B43B57E00D1A2DE /* TradeViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -543,6 +599,10 @@
 		726266C71B3964DB00B3302D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				726FA2461B43B5B300D1A2DE /* CardModel.h */,
+				726FA2471B43B5B300D1A2DE /* CardModel.m */,
+				726FA2481B43B5B300D1A2DE /* GoodsModel.h */,
+				726FA2491B43B5B300D1A2DE /* GoodsModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -550,6 +610,9 @@
 		729F9D231B3FFEF200741CC5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				726FA2501B43B5DB00D1A2DE /* bg.png */,
+				726FA24C1B43B5CB00D1A2DE /* 卡包.png */,
+				726FA24D1B43B5CB00D1A2DE /* 更多.png */,
 				726FA0E91B42305F00D1A2DE /* transparent.gif */,
 				726FA0EA1B42305F00D1A2DE /* u2.png */,
 				726FA0EB1B42305F00D1A2DE /* u4.png */,
@@ -851,6 +914,7 @@
 			files = (
 				726FA1DE1B42306000D1A2DE /* u716_line.png in Resources */,
 				726FA1861B42306000D1A2DE /* u37.png in Resources */,
+				726FA24F1B43B5CB00D1A2DE /* 更多.png in Resources */,
 				726FA1AA1B42306000D1A2DE /* u233.png in Resources */,
 				726FA1BB1B42306000D1A2DE /* u406.png in Resources */,
 				726FA1DA1B42306000D1A2DE /* u688_line.png in Resources */,
@@ -863,6 +927,7 @@
 				726FA17F1B42306000D1A2DE /* u10.png in Resources */,
 				726FA17D1B42306000D1A2DE /* u6.png in Resources */,
 				726FA1881B42306000D1A2DE /* u46.png in Resources */,
+				726FA2451B43B59400D1A2DE /* VolumeCell.xib in Resources */,
 				726FA1EE1B42306000D1A2DE /* u824.png in Resources */,
 				726FA1F41B42306000D1A2DE /* u926.png in Resources */,
 				726FA1CC1B42306000D1A2DE /* u617.png in Resources */,
@@ -885,8 +950,10 @@
 				726FA1B11B42306000D1A2DE /* u266.png in Resources */,
 				726FA18B1B42306000D1A2DE /* u56.jpg in Resources */,
 				726FA1D31B42306000D1A2DE /* u641_line.png in Resources */,
+				726FA2511B43B5DB00D1A2DE /* bg.png in Resources */,
 				726FA1D01B42306000D1A2DE /* u639_end.png in Resources */,
 				726FA1A71B42306000D1A2DE /* u219.png in Resources */,
+				726FA24E1B43B5CB00D1A2DE /* 卡包.png in Resources */,
 				726FA1D91B42306000D1A2DE /* u686.png in Resources */,
 				726FA1DF1B42306000D1A2DE /* u720.png in Resources */,
 				726FA18A1B42306000D1A2DE /* u50.png in Resources */,
@@ -929,6 +996,7 @@
 				726FA1BA1B42306000D1A2DE /* u367.png in Resources */,
 				726FA1B21B42306000D1A2DE /* u274.png in Resources */,
 				726FA1901B42306000D1A2DE /* u72.jpg in Resources */,
+				726FA2411B43B59400D1A2DE /* GoodsCell.xib in Resources */,
 				726FA1CB1B42306000D1A2DE /* u615.png in Resources */,
 				726FA2061B42306000D1A2DE /* u1077.png in Resources */,
 				729F9D271B3FFEF200741CC5 /* rightItem.png in Resources */,
@@ -962,6 +1030,7 @@
 				726FA1981B42306000D1A2DE /* u126.png in Resources */,
 				726FA1C41B42306000D1A2DE /* u549.png in Resources */,
 				726FA1B41B42306000D1A2DE /* u283.png in Resources */,
+				726FA2431B43B59400D1A2DE /* MoneyCell.xib in Resources */,
 				726FA1DD1B42306000D1A2DE /* u715_line.png in Resources */,
 				726FA1F11B42306000D1A2DE /* u871.png in Resources */,
 				726FA1FE1B42306000D1A2DE /* u1016.png in Resources */,
@@ -1020,7 +1089,10 @@
 			files = (
 				72F37E2B1B3BAA73001D8A58 /* AFURLConnectionOperation.m in Sources */,
 				72F37E261B3BAA73001D8A58 /* AFHTTPRequestOperation.m in Sources */,
+				726FA2331B43B57E00D1A2DE /* TradeViewController.m in Sources */,
 				72F37E321B3BAA73001D8A58 /* UIButton+AFNetworking.m in Sources */,
+				726FA2321B43B57E00D1A2DE /* OrderDetaikViewController.m in Sources */,
+				726FA24A1B43B5B300D1A2DE /* CardModel.m in Sources */,
 				72F37E291B3BAA73001D8A58 /* AFNetworkReachabilityManager.m in Sources */,
 				726FA20D1B42360E00D1A2DE /* TlistCell.m in Sources */,
 				72F37E341B3BAA73001D8A58 /* UIProgressView+AFNetworking.m in Sources */,
@@ -1030,7 +1102,9 @@
 				72F37E351B3BAA73001D8A58 /* UIRefreshControl+AFNetworking.m in Sources */,
 				726FA0E61B422E1500D1A2DE /* SlistCell.m in Sources */,
 				72F37E2D1B3BAA73001D8A58 /* AFURLResponseSerialization.m in Sources */,
+				726FA2421B43B59400D1A2DE /* MoneyCell.m in Sources */,
 				726266A41B395C4200B3302D /* AppDelegate.m in Sources */,
+				726FA2401B43B59400D1A2DE /* GoodsCell.m in Sources */,
 				72F37E3A1B3BC634001D8A58 /* NSString+Hashing.m in Sources */,
 				72F37E331B3BAA73001D8A58 /* UIImageView+AFNetworking.m in Sources */,
 				726266A11B395C4200B3302D /* main.m in Sources */,
@@ -1042,8 +1116,12 @@
 				726266CA1B39653100B3302D /* RootViewController.m in Sources */,
 				725897481B3A8B97002098E2 /* GZRControl.m in Sources */,
 				72F37E281B3BAA73001D8A58 /* AFHTTPSessionManager.m in Sources */,
+				726FA24B1B43B5B300D1A2DE /* GoodsModel.m in Sources */,
 				72F37E301B3BAA73001D8A58 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				726FA23F1B43B59400D1A2DE /* CardCell.m in Sources */,
+				726FA2441B43B59400D1A2DE /* VolumeCell.m in Sources */,
 				72F37E2F1B3BAA73001D8A58 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				726FA2311B43B57E00D1A2DE /* CardbagViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

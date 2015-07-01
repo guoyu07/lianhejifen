@@ -11,6 +11,8 @@
 #import "FlistCell.h"
 #import "SlistCell.h"
 #import "TlistCell.h"
+#import "CardbagViewController.h"
+#import "TradeViewController.h"
 
 @interface RootViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 {
@@ -29,6 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationController.navigationBar.hidden = YES;
     _btnArray = [[NSMutableArray alloc] init];
     _tradeBtnArray = [[NSMutableArray alloc] init];
     
@@ -58,11 +61,15 @@
 }
 
 - (void)leftButtonClicked {
+    CardbagViewController *card =[[CardbagViewController alloc]init];
     
+    [self.navigationController pushViewController:card animated:YES];
 }
 
 - (void)rightButtonClicked {
+    TradeViewController *trade =[[TradeViewController alloc]init];
     
+    [self.navigationController pushViewController:trade animated:YES];
 }
 
 - (void)configUI {
