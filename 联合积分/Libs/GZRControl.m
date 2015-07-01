@@ -51,9 +51,14 @@
     return button;
 }
 
-+ (UIView *)viewWithFrame:(CGRect)frame {
++ (UIView *)viewWithFrame:(CGRect)frame
+                  bgColor:(UIColor *)bgColor
+             cornerRadius:(CGFloat)cornerRadius
+                    masks:(BOOL)YESorNO{
     UIView *view = [[UIView alloc] initWithFrame:frame];
-    
+    view.backgroundColor = bgColor;
+    view.layer.cornerRadius = cornerRadius;
+    view.layer.masksToBounds = YESorNO;
     return view;
 }
 
