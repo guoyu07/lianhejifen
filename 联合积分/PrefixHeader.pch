@@ -1,0 +1,18 @@
+//
+//  PrefixHeader.pch
+//  联合积分
+//
+//  Created by arong on 15/6/24.
+//  Copyright (c) 2015年 arong. All rights reserved.
+//
+
+#ifndef _____PrefixHeader_pch
+#define _____PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "Header.h"
+#import "GZRControl.h"
+
+#endif

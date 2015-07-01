@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FlistCell" rowHeight="155" id="Xvf-xc-2C8" customClass="FlistCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="152"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xvf-xc-2C8" id="y51-81-JAU">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="u50.png" translatesAutoresizingMaskIntoConstraints="NO" id="n51-LF-uvy">
+                        <rect key="frame" x="5" y="5" width="150" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="150" id="FVI-A6-beN"/>
+                            <constraint firstAttribute="width" constant="150" id="sdz-pF-E5l"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="u50.png" translatesAutoresizingMaskIntoConstraints="NO" id="iRi-CN-5wB">
+                        <rect key="frame" x="163" y="5" width="150" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="LwT-X2-T4g"/>
+                            <constraint firstAttribute="height" constant="150" id="VOR-go-Pg8"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jjg-Se-bNR">
+                        <rect key="frame" x="5" y="5" width="150" height="148.5"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xAi-3r-6lm">
+                        <rect key="frame" x="163" y="5" width="150" height="148.5"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="iRi-CN-5wB" firstAttribute="top" secondItem="y51-81-JAU" secondAttribute="topMargin" constant="-3" id="2JO-TQ-NaF"/>
+                    <constraint firstItem="n51-LF-uvy" firstAttribute="top" secondItem="y51-81-JAU" secondAttribute="topMargin" constant="-3" id="34y-SD-kc7"/>
+                    <constraint firstItem="n51-LF-uvy" firstAttribute="leading" secondItem="y51-81-JAU" secondAttribute="leadingMargin" constant="-3" id="6EB-BJ-Gr6"/>
+                    <constraint firstItem="iRi-CN-5wB" firstAttribute="leading" secondItem="jjg-Se-bNR" secondAttribute="trailing" constant="8" id="9Ky-eA-tFG"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="n51-LF-uvy" secondAttribute="bottom" constant="-11.5" id="AtW-rc-XDB"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="iRi-CN-5wB" secondAttribute="trailing" constant="-1" id="N62-2u-ASf"/>
+                    <constraint firstItem="xAi-3r-6lm" firstAttribute="leading" secondItem="n51-LF-uvy" secondAttribute="trailing" constant="8" id="T5M-UU-kXV"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="iRi-CN-5wB" secondAttribute="bottom" constant="-11.5" id="x76-bO-VW1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="leftImageView" destination="jjg-Se-bNR" id="ttQ-fO-sdv"/>
+                <outlet property="rightImageView" destination="xAi-3r-6lm" id="dBk-dK-fF4"/>
+            </connections>
+            <point key="canvasLocation" x="346" y="222.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="u50.png" width="230" height="230"/>
+    </resources>
+</document>
