@@ -16,6 +16,7 @@
 #import "SellViewController.h"
 #import "ConsumeViewController.h"
 #import "FinancialViewController.h"
+#import "BuyViewController.h"
 
 @interface RootViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 {
@@ -166,6 +167,11 @@
         SellViewController *VC = [[SellViewController alloc] init];
         [self.navigationController pushViewController:VC animated:YES];
     } else {
+        BuyViewController *buy =[[BuyViewController alloc]init];
+        
+        [self.navigationController pushViewController:buy animated:YES];
+        
+        
         
     }
 

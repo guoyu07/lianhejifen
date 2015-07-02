@@ -10,6 +10,8 @@
 #import "CardModel.h"
 #import "CardCell.h"
 #import "ExchangeViewController.h"
+#import "AddCardCell.h"
+#import "AddCardViewController.h"
 @interface CardbagViewController ()<UITableViewDataSource,UITableViewDelegate,MyProtocalDelegate>
 {
     UITableView *cardTableView; //卡包中包含的积分类别
@@ -192,12 +194,27 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return dataArray.count;
+    return dataArray.count+1;
     
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    if (indexPath.row ==dataArray.count) {
+        
+        static NSString *cell1 =@"cell1";
+        AddCardCell *cell =[tableView dequeueReusableCellWithIdentifier:cell1];
+        if (cell ==nil) {
+            cell = [[[NSBundle mainBundle]loadNibNamed:@"AddCardCell" owner:self options:nil]lastObject];
+
+        }
+        
+        return cell;
+
+
+        
+    }
     static NSString *cellName =@"cellName";
     
     CardCell *cell =[tableView dequeueReusableCellWithIdentifier:cellName];
@@ -210,7 +227,6 @@
     cell.delegate =self;
     [cell loadData:item index:indexPath];
     return cell;
-    
     
 }
 
@@ -242,6 +258,20 @@
 {
 
       [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    if (indexPath.row ==dataArray.count) {
+        
+        AddCardViewController *addCard =[[AddCardViewController alloc]init];
+        
+        [self.navigationController pushViewController:addCard animated:YES];
+        
+    }else
+    {
+        
+        
+        
+        
+    }
+    
     
     
     

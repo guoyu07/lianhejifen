@@ -46,7 +46,7 @@
         [view removeFromSuperview];
         
     }
-    UIImageView *bgImageView =[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 120)];
+    UIImageView *bgImageView =[[UIImageView alloc]initWithFrame:CGRectMake(5, 5, SCREEN_WIDTH-10    , 110)];
     bgImageView.userInteractionEnabled =YES;
     
     bgImageView.image =[UIImage imageNamed:@"bg"];
@@ -74,15 +74,15 @@
 
     if (index.row==0) {
         
-       [bgImageView addSubview: [GZRControl createButtonWithFrame:CGRectMake(SCREEN_WIDTH -220, 70,100 , 30) ImageName:@"" Target:self Action:@selector(leftButtonClick:) Title:@"转赠" titleColor:[UIColor blackColor] backColor:[UIColor grayColor] cornerRadius:15 masks:YES]];
+       [bgImageView addSubview: [GZRControl createButtonWithFrame:CGRectMake(SCREEN_WIDTH -230, 70,100 , 30) ImageName:@"" Target:self Action:@selector(leftButtonClick:) Title:@"转赠" titleColor:[UIColor blackColor] backColor:[UIColor grayColor] cornerRadius:15 masks:YES]];
         
         
-       [bgImageView addSubview: [GZRControl createButtonWithFrame:CGRectMake(SCREEN_WIDTH -110, 70,100 , 30) ImageName:@"" Target:self Action:@selector(rightButtonClick:) Title:@"转出积分" titleColor:[UIColor blackColor] backColor:[UIColor grayColor] cornerRadius:15 masks:YES]];
+       [bgImageView addSubview: [GZRControl createButtonWithFrame:CGRectMake(SCREEN_WIDTH -120, 70,100 , 30) ImageName:@"" Target:self Action:@selector(rightButtonClick:) Title:@"转出积分" titleColor:[UIColor blackColor] backColor:[UIColor grayColor] cornerRadius:15 masks:YES]];
         
     }
     else
     {
-         [bgImageView addSubview: [GZRControl createButtonWithFrame:CGRectMake(SCREEN_WIDTH -160, 70,150 , 30) ImageName:@"" Target:self Action:@selector(exchangeClick:) Title:@"转为联合积分" titleColor:[UIColor whiteColor] backColor:RGBCOLOR(228, 35, 117) cornerRadius:15 masks:YES]];
+         [bgImageView addSubview: [GZRControl createButtonWithFrame:CGRectMake(SCREEN_WIDTH -170, 70,150 , 30) ImageName:@"" Target:self Action:@selector(exchangeClick:) Title:@"转为联合积分" titleColor:[UIColor whiteColor] backColor:RGBCOLOR(228, 35, 117) cornerRadius:15 masks:YES]];
         
         
     }

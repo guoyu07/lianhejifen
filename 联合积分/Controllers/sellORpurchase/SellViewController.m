@@ -33,7 +33,14 @@
     
     UIButton *backBtn = [GZRControl createButtonWithFrame:CGRectMake(5, 10, 30, 30) ImageName:@"u257" Target:self Action:@selector(backBtnClicked) Title:nil titleColor:nil backColor:nil cornerRadius:0 masks:NO];
     [navView addSubview:backBtn];
+    
+    UILabel *titleLabel =[GZRControl createLabelWithFrame:CGRectMake(70, 0, 120, 49) Font:25 Text:@"卖出积分" TextColor:[UIColor whiteColor] TextAligent:NSTextAlignmentLeft];
+    
+    [navView addSubview:titleLabel];
+
+    
 }
+
 
 - (void)backBtnClicked {
     [self.navigationController popToRootViewControllerAnimated:YES];
