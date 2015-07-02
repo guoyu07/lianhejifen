@@ -13,6 +13,7 @@
 #import "TlistCell.h"
 #import "CardbagViewController.h"
 #import "TradeViewController.h"
+#import "SellViewController.h"
 
 @interface RootViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 {
@@ -149,7 +150,13 @@
  *  @param btn 传入所选择交易的tag值
  */
 - (void)buttonItemClicked:(UIButton *)btn {
-    logdebug(@"卖出or收购!");
+    if (btn.tag == 222) {
+        SellViewController *VC = [[SellViewController alloc] init];
+        [self.navigationController pushViewController:VC animated:YES];
+    } else {
+        
+    }
+
 }
 /**
  *  选择展示列表

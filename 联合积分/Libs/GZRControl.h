@@ -18,7 +18,10 @@
                         TextColor:(UIColor *)textColor
                       TextAligent:(NSTextAlignment)textAligent;
 #pragma mark -- 创建View 
-+ (UIView *)viewWithFrame:(CGRect)frame;
++ (UIView *)viewWithFrame:(CGRect)frame
+                  bgColor:(UIColor *)bgColor
+             cornerRadius:(CGFloat)cornerRadius
+                    masks:(BOOL)YESorNO;
 #pragma mark -- 创建ImageView
 + (UIImageView *)createImageViewWithFrame:(CGRect)frame ImageName:(NSString *)imageName;
 #pragma mark -- 创建Button

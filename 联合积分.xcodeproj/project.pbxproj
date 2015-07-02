@@ -188,6 +188,7 @@
 		726FA2511B43B5DB00D1A2DE /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 726FA2501B43B5DB00D1A2DE /* bg.png */; };
 		729F9D261B3FFEF200741CC5 /* leftItem.png in Resources */ = {isa = PBXBuildFile; fileRef = 729F9D241B3FFEF200741CC5 /* leftItem.png */; };
 		729F9D271B3FFEF200741CC5 /* rightItem.png in Resources */ = {isa = PBXBuildFile; fileRef = 729F9D251B3FFEF200741CC5 /* rightItem.png */; };
+		72E458231B443A08004AAF09 /* SellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E458221B443A08004AAF09 /* SellViewController.m */; };
 		72F37E261B3BAA73001D8A58 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F37E021B3BAA73001D8A58 /* AFHTTPRequestOperation.m */; };
 		72F37E271B3BAA73001D8A58 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F37E041B3BAA73001D8A58 /* AFHTTPRequestOperationManager.m */; };
 		72F37E281B3BAA73001D8A58 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F37E061B3BAA73001D8A58 /* AFHTTPSessionManager.m */; };
@@ -425,6 +426,8 @@
 		726FA2501B43B5DB00D1A2DE /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		729F9D241B3FFEF200741CC5 /* leftItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftItem.png; sourceTree = "<group>"; };
 		729F9D251B3FFEF200741CC5 /* rightItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightItem.png; sourceTree = "<group>"; };
+		72E458211B443A08004AAF09 /* SellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellViewController.h; sourceTree = "<group>"; };
+		72E458221B443A08004AAF09 /* SellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SellViewController.m; sourceTree = "<group>"; };
 		72F37E011B3BAA73001D8A58 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		72F37E021B3BAA73001D8A58 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		72F37E031B3BAA73001D8A58 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -605,6 +608,8 @@
 			children = (
 				726266C81B39653100B3302D /* RootViewController.h */,
 				726266C91B39653100B3302D /* RootViewController.m */,
+				72E4581F1B4439AC004AAF09 /* sellORpurchase */,
+				72E458201B4439AC004AAF09 /* MainDetail */,
 				726FA22B1B43B57E00D1A2DE /* CardbagViewController.h */,
 				726FA22C1B43B57E00D1A2DE /* CardbagViewController.m */,
 				4B6514381B43CFE6007C5E0F /* ExchangeViewController.h */,
@@ -783,6 +788,22 @@
 				729F9D251B3FFEF200741CC5 /* rightItem.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		72E4581F1B4439AC004AAF09 /* sellORpurchase */ = {
+			isa = PBXGroup;
+			children = (
+				72E458211B443A08004AAF09 /* SellViewController.h */,
+				72E458221B443A08004AAF09 /* SellViewController.m */,
+			);
+			path = sellORpurchase;
+			sourceTree = "<group>";
+		};
+		72E458201B4439AC004AAF09 /* MainDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainDetail;
 			sourceTree = "<group>";
 		};
 		72F37DFF1B3BAA73001D8A58 /* AFNetworking */ = {
@@ -1130,6 +1151,7 @@
 				726FA2421B43B59400D1A2DE /* MoneyCell.m in Sources */,
 				726266A41B395C4200B3302D /* AppDelegate.m in Sources */,
 				726FA2401B43B59400D1A2DE /* GoodsCell.m in Sources */,
+				72E458231B443A08004AAF09 /* SellViewController.m in Sources */,
 				72F37E3A1B3BC634001D8A58 /* NSString+Hashing.m in Sources */,
 				72F37E331B3BAA73001D8A58 /* UIImageView+AFNetworking.m in Sources */,
 				726266A11B395C4200B3302D /* main.m in Sources */,
