@@ -14,6 +14,8 @@
 #import "CardbagViewController.h"
 #import "TradeViewController.h"
 #import "SellViewController.h"
+#import "ConsumeViewController.h"
+#import "FinancialViewController.h"
 
 @interface RootViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 {
@@ -24,6 +26,8 @@
     NSMutableArray  *_btnArray;
     NSMutableArray  *_tradeBtnArray;
     NSInteger    _currentIndex;
+    
+    NSMutableArray  *_dataArray;
 }
 @end
 
@@ -33,12 +37,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.hidden = YES;
-    _btnArray = [[NSMutableArray alloc] init];
-    _tradeBtnArray = [[NSMutableArray alloc] init];
     
+    [self prepareData];
     [self configUI];
     [self createTopButton];
 }
+
+// 准备数据
+- (void)prepareData {
+    _btnArray = [[NSMutableArray alloc] init];
+    _tradeBtnArray = [[NSMutableArray alloc] init];
+
+    _dataArray = [NSMutableArray arrayWithObjects:@"u56.jpg",@"u48.png",@"u58.jpg",@"u60.jpg",@"u64.jpg",@"u68.jpg",@"u72.jpg",@"u56.jpg",@"u58.jpg",@"u60.jpg",@"u64.jpg",@"u68.jpg", nil];
+}
+
 /**
  *  创建导航按钮
  */
@@ -102,7 +114,7 @@
     }
     
     _listView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(customView.frame)+10+40+20, SCREEN_WIDTH, SCREEN_HEIGHT-69)];
-    _listView.backgroundColor = [UIColor purpleColor];
+    _listView.backgroundColor = [UIColor clearColor];
     [_bgScrollView addSubview:_listView];
     
     NSArray *listArray = [NSArray arrayWithObjects:@"花积分",@"积分理财",@"赚积分", nil];
@@ -178,14 +190,35 @@
 
 #pragma mark - tableView DataSource && Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    switch (tableView.tag) {
+        case 444:
+        {
+            return _dataArray.count/2;
+        }
+            break;
+        case 445:
+        {
+            return 10;
+        }
+            break;
+        case 446:
+        {
+            return 10;
+        }
+            break;
+            
+        default:
+            break;
+    }
+    return 0;
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (tableView.tag) {
         case 444:
         {
-            return 152;
+            return (SCREEN_WIDTH-15)/2+5;
         }
             break;
         case 445:
@@ -212,8 +245,26 @@
             static NSString *cellId = @"FlistCell";
             FlistCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
             if (!cell) {
-                cell = [[[NSBundle mainBundle] loadNibNamed:@"FlistCell" owner:self options:nil] lastObject];
+                cell = [[FlistCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
             }
+            [cell sendValueTag:^(NSInteger tag) {
+                if (tag == 89) {
+                    logdebug(@"跳转到左侧详情页面!");
+                    ConsumeViewController *VC = [[ConsumeViewController alloc] init];
+                    VC.titleName = @"Ray-Ban/雷朋金边框蓝色镀膜反光太阳镜";
+                    [self.navigationController pushViewController:VC animated:YES];
+                } else if (tag == 98) {
+                    logdebug(@"跳转到右侧详情页面!");
+                }
+            }];
+            
+            if (indexPath.row < _dataArray.count) {
+                cell.leftImageView.image = [UIImage imageNamed:[_dataArray objectAtIndex:indexPath.row*2]];
+            }
+            if (indexPath.row*2+1 < _dataArray.count) {
+                cell.rightImageView.image = [UIImage imageNamed:[_dataArray objectAtIndex:indexPath.row*2+1]];
+            }
+            
             return cell;
         }
             break;
@@ -251,6 +302,23 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    switch (tableView.tag) {
+        case 445:
+        {
+            FinancialViewController *VC = [[FinancialViewController alloc] init];
+            VC.titleName = @"油利可图201501";
+            [self.navigationController pushViewController:VC animated:YES];
+        }
+            break;
+        case 446:
+        {
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
     logdebug(@"跳转到相应的页面!");
 }
 
@@ -273,7 +341,13 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (scrollView.tag == 888) {
-        logdebug(@"%f",scrollView.contentOffset.y);
+        logdebug(@"xxxxx:%f yyyyyy:%f",scrollView.contentOffset.x,scrollView.contentOffset.y);
+        
+        if (scrollView.contentOffset.y >= 230) {
+            [UIView animateWithDuration:0.3 animations:^{
+                _bgScrollView.contentOffset = CGPointMake(0, 270);
+            }];
+        }
         
         if (scrollView.contentOffset.y >= 270) {
             _sourceLabel.hidden = NO;
@@ -286,6 +360,7 @@
                 btn.hidden = NO;
             }
         }
+        
     }
 }
 

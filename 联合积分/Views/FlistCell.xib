@@ -49,7 +49,7 @@
                 <outlet property="leftImageView" destination="jjg-Se-bNR" id="ttQ-fO-sdv"/>
                 <outlet property="rightImageView" destination="xAi-3r-6lm" id="dBk-dK-fF4"/>
             </connections>
-            <point key="canvasLocation" x="346" y="222.5"/>
+            <point key="canvasLocation" x="290" y="230"/>
         </tableViewCell>
     </objects>
     <resources>

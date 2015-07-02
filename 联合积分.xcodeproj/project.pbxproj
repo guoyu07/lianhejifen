@@ -189,6 +189,8 @@
 		729F9D261B3FFEF200741CC5 /* leftItem.png in Resources */ = {isa = PBXBuildFile; fileRef = 729F9D241B3FFEF200741CC5 /* leftItem.png */; };
 		729F9D271B3FFEF200741CC5 /* rightItem.png in Resources */ = {isa = PBXBuildFile; fileRef = 729F9D251B3FFEF200741CC5 /* rightItem.png */; };
 		72E458231B443A08004AAF09 /* SellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E458221B443A08004AAF09 /* SellViewController.m */; };
+		72E85F421B4503CD00ECB862 /* ConsumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E85F411B4503CD00ECB862 /* ConsumeViewController.m */; };
+		72E85F451B453BC400ECB862 /* FinancialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E85F441B453BC400ECB862 /* FinancialViewController.m */; };
 		72F37E261B3BAA73001D8A58 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F37E021B3BAA73001D8A58 /* AFHTTPRequestOperation.m */; };
 		72F37E271B3BAA73001D8A58 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F37E041B3BAA73001D8A58 /* AFHTTPRequestOperationManager.m */; };
 		72F37E281B3BAA73001D8A58 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F37E061B3BAA73001D8A58 /* AFHTTPSessionManager.m */; };
@@ -428,6 +430,10 @@
 		729F9D251B3FFEF200741CC5 /* rightItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightItem.png; sourceTree = "<group>"; };
 		72E458211B443A08004AAF09 /* SellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellViewController.h; sourceTree = "<group>"; };
 		72E458221B443A08004AAF09 /* SellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SellViewController.m; sourceTree = "<group>"; };
+		72E85F401B4503CD00ECB862 /* ConsumeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsumeViewController.h; sourceTree = "<group>"; };
+		72E85F411B4503CD00ECB862 /* ConsumeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsumeViewController.m; sourceTree = "<group>"; };
+		72E85F431B453BC400ECB862 /* FinancialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinancialViewController.h; sourceTree = "<group>"; };
+		72E85F441B453BC400ECB862 /* FinancialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinancialViewController.m; sourceTree = "<group>"; };
 		72F37E011B3BAA73001D8A58 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		72F37E021B3BAA73001D8A58 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		72F37E031B3BAA73001D8A58 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -802,6 +808,10 @@
 		72E458201B4439AC004AAF09 /* MainDetail */ = {
 			isa = PBXGroup;
 			children = (
+				72E85F401B4503CD00ECB862 /* ConsumeViewController.h */,
+				72E85F411B4503CD00ECB862 /* ConsumeViewController.m */,
+				72E85F431B453BC400ECB862 /* FinancialViewController.h */,
+				72E85F441B453BC400ECB862 /* FinancialViewController.m */,
 			);
 			path = MainDetail;
 			sourceTree = "<group>";
@@ -1135,6 +1145,7 @@
 				72F37E2B1B3BAA73001D8A58 /* AFURLConnectionOperation.m in Sources */,
 				72F37E261B3BAA73001D8A58 /* AFHTTPRequestOperation.m in Sources */,
 				726FA2331B43B57E00D1A2DE /* TradeViewController.m in Sources */,
+				72E85F421B4503CD00ECB862 /* ConsumeViewController.m in Sources */,
 				72F37E321B3BAA73001D8A58 /* UIButton+AFNetworking.m in Sources */,
 				726FA2321B43B57E00D1A2DE /* OrderDetaikViewController.m in Sources */,
 				726FA24A1B43B5B300D1A2DE /* CardModel.m in Sources */,
@@ -1144,6 +1155,7 @@
 				72F37E341B3BAA73001D8A58 /* UIProgressView+AFNetworking.m in Sources */,
 				72F37E2E1B3BAA73001D8A58 /* AFURLSessionManager.m in Sources */,
 				4B6514361B43C7B7007C5E0F /* PaymentCell.m in Sources */,
+				72E85F451B453BC400ECB862 /* FinancialViewController.m in Sources */,
 				72F37E2C1B3BAA73001D8A58 /* AFURLRequestSerialization.m in Sources */,
 				7258974B1B3AA9BD002098E2 /* CustomView.m in Sources */,
 				72F37E351B3BAA73001D8A58 /* UIRefreshControl+AFNetworking.m in Sources */,
