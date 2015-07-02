@@ -14,7 +14,7 @@
 #import "CardbagViewController.h"
 #import "TradeViewController.h"
 #import "SellViewController.h"
-
+#import "BuyViewController.h"
 @interface RootViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 {
     UILabel      *_sourceLabel;     // 导航中显示积分的label标签
@@ -154,6 +154,11 @@
         SellViewController *VC = [[SellViewController alloc] init];
         [self.navigationController pushViewController:VC animated:YES];
     } else {
+        BuyViewController *buy =[[BuyViewController alloc]init];
+        
+        [self.navigationController pushViewController:buy animated:YES];
+        
+        
         
     }
 
