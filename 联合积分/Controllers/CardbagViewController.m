@@ -9,6 +9,7 @@
 #import "CardbagViewController.h"
 #import "CardModel.h"
 #import "CardCell.h"
+#import "ExchangeViewController.h"
 @interface CardbagViewController ()<UITableViewDataSource,UITableViewDelegate,MyProtocalDelegate>
 {
     UITableView *cardTableView; //卡包中包含的积分类别
@@ -33,7 +34,7 @@
      moreView.hidden =YES;
     isMore =NO;
     [self createData];
-    
+    [self createBottom];
     
 }
 
@@ -103,6 +104,40 @@
     
 }
 
+-(void)createBottom
+{
+
+    UIView *bottomView =[[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT-80, SCREEN_WIDTH, 80)];
+    bottomView.backgroundColor =[UIColor orangeColor];
+    
+    [self.view addSubview:bottomView];
+    
+    bottomView.userInteractionEnabled =YES;
+    
+    UILabel *titleLabel =[GZRControl createLabelWithFrame:CGRectMake(20, 20,SCREEN_WIDTH-100 , 40) Font:20 Text:@"转为联合积分，即可兑换丰富商品" TextColor:[UIColor whiteColor] TextAligent:NSTextAlignmentCenter];
+    
+    [bottomView addSubview:titleLabel];
+    
+    
+    UIImageView *iconImageView =[GZRControl createImageViewWithFrame:CGRectMake(SCREEN_WIDTH-80, 20, 40, 40) ImageName:@"u278"];
+    
+    [bottomView addSubview:iconImageView];
+    
+    UITapGestureRecognizer*tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(buttonClick)];
+    
+    [bottomView addGestureRecognizer:tapGesture];
+    
+    
+}
+
+-(void)buttonClick
+{
+    ExchangeViewController *exchange =[[ExchangeViewController alloc]init];
+    
+    [self.navigationController pushViewController:exchange animated:YES];
+
+}
+
 -(void)firstButton
 {
     
@@ -118,7 +153,7 @@
 }
 -(void)createUI
 {
-    cardTableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 69, SCREEN_WIDTH, SCREEN_HEIGHT-69) style:UITableViewStylePlain];
+    cardTableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 69, SCREEN_WIDTH, SCREEN_HEIGHT-149) style:UITableViewStylePlain];
     
     
     cardTableView.delegate =self;
@@ -189,6 +224,16 @@
 -(void)rightButtonClick
 {
     logdebug(@"转出积分");
+    
+    
+}
+
+-(void)exchange
+{
+    ExchangeViewController *exchange =[[ExchangeViewController alloc]init];
+    
+    [self.navigationController pushViewController:exchange animated:YES];
+    
     
     
 }

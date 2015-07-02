@@ -56,7 +56,7 @@
     self.contentView.layer.shadowOffset =CGSizeMake(3, 3);
     self.contentView.layer.shadowOpacity = 0.5;//不透明度
     
-    iconImageView =[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"logo"]];
+    iconImageView =[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"u251"]];
     iconImageView.frame =CGRectMake(10, 20, 30, 30);
     [bgImageView addSubview:iconImageView];
     
@@ -82,7 +82,7 @@
     }
     else
     {
-         [bgImageView addSubview: [GZRControl createButtonWithFrame:CGRectMake(SCREEN_WIDTH -160, 70,150 , 30) ImageName:@"" Target:self Action:@selector(rightButtonClick:) Title:@"转为联合积分" titleColor:[UIColor whiteColor] backColor:RGBCOLOR(228, 35, 117) cornerRadius:15 masks:YES]];
+         [bgImageView addSubview: [GZRControl createButtonWithFrame:CGRectMake(SCREEN_WIDTH -160, 70,150 , 30) ImageName:@"" Target:self Action:@selector(exchangeClick:) Title:@"转为联合积分" titleColor:[UIColor whiteColor] backColor:RGBCOLOR(228, 35, 117) cornerRadius:15 masks:YES]];
         
         
     }
@@ -101,6 +101,13 @@
 {
     
     [self.delegate rightButtonClick];
+    
+    
+}
+
+-(void)exchangeClick:(UIButton * )btn
+{
+    [self.delegate exchange];
     
     
 }
