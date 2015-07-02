@@ -25,5 +25,5 @@
 @optional
 -(void)leftButtonClick;
 -(void)rightButtonClick;
-
+-(void)exchange;
 @end

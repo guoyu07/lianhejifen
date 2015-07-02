@@ -11,6 +11,8 @@
 #import "GoodsModel.h"
 #import "OrderDetaikViewController.h"
 #import "VolumeCell.h"
+#import "MoneyCell.h"
+#import "PaymentCell.h"
 @interface TradeViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray *titleArray;
@@ -44,7 +46,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor =[UIColor whiteColor];
-    logdebug(@"修改了");
     [self createNa];
     [self createUI];
     [self createData];
@@ -84,23 +85,40 @@
     
 }
 
-
 -(void)titleButtonClick:(UIButton *)btn
 {
-
     currentBtn.selected =NO;
     btn.selected =YES;
     currentBtn =btn;
     if (currentBtn.tag ==100) {
         goodsTableView.hidden =NO;
         volumeTableView.hidden =YES;
+        moneyTableView.hidden =YES;
+        paymentTableView.hidden =YES;
+        
+    }
+    else if(currentBtn.tag ==101)
+    {
+        volumeTableView.hidden =NO;
+        moneyTableView.hidden =YES;
+        goodsTableView.hidden =YES;
+        paymentTableView.hidden =YES;
+        
+    }
+    else if(currentBtn.tag ==102)
+    {
+        moneyTableView.hidden =NO;
+        goodsTableView.hidden =YES;
+        volumeTableView.hidden =YES;
+        paymentTableView.hidden =YES;
         
     }
     else
     {
+        paymentTableView.hidden =NO;
         goodsTableView.hidden =YES;
-        volumeTableView.hidden =NO;
-        
+        volumeTableView .hidden =YES;
+        moneyTableView.hidden =YES;
         
     }
     logdebug(@"标题按钮被点击");
@@ -147,7 +165,6 @@
     [self.view addSubview:paymentTableView];
     paymentTableView.hidden =YES;
 
-    
 }
 
 -(void)createData
@@ -176,10 +193,8 @@
     
     
 }
-
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
- 
     if (tableView ==goodsTableView) {
     
     static NSString *cell1 =@"cell1";
@@ -199,7 +214,7 @@
     
     return cell;
     }
-    else    {
+    else if(tableView ==volumeTableView){
         static NSString *cell2 =@"cell2";
         
         VolumeCell *cell =[tableView dequeueReusableCellWithIdentifier:cell2];
@@ -211,6 +226,36 @@
         }
     
         return cell;
+        
+    }
+    else if(tableView ==moneyTableView)
+    {
+        static NSString *cell3 =@"cell3";
+        
+        MoneyCell *cell =[tableView dequeueReusableCellWithIdentifier:cell3];
+        if (cell ==nil) {
+            
+            cell =[[[NSBundle mainBundle ]loadNibNamed:@"MoneyCell" owner:self options:nil]lastObject];
+            
+        }
+        
+        return cell;
+        
+    }
+    else
+    {
+        static NSString *cell4 =@"cell4";
+        
+        PaymentCell *cell =[tableView dequeueReusableCellWithIdentifier:cell4];
+        if (cell ==nil) {
+            
+            cell =[[[NSBundle mainBundle ]loadNibNamed:@"PaymentCell" owner:self options:nil]lastObject];
+            
+        }
+        
+        return cell;
+
+        
         
     }
     
@@ -228,7 +273,10 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if (tableView ==moneyTableView) {
+        return 150.f;
+        
+    }
     return 120.f;
     
     

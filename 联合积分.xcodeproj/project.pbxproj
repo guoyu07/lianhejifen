@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B6514361B43C7B7007C5E0F /* PaymentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6514341B43C7B7007C5E0F /* PaymentCell.m */; };
+		4B6514371B43C7B7007C5E0F /* PaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6514351B43C7B7007C5E0F /* PaymentCell.xib */; };
+		4B65143A1B43CFE6007C5E0F /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6514391B43CFE6007C5E0F /* ExchangeViewController.m */; };
+		4B65143E1B43DAA1007C5E0F /* ExchangeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B65143C1B43DAA1007C5E0F /* ExchangeCell.m */; };
+		4B65143F1B43DAA1007C5E0F /* ExchangeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B65143D1B43DAA1007C5E0F /* ExchangeCell.xib */; };
 		725897481B3A8B97002098E2 /* GZRControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 725897471B3A8B97002098E2 /* GZRControl.m */; };
 		7258974B1B3AA9BD002098E2 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7258974A1B3AA9BD002098E2 /* CustomView.m */; };
 		726266A11B395C4200B3302D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 726266A01B395C4200B3302D /* main.m */; };
@@ -215,6 +220,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B6514331B43C7B7007C5E0F /* PaymentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentCell.h; sourceTree = "<group>"; };
+		4B6514341B43C7B7007C5E0F /* PaymentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentCell.m; sourceTree = "<group>"; };
+		4B6514351B43C7B7007C5E0F /* PaymentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentCell.xib; sourceTree = "<group>"; };
+		4B6514381B43CFE6007C5E0F /* ExchangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeViewController.h; sourceTree = "<group>"; };
+		4B6514391B43CFE6007C5E0F /* ExchangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeViewController.m; sourceTree = "<group>"; };
+		4B65143B1B43DAA1007C5E0F /* ExchangeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeCell.h; sourceTree = "<group>"; };
+		4B65143C1B43DAA1007C5E0F /* ExchangeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeCell.m; sourceTree = "<group>"; };
+		4B65143D1B43DAA1007C5E0F /* ExchangeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExchangeCell.xib; sourceTree = "<group>"; };
 		725897421B3A830A002098E2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		725897451B3A8398002098E2 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		725897461B3A8B97002098E2 /* GZRControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZRControl.h; sourceTree = "<group>"; };
@@ -571,6 +584,9 @@
 				726FA20E1B42362100D1A2DE /* TlistCell.xib */,
 				726FA2341B43B59400D1A2DE /* CardCell.h */,
 				726FA2351B43B59400D1A2DE /* CardCell.m */,
+				4B65143B1B43DAA1007C5E0F /* ExchangeCell.h */,
+				4B65143C1B43DAA1007C5E0F /* ExchangeCell.m */,
+				4B65143D1B43DAA1007C5E0F /* ExchangeCell.xib */,
 				726FA2361B43B59400D1A2DE /* GoodsCell.h */,
 				726FA2371B43B59400D1A2DE /* GoodsCell.m */,
 				726FA2381B43B59400D1A2DE /* GoodsCell.xib */,
@@ -580,6 +596,9 @@
 				726FA23C1B43B59400D1A2DE /* VolumeCell.h */,
 				726FA23D1B43B59400D1A2DE /* VolumeCell.m */,
 				726FA23E1B43B59400D1A2DE /* VolumeCell.xib */,
+				4B6514331B43C7B7007C5E0F /* PaymentCell.h */,
+				4B6514341B43C7B7007C5E0F /* PaymentCell.m */,
+				4B6514351B43C7B7007C5E0F /* PaymentCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -593,6 +612,8 @@
 				72E458201B4439AC004AAF09 /* MainDetail */,
 				726FA22B1B43B57E00D1A2DE /* CardbagViewController.h */,
 				726FA22C1B43B57E00D1A2DE /* CardbagViewController.m */,
+				4B6514381B43CFE6007C5E0F /* ExchangeViewController.h */,
+				4B6514391B43CFE6007C5E0F /* ExchangeViewController.m */,
 				726FA22D1B43B57E00D1A2DE /* OrderDetaikViewController.h */,
 				726FA22E1B43B57E00D1A2DE /* OrderDetaikViewController.m */,
 				726FA22F1B43B57E00D1A2DE /* TradeViewController.h */,
@@ -1002,9 +1023,11 @@
 				726FA1891B42306000D1A2DE /* u48.png in Resources */,
 				726FA1FA1B42306000D1A2DE /* u999.png in Resources */,
 				726FA1FC1B42306000D1A2DE /* u1003.png in Resources */,
+				4B65143F1B43DAA1007C5E0F /* ExchangeCell.xib in Resources */,
 				726FA1AD1B42306000D1A2DE /* u251.png in Resources */,
 				726FA1A81B42306000D1A2DE /* u221.png in Resources */,
 				726FA2071B42306000D1A2DE /* u1089_line.png in Resources */,
+				4B6514371B43C7B7007C5E0F /* PaymentCell.xib in Resources */,
 				726FA1ED1B42306000D1A2DE /* u820.png in Resources */,
 				726FA1E51B42306000D1A2DE /* u758.png in Resources */,
 				726FA1C91B42306000D1A2DE /* u589.png in Resources */,
@@ -1117,8 +1140,10 @@
 				726FA24A1B43B5B300D1A2DE /* CardModel.m in Sources */,
 				72F37E291B3BAA73001D8A58 /* AFNetworkReachabilityManager.m in Sources */,
 				726FA20D1B42360E00D1A2DE /* TlistCell.m in Sources */,
+				4B65143E1B43DAA1007C5E0F /* ExchangeCell.m in Sources */,
 				72F37E341B3BAA73001D8A58 /* UIProgressView+AFNetworking.m in Sources */,
 				72F37E2E1B3BAA73001D8A58 /* AFURLSessionManager.m in Sources */,
+				4B6514361B43C7B7007C5E0F /* PaymentCell.m in Sources */,
 				72F37E2C1B3BAA73001D8A58 /* AFURLRequestSerialization.m in Sources */,
 				7258974B1B3AA9BD002098E2 /* CustomView.m in Sources */,
 				72F37E351B3BAA73001D8A58 /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -1145,6 +1170,7 @@
 				726FA2441B43B59400D1A2DE /* VolumeCell.m in Sources */,
 				72F37E2F1B3BAA73001D8A58 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				726FA2311B43B57E00D1A2DE /* CardbagViewController.m in Sources */,
+				4B65143A1B43CFE6007C5E0F /* ExchangeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
