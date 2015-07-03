@@ -29,7 +29,7 @@
     
     [self createData];
     [self createNav];
-    
+
     [self createUI];
     
 }

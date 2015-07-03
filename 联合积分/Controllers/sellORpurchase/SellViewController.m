@@ -37,7 +37,6 @@
     UILabel *titleLabel =[GZRControl createLabelWithFrame:CGRectMake(70, 0, 120, 49) Font:25 Text:@"卖出积分" TextColor:[UIColor whiteColor] TextAligent:NSTextAlignmentLeft];
     
     [navView addSubview:titleLabel];
-
     
 }
 
