@@ -3,7 +3,7 @@
 //  联合积分
 //
 //  Created by kaifabu－2 on 15/7/2.
-//  Copyright (c) 2015年 arong. All rights reserved.
+//  Copyright (c)2015年 arong. All rights reserved.
 //
 
 #import "BuyViewController.h"
@@ -14,8 +14,15 @@
     UITableView *hisTableView;
     NSMutableArray *hisArray;
     
-    UILabel * integralLabel;
-    UILabel * moneyLabel;
+
+    //上部视图
+    UIView *_headerView;
+    //滑条
+    UISlider *_buySlider;
+    UILabel *_buyLabel;
+    
+    UISlider *_priceSlider;
+    UILabel  *_priceLabel;
     
 }
 @end
@@ -68,6 +75,7 @@
     hisTableView.delegate =self;
     hisTableView.dataSource =self;
     hisTableView.showsVerticalScrollIndicator =NO;
+    hisTableView.separatorStyle =UITableViewCellSelectionStyleNone;
     [self.view addSubview:hisTableView];
 
     
@@ -85,61 +93,92 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView *headerView =[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 300)];
+    _headerView =[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 300)];
+    _headerView.backgroundColor =[UIColor whiteColor];
+
+    //设置滑动条slider的一些基本属性
+    _buySlider = [[UISlider alloc]init];
+    _buySlider.frame = CGRectMake(70, 100-69+20, SCREEN_WIDTH-80, 50); //滑动条的位置，大小
+    _buySlider.minimumValue = 0; //最小值
+    _buySlider.maximumValue = 500; //最大值
+    _buySlider.value = 0; //默认值
     
-    UILabel * buyLabel =[GZRControl createLabelWithFrame:CGRectMake(20, 100-69, 50,30 ) Font:20 Text:@"求购" TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
+    //sliderValueChanged事件
+    [_buySlider addTarget:self action:@selector(buySliderValueChange:) forControlEvents:UIControlEventValueChanged];
+    //设置label的属性
+    _buyLabel = [[UILabel alloc]initWithFrame:CGRectMake(_buySlider.frame.origin.x-20, _buySlider.frame.origin.y-10, 70, 20)];
+    _buyLabel.textAlignment =NSTextAlignmentCenter;
+    [_buyLabel setBackgroundColor:[UIColor clearColor]];
+    [_buyLabel setText:[NSString stringWithFormat:@"%d积分",(int)_buySlider.value]];
     
-    headerView.backgroundColor =[UIColor whiteColor];
-    [headerView addSubview:buyLabel];
-    UISlider *buySlider = [[UISlider alloc] initWithFrame:CGRectMake(80,100-69, SCREEN_WIDTH-100  ,30)];
-    buySlider.tintColor = RGBCOLOR(228, 35, 117);
-    buySlider.thumbTintColor = RGBCOLOR(228, 35, 117);
-    buySlider.maximumValue = 1000;
-    buySlider.minimumValue = 0;
-    buySlider.value = 0;
-    buySlider.continuous = YES;
-    [buySlider addTarget:self action:@selector(buySliderValueChange:) forControlEvents:UIControlEventValueChanged];
-    [headerView addSubview:buySlider];
-    integralLabel =[GZRControl createLabelWithFrame:CGRectMake(80, 100-69+30, 60, 30) Font:17 Text:@"1000积分" TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
-    [headerView addSubview:integralLabel];
+    [_headerView addSubview:_buySlider];
+    [_headerView addSubview:_buyLabel];
+
+    UILabel * titleLabel1 =[GZRControl createLabelWithFrame:CGRectMake(20, 100-69+30, 50,30 ) Font:20 Text:@"求购" TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
     
-    UILabel * priceLabel =[GZRControl createLabelWithFrame:CGRectMake(20, 170-69, 50,30 ) Font:20 Text:@"出价" TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
+    [_headerView addSubview:titleLabel1];
     
-    [headerView addSubview:priceLabel];
+    //设置滑动条slider的一些基本属性
+    _priceSlider = [[UISlider alloc]init];
+    _priceSlider.frame = CGRectMake(70, 170-69+20, SCREEN_WIDTH-80, 50); //滑动条的位置，大小
+    _priceSlider.minimumValue = 0; //最小值
+    _priceSlider.maximumValue = 500; //最大值
+    _priceSlider.value = 0; //默认值
     
-    UISlider *prictSlider = [[UISlider alloc] initWithFrame:CGRectMake(80,170-69, SCREEN_WIDTH-100  ,30)];
-    prictSlider.tintColor = RGBCOLOR(228, 35, 117);
-    prictSlider.thumbTintColor = RGBCOLOR(228, 35, 117);
-    prictSlider.maximumValue = 100;
-    prictSlider.minimumValue = 0;
-    prictSlider.value = 0;
-    prictSlider.continuous = YES;
-    [prictSlider addTarget:self action:@selector(priceSliderValueChange:) forControlEvents:UIControlEventValueChanged];
-    [headerView addSubview:prictSlider];
-    moneyLabel =[GZRControl createLabelWithFrame:CGRectMake(80, 170-69+30, 60, 30) Font:17 Text:@"￥100" TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
-    [headerView addSubview:moneyLabel];
+    //sliderValueChanged事件
+    [_priceSlider addTarget:self action:@selector(priceSliderValueChange:) forControlEvents:UIControlEventValueChanged];
+    //设置label的属性
+     _priceLabel= [[UILabel alloc]initWithFrame:CGRectMake(_priceSlider.frame.origin.x-20, _priceSlider.frame.origin.y-10, 70, 20)];
+    _priceLabel.textAlignment =NSTextAlignmentCenter;
+    [_priceLabel setBackgroundColor:[UIColor clearColor]];
+    [_priceLabel setText:[NSString stringWithFormat:@"￥%d",(int)_priceSlider.value]];
+    
+    [_headerView addSubview:_priceSlider];
+    [_headerView addSubview:_priceLabel];
+    
+    
+    UILabel * titleLabel2 =[GZRControl createLabelWithFrame:CGRectMake(20, 170-69+30, 50,30 ) Font:20 Text:@"出价" TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
+    
+    [_headerView addSubview:titleLabel2];
+    
 
     
     UIButton *releaseButton =[GZRControl createButtonWithFrame:CGRectMake(10, 250-69, SCREEN_WIDTH-20, 50) ImageName:@"" Target:self Action:@selector(releaseButtonClick:) Title:@"发布" titleColor:[UIColor whiteColor] backColor:RGBCOLOR(228, 35, 117) cornerRadius:0 masks:YES];
     
-    [headerView addSubview:releaseButton];
+    [_headerView addSubview:releaseButton];
 
     
-    return headerView;
+    return _headerView;
     
 }
+
 -(void)buySliderValueChange:(UISlider *)slider
 {
-    integralLabel.frame =CGRectMake(80+slider.value/1000*slider.frame.size.width, 100-69+30, 60, 30);
+    //调节数字追随滑动速度
+   // integralLabel.frame =CGRectMake(80+slider.value/1000*slider.frame.size.width, 100-69, 60, 30);
+
+    UIImageView *imageView = [_buySlider.subviews objectAtIndex:2];
+    CGRect theRect = [_headerView convertRect:imageView.frame fromView:imageView.superview];
+    [_buyLabel setFrame:CGRectMake(theRect.origin.x-22, theRect.origin.y-38, _buyLabel.frame.size.width, _buySlider.frame.size.height)];
     
+    NSInteger v = _buySlider.value+0.5;
+    //label的显示数字。为滑动条移动后的位置的value
+    [_buyLabel setText:[NSString stringWithFormat:@"%d积分",(int)v]];
+    
+
 }
 
 -(void)priceSliderValueChange:(UISlider *)slider
 {
-    moneyLabel.frame =CGRectMake(80+slider.value/100*slider.frame.size.width, 170-69+30, 60, 30);
+    
+    UIImageView *imageView = [_priceSlider.subviews objectAtIndex:2];
+    CGRect theRect = [_headerView convertRect:imageView.frame fromView:imageView.superview];
+    [_priceLabel setFrame:CGRectMake(theRect.origin.x-22, theRect.origin.y-38, _priceLabel.frame.size.width, _priceSlider.frame.size.height)];
+    
+    NSInteger v = _priceSlider.value+0.5;
+    //label的显示数字。为滑动条移动后的位置的value
+    [_priceLabel setText:[NSString stringWithFormat:@"￥%d",(int)v]];
 
-    
-    
     
 }
 
