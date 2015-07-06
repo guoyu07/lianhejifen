@@ -270,6 +270,9 @@
                     [self.navigationController pushViewController:VC animated:YES];
                 } else if (tag == 98) {
                     logdebug(@"跳转到右侧详情页面!");
+                    
+                    
+                    
                 }
             }];
             

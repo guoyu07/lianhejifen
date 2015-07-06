@@ -38,7 +38,7 @@
     [self.view addSubview:naView];
     
     UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [leftButton setFrame:CGRectMake(5, 5, SCREEN_WIDTH/6-10, 40)];
+    [leftButton setFrame:CGRectMake(10, 10,30, 30)];
     [leftButton setBackgroundImage:[UIImage imageNamed:@"u532"] forState:UIControlStateNormal];
     [leftButton addTarget:self action:@selector(leftButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [naView addSubview:leftButton];
