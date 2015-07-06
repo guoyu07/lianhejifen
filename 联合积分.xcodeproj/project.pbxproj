@@ -216,6 +216,7 @@
 		72F37E351B3BAA73001D8A58 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F37E231B3BAA73001D8A58 /* UIRefreshControl+AFNetworking.m */; };
 		72F37E361B3BAA73001D8A58 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F37E251B3BAA73001D8A58 /* UIWebView+AFNetworking.m */; };
 		72F37E3A1B3BC634001D8A58 /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F37E391B3BC634001D8A58 /* NSString+Hashing.m */; };
+		72FA0EEF1B4A522B00044A6E /* EarnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FA0EEE1B4A522B00044A6E /* EarnViewController.m */; };
 		72FE37FD1B4671A200B2537E /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE37FC1B4671A200B2537E /* RegisterViewController.m */; };
 		72FE38001B46853900B2537E /* RegisterViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE37FF1B46853900B2537E /* RegisterViewController1.m */; };
 /* End PBXBuildFile section */
@@ -493,6 +494,8 @@
 		72F37E251B3BAA73001D8A58 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		72F37E381B3BC634001D8A58 /* NSString+Hashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashing.h"; sourceTree = "<group>"; };
 		72F37E391B3BC634001D8A58 /* NSString+Hashing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hashing.m"; sourceTree = "<group>"; };
+		72FA0EED1B4A522B00044A6E /* EarnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EarnViewController.h; sourceTree = "<group>"; };
+		72FA0EEE1B4A522B00044A6E /* EarnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EarnViewController.m; sourceTree = "<group>"; };
 		72FE37FB1B4671A200B2537E /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		72FE37FC1B4671A200B2537E /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		72FE37FE1B46853900B2537E /* RegisterViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController1.h; sourceTree = "<group>"; };
@@ -851,6 +854,8 @@
 				72E85F411B4503CD00ECB862 /* ConsumeViewController.m */,
 				72E85F431B453BC400ECB862 /* FinancialViewController.h */,
 				72E85F441B453BC400ECB862 /* FinancialViewController.m */,
+				72FA0EED1B4A522B00044A6E /* EarnViewController.h */,
+				72FA0EEE1B4A522B00044A6E /* EarnViewController.m */,
 			);
 			path = MainDetail;
 			sourceTree = "<group>";
@@ -1239,6 +1244,7 @@
 				4BF858CF1B44CE1C004717D8 /* BuyViewController.m in Sources */,
 				726266CA1B39653100B3302D /* RootViewController.m in Sources */,
 				72FE37FD1B4671A200B2537E /* RegisterViewController.m in Sources */,
+				72FA0EEF1B4A522B00044A6E /* EarnViewController.m in Sources */,
 				725897481B3A8B97002098E2 /* GZRControl.m in Sources */,
 				72F37E281B3BAA73001D8A58 /* AFHTTPSessionManager.m in Sources */,
 				726FA24B1B43B5B300D1A2DE /* GoodsModel.m in Sources */,

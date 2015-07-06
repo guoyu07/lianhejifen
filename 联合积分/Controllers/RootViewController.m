@@ -17,6 +17,7 @@
 #import "ConsumeViewController.h"
 #import "FinancialViewController.h"
 #import "BuyViewController.h"
+#import "EarnViewController.h"
 
 @interface RootViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 {
@@ -53,7 +54,7 @@
     _tradeBtnArray = [[NSMutableArray alloc] init];
 
     _dataArray = [NSMutableArray arrayWithObjects:@"u56.jpg",@"u48.png",@"u58.jpg",@"u60.jpg",@"u64.jpg",@"u68.jpg",@"u72.jpg",@"u56.jpg",@"u58.jpg",@"u60.jpg",@"u64.jpg",@"u68.jpg", nil];
-    
+    _dataArrayT = [NSMutableArray arrayWithObjects:@"极速注册中国银行信用卡",@"看视频",@"招行信用卡美国亚马逊海购最高",@"邀请好友", nil];
 }
 
 /**
@@ -218,7 +219,7 @@
             break;
         case 446:
         {
-            return 10;
+            return _dataArrayT.count;
         }
             break;
             
@@ -256,7 +257,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (tableView.tag) {
         case 444:
-        {
+        {   // 花积分
             static NSString *cellId = @"FlistCell";
             FlistCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
             if (!cell) {
@@ -267,9 +268,14 @@
                     logdebug(@"跳转到左侧详情页面!");
                     ConsumeViewController *VC = [[ConsumeViewController alloc] init];
                     VC.titleName = @"Ray-Ban/雷朋金边框蓝色镀膜反光太阳镜";
+                    VC.isVouchers = NO;
                     [self.navigationController pushViewController:VC animated:YES];
                 } else if (tag == 98) {
                     logdebug(@"跳转到右侧详情页面!");
+                    ConsumeViewController *VC = [[ConsumeViewController alloc] init];
+                    VC.titleName = @"超市代金券";
+                    VC.isVouchers = YES;
+                    [self.navigationController pushViewController:VC animated:YES];
                 }
             }];
             
@@ -284,7 +290,7 @@
         }
             break;
         case 445:
-        {
+        {   // 积分理财
             static NSString *cellId = @"SlistCell";
             SlistCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
             if (!cell) {
@@ -298,12 +304,19 @@
         }
             break;
         case 446:
-        {
+        {   // 赚积分
             static NSString *cellId = @"TlistCell";
             TlistCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
             if (!cell) {
                 cell = [[[NSBundle mainBundle] loadNibNamed:@"TlistCell" owner:self options:nil] lastObject];
                 
+            }
+            if (indexPath.row == 0) {
+                cell.sourceLabel.hidden = YES;
+                cell.bgImageView.backgroundColor = [UIColor brownColor];
+            } else {
+                cell.sourceLabel.hidden = NO;
+                cell.titleLabel.text = [_dataArrayT objectAtIndex:indexPath.row - 1];
             }
             return cell;
         }
@@ -317,6 +330,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    TlistCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"TlistCell" owner:self options:nil] lastObject];
     switch (tableView.tag) {
         case 445:
         {
@@ -327,14 +341,21 @@
             break;
         case 446:
         {
-            
+            if (indexPath.row == 0) {
+                logdebug(@"背景变色!!!");
+                cell.bgImageView.backgroundColor = [UIColor lightGrayColor];
+                cell.titleLabel.text = @"今日已签到，明天再来~";
+            } else if(indexPath.row == 1){
+                EarnViewController *VC = [[EarnViewController alloc] init];
+                VC.titleName = @"极速注册";
+                [self.navigationController pushViewController:VC animated:YES];
+            }
         }
             break;
             
         default:
             break;
     }
-    logdebug(@"跳转到相应的页面!");
 }
 
 #pragma mark - scrollView Delegate

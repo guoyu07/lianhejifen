@@ -12,5 +12,7 @@
 @interface ConsumeViewController : UIViewController
 
 @property (nonatomic,copy) NSString *titleName;
+// 判断是否是代金券内容
+@property (nonatomic,assign) BOOL isVouchers;
 
 @end
