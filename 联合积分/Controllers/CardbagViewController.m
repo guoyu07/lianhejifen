@@ -16,7 +16,6 @@
 {
     UITableView *cardTableView; //卡包中包含的积分类别
     NSMutableArray *dataArray;  //数据数组
-    
     UIView *moreView;
     BOOL isMore;
 }
@@ -103,9 +102,7 @@
 
     [self.view addSubview:moreView];
     
-    
 }
-
 -(void)createBottom
 {
 
@@ -128,7 +125,6 @@
     UITapGestureRecognizer*tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(buttonClick)];
     
     [bottomView addGestureRecognizer:tapGesture];
-    
     
 }
 
@@ -213,8 +209,6 @@
         
         return cell;
 
-
-        
     }
     static NSString *cellName =@"cellName";
     
@@ -285,6 +279,7 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
 }
 
 /*
