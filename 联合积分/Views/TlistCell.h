@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface TlistCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
-@property (weak, nonatomic) IBOutlet UILabel     *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel     *sourceLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *bgImageView;  // 填充背景颜色
+@property (weak, nonatomic) IBOutlet UILabel     *titleLabel;   // 标题
+@property (weak, nonatomic) IBOutlet UILabel     *sourceLabel;  // 送积分
 
 @end

@@ -12,6 +12,8 @@
 {
     UIPageControl *_pageControl;    // 页码指示器
     NSInteger     *_currentIndex;   // 标记当前页
+    
+    NSMutableArray *_btnArray;      // 存储操作按钮
 }
 @end
 
@@ -24,8 +26,13 @@
     UIView *bgView = [GZRControl viewWithFrame:CGRectMake(0, 69, SCREEN_WIDTH, SCREEN_HEIGHT-69) bgColor:RGBCOLOR(235, 235, 235) cornerRadius:0 masks:NO];
     [self.view addSubview:bgView];
     
+    [self prepareData];
     [self createNav];
-    [self createGoodsView];
+    if (self.isVouchers) {
+        [self createVouchersView];
+    } else {
+        [self createGoodsView];
+    }
 }
 
 - (void)createNav {
@@ -49,6 +56,7 @@
  */
 - (void)prepareData {
     _currentIndex = 0;
+    _btnArray = [[NSMutableArray alloc] init];
 }
 
 /**
@@ -129,6 +137,79 @@
  *  创建代金券展示视图
  */
 - (void)createVouchersView {
+    UIView *bgView1 = [GZRControl viewWithFrame:CGRectMake(0, 69, SCREEN_WIDTH, (SCREEN_HEIGHT-69-49-30)/5) bgColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
+    [self.view addSubview:bgView1];
+    
+    UIView *bgView2 = [GZRControl viewWithFrame:CGRectMake(0, CGRectGetMaxY(bgView1.frame)+10, SCREEN_WIDTH, (SCREEN_HEIGHT-69-49-30)/5) bgColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
+    [self.view addSubview:bgView2];
+    
+    UIView *bgView3 = [GZRControl viewWithFrame:CGRectMake(0, CGRectGetMaxY(bgView2.frame)+10, SCREEN_WIDTH, (SCREEN_HEIGHT-69-49-30)*2/5) bgColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
+    [self.view addSubview:bgView3];
+    
+    UIView *bgView4 = [GZRControl viewWithFrame:CGRectMake(0, CGRectGetMaxY(bgView3.frame)+10, SCREEN_WIDTH, (SCREEN_HEIGHT-69-49-30)/5) bgColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
+    [self.view addSubview:bgView4];
+    
+    UIButton *confirmBtn = [GZRControl createButtonWithFrame:CGRectMake(0, SCREEN_HEIGHT-49, SCREEN_WIDTH, 49) ImageName:nil Target:self Action:@selector(confirmBtnClicked) Title:@"确认兑换" titleColor:[UIColor whiteColor] backColor:RGBCOLOR(228, 35, 117) cornerRadius:0 masks:NO];
+    [self.view addSubview:confirmBtn];
+    
+    /*********创建内容视图1**********/
+    UILabel *nameLabel = [GZRControl createLabelWithFrame:CGRectMake(20, (bgView1.frame.size.height-40)/3, 120, 20) Font:17 Text:self.titleName TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
+    [bgView1 addSubview:nameLabel];
+    
+    UILabel *sourceLabel = [GZRControl createLabelWithFrame:CGRectMake(20, (bgView1.frame.size.height-40)/3*2+20, 100, 20) Font:15 Text:@"4990积分" TextColor:[UIColor brownColor] TextAligent:NSTextAlignmentLeft];
+    [bgView1 addSubview:sourceLabel];
+    
+    UILabel *priceLabel = [GZRControl createLabelWithFrame:CGRectMake(CGRectGetMaxX(sourceLabel.frame)+10, (bgView1.frame.size.height-40)/3*2+20, 80, 20) Font:15 Text:@"￥50.00" TextColor:[UIColor grayColor] TextAligent:NSTextAlignmentLeft];
+    [bgView1 addSubview:priceLabel];
+    
+    UILabel *salesLabel = [GZRControl createLabelWithFrame:CGRectMake(SCREEN_WIDTH-20-100, (bgView1.frame.size.height-40)/3*2+20, 100, 20) Font:15 Text:@"销量 1031" TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentRight];
+    [bgView1 addSubview:salesLabel];
+    
+    UILabel *lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(sourceLabel.frame)+5, (bgView1.frame.size.height-40)/3*2+24, 80, 1)];
+    [lineLabel setBackgroundColor:[UIColor blackColor]];
+    lineLabel.transform = CGAffineTransformRotate(lineLabel.transform, 2.9);
+    [bgView1 addSubview:lineLabel];
+    
+    /**************创建内容视图2****************/
+    UILabel *titleLabel = [GZRControl createLabelWithFrame:CGRectMake(20, (bgView2.frame.size.height-60)/3, 80, 20) Font:15 Text:@"选择金额" TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
+    [bgView2 addSubview:titleLabel];
+    
+    NSArray *moneyArr = [NSArray arrayWithObjects:@"10",@"20",@"50",@"100",@"200", nil];
+    NSInteger spw = (SCREEN_WIDTH-40-100)/4;
+    for (int i=0; i<5; i++) {
+        UIButton *chooseBtn = [GZRControl createButtonWithFrame:CGRectMake(20+(spw+20)*i, (bgView2.frame.size.height-60)/3*2+20, 20, 20) ImageName:@"u1147" Target:self Action:@selector(chooseBtnClicked:) Title:nil titleColor:[UIColor clearColor] backColor:[UIColor clearColor] cornerRadius:0 masks:NO];
+        [chooseBtn setBackgroundImage:[UIImage imageNamed:@"u1153"] forState:UIControlStateSelected];
+        if (i==0) {
+            chooseBtn.selected = YES;
+        }
+        chooseBtn.tag = 111+i;
+        [bgView2 addSubview:chooseBtn];
+        [_btnArray addObject:chooseBtn];
+        
+        UILabel *moneyLabel = [GZRControl createLabelWithFrame:CGRectMake(20+(spw+20)*i, (bgView2.frame.size.height-60)/3*2+40, 20, 20) Font:10 Text:[moneyArr objectAtIndex:i] TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentCenter];
+        [bgView2 addSubview:moneyLabel];
+        
+        if (i<4) {
+            UILabel *spaceLabel = [[UILabel alloc] initWithFrame:CGRectMake(40+(spw+20)*i, (bgView2.frame.size.height-60)/3*2+29, spw, 1)];
+            [spaceLabel setBackgroundColor:[UIColor lightGrayColor]];
+            [bgView2 addSubview:spaceLabel];
+        }
+    }
+}
+
+/**
+ *  选择金额
+ */
+- (void)chooseBtnClicked:(UIButton *)btn {
+    
+    for (UIButton *currentBtn in _btnArray) {
+        if (currentBtn.tag == btn.tag) {
+            currentBtn.selected = YES;
+        } else {
+            currentBtn.selected = NO;
+        }
+    }
+    
     
     
 }
