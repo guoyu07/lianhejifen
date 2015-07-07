@@ -27,10 +27,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor =[UIColor whiteColor];
-   
     [self createNa];
     [self createUI];
-
     [self createMore];
      moreView.hidden =YES;
     isMore =NO;

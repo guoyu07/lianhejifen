@@ -41,12 +41,12 @@
     [self.view addSubview:naView];
     
     UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [leftButton setFrame:CGRectMake(5, 5, SCREEN_WIDTH/6-10, 40)];
+    [leftButton setFrame:CGRectMake(10, 10, 30, 30)];
     [leftButton setBackgroundImage:[UIImage imageNamed:@"u257"] forState:UIControlStateNormal];
     [leftButton addTarget:self action:@selector(leftButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [naView addSubview:leftButton];
     
-    UILabel *titleLabel =[GZRControl createLabelWithFrame:CGRectMake(SCREEN_WIDTH/6, 0, SCREEN_WIDTH/3, 49) Font:22 Text:@"订单详情" TextColor:[UIColor whiteColor] TextAligent:NSTextAlignmentCenter];
+    UILabel *titleLabel =[GZRControl createLabelWithFrame:CGRectMake(SCREEN_WIDTH/6, 0, SCREEN_WIDTH/3, 49) Font:20 Text:@"订单详情" TextColor:[UIColor whiteColor] TextAligent:NSTextAlignmentCenter];
     
     [naView addSubview:titleLabel];
     
