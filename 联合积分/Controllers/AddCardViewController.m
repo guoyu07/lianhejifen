@@ -47,8 +47,6 @@
     
     [naView addSubview:titleLabel];
     
-    
-    
 }
 -(void)leftButtonClick:(UIButton *)btn
 {

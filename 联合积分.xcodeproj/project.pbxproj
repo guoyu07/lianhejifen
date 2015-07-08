@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B45C5091B4B67C8000712CC /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B45C5081B4B67C8000712CC /* MapViewController.m */; };
 		4B6514361B43C7B7007C5E0F /* PaymentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6514341B43C7B7007C5E0F /* PaymentCell.m */; };
 		4B6514371B43C7B7007C5E0F /* PaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6514351B43C7B7007C5E0F /* PaymentCell.xib */; };
 		4B65143A1B43CFE6007C5E0F /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6514391B43CFE6007C5E0F /* ExchangeViewController.m */; };
@@ -240,6 +241,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B45C5071B4B67C8000712CC /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		4B45C5081B4B67C8000712CC /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		4B6514331B43C7B7007C5E0F /* PaymentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentCell.h; sourceTree = "<group>"; };
 		4B6514341B43C7B7007C5E0F /* PaymentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentCell.m; sourceTree = "<group>"; };
 		4B6514351B43C7B7007C5E0F /* PaymentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentCell.xib; sourceTree = "<group>"; };
@@ -255,7 +258,7 @@
 		4B825BAF1B4A5A930047575C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4B825BB11B4A5A9F0047575C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4B825BB31B4A5AA90047575C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		4B825BB51B4A5B690047575C /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
+		4B825BB51B4A5B690047575C /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = ../Controllers/mapapi.bundle; sourceTree = "<group>"; };
 		4BF858CD1B44CE1C004717D8 /* BuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyViewController.h; sourceTree = "<group>"; };
 		4BF858CE1B44CE1C004717D8 /* BuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyViewController.m; sourceTree = "<group>"; };
 		4BF858D01B44E03D004717D8 /* HistoryBuyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryBuyCell.h; sourceTree = "<group>"; };
@@ -685,9 +688,10 @@
 		726266C61B3964DB00B3302D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4B825BB51B4A5B690047575C /* mapapi.bundle */,
 				726266C81B39653100B3302D /* RootViewController.h */,
 				726266C91B39653100B3302D /* RootViewController.m */,
+				4B45C5071B4B67C8000712CC /* MapViewController.h */,
+				4B45C5081B4B67C8000712CC /* MapViewController.m */,
 				72FE37F91B46700000B2537E /* login */,
 				72FE37FA1B46700000B2537E /* register */,
 				72E4581F1B4439AC004AAF09 /* sellORpurchase */,
@@ -722,6 +726,7 @@
 		729F9D231B3FFEF200741CC5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4B825BB51B4A5B690047575C /* mapapi.bundle */,
 				726FA2501B43B5DB00D1A2DE /* bg.png */,
 				726FA24C1B43B5CB00D1A2DE /* 卡包.png */,
 				726FA24D1B43B5CB00D1A2DE /* 更多.png */,
@@ -1294,6 +1299,7 @@
 				726FA23F1B43B59400D1A2DE /* CardCell.m in Sources */,
 				726FA2441B43B59400D1A2DE /* VolumeCell.m in Sources */,
 				72F37E2F1B3BAA73001D8A58 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				4B45C5091B4B67C8000712CC /* MapViewController.m in Sources */,
 				726FA2311B43B57E00D1A2DE /* CardbagViewController.m in Sources */,
 				4B65143A1B43CFE6007C5E0F /* ExchangeViewController.m in Sources */,
 			);
