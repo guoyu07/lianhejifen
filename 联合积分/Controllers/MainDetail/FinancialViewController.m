@@ -71,7 +71,7 @@
         UILabel *titleLabel = [GZRControl createLabelWithFrame:CGRectMake(20+i%2*(10+50+(VW1-150)/2), CGRectGetMaxY(rateLabel.frame)+(VH1-100)/4+i/2*((VH1-100)/4+20), 50, 20) Font:15 Text:[titleArr objectAtIndex:i] TextColor:[UIColor grayColor] TextAligent:NSTextAlignmentLeft];
         [bgView1 addSubview:titleLabel];
         
-        UILabel *contentLabel = [GZRControl createLabelWithFrame:CGRectMake(70+i%2*(10+50+(VW1-150)/2), CGRectGetMaxY(rateLabel.frame)+(VH1-100)/4+i/2*((VH1-100)/4+20), (VW1-150)/2, 20) Font:17 Text:[contentArr objectAtIndex:i] TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
+        UILabel *contentLabel = [GZRControl createLabelWithFrame:CGRectMake(70+i%2*(10+50+(VW1-150)/2), CGRectGetMaxY(rateLabel.frame)+(VH1-100)/4+i/2*((VH1-100)/4+20), (VW1-150)/2, 20) Font:15 Text:[contentArr objectAtIndex:i] TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
         [bgView1 addSubview:contentLabel];
     }
     
