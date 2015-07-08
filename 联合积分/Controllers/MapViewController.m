@@ -2,182 +2,100 @@
 //  MapViewController.m
 //  联合积分
 //
-//  Created by kaifabu－2 on 15/7/7.
+//  Created by kaifabu－2 on 15/7/8.
 //  Copyright (c) 2015年 arong. All rights reserved.
 //
 
 #import "MapViewController.h"
-
-@interface MapViewController ()<BMKMapViewDelegate,BMKLocationServiceDelegate>
+@interface MapViewController ()<MAMapViewDelegate>
 {
-    BMKMapManager *_mapManager;
-    BMKMapView *_mapView;
-    BMKLocationService *_locationService;
-    BMKCoordinateRegion *_coordinate ;
-    BMKPointAnnotation* _pointAnnotation;
-
+    MAMapView *_map;
 }
 @end
+
 @implementation MapViewController
 
-- (void)viewDidLoad {
+-(void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    // Do any additional setup after loading the view, typically from a nib.
+    //配置用户Key
+    [MAMapServices sharedServices].apiKey = @"56a4bcc2f6808b10cbaf67132c6aed4d";
+    
+    _map = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))];
+    _map.delegate = self;
+    
+        MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
+        pointAnnotation.coordinate = CLLocationCoordinate2DMake(39.989631, 116.481018);
+        pointAnnotation.title = @"方恒国际";
+        pointAnnotation.subtitle = @"阜通东大街6号";
+    
+    [_map setCenterCoordinate:pointAnnotation.coordinate animated:YES];
+        [_map addAnnotation:pointAnnotation];
+       [self.view addSubview:_map];
+    
+}
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationController.navigationBar.hidden = YES;
+    //    CLLocationCoordinate2D coordinate=CLLocationCoordinate2DMake(40.035139,116.311655);
+    //    CLLocationCoordinate2D coordinate=CLLocationCoordinate2DMake(40.037367,116.370463);
 
-    _mapManager =[[BMKMapManager alloc]init];
     
-    BOOL ret = [_mapManager start:@"8iP7jCLGOAx8hSSs7SaHZdum"  generalDelegate:nil];
-    if (!ret) {
-        NSLog(@"manager start failed!");
-    }
-    
-    [self createNa];
-    
-    [self createMap];
+    //    for (NSInteger i=0; i<20; i++) {
+    //        CLLocationCoordinate2D coordinate1=CLLocationCoordinate2DMake(40.035139+i*0.0005, 116.311655+i*0.01);
+    //        MAPointAnnotation *pin1=[[MAPointAnnotation alloc]init];
+    //        pin1.coordinate=coordinate1;
+    //        pin1.title=[NSString stringWithFormat:@"大头针%d标示",i];
+    //        [_map addAnnotation:pin1];
+    //    }
     
 }
-- (void) viewDidAppear:(BOOL)animated {
-    
-    _mapView =[[BMKMapView alloc]initWithFrame:CGRectMake(0, 69, SCREEN_WIDTH, SCREEN_HEIGHT-69)];
-    
-    _mapView.delegate =self;
-    [self.view addSubview:_mapView];
-    _mapView.showsUserLocation = YES; //是否显示定位图层（即我的位置的小圆点）
-    _mapView.zoomLevel = 15;//地图显示比例
-    _mapView.rotateEnabled = NO; //设置是否可以旋转
-    _mapView.userTrackingMode = BMKUserTrackingModeFollow;
-
-    [self addPointAnnotationlatitude:39.915 longitude:116.404];
-
-    for (int i = 1; i < 6; i++) {
-        BMKPointAnnotation* annotation = [[BMKPointAnnotation alloc]init];
-        CLLocationCoordinate2D coor;
-        coor.latitude = 39.915 + i*0.002;
-        coor.longitude = 116.404 + i*0.002;
-        annotation.coordinate = coor;
-        annotation.title = @"超市";
-        annotation.subtitle =@"地址";
-        [_mapView   addAnnotation:annotation];
-        logdebug(@"%d",i);
+//协议中的方法，用于显示大头针的提示框
+-(MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation
+{
+    static NSString *identifer=@"MyPinId";
+    MAPinAnnotationView *pinView=(MAPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:identifer];
+    if (!pinView) {
+        pinView=[[MAPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:identifer];
+        pinView.canShowCallout=YES;
+        UIView *leftView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 80, 27)];
+        leftView.layer.cornerRadius=10;
+        leftView.layer.masksToBounds=YES;
+        leftView.backgroundColor=[UIColor cyanColor];
+        pinView.leftCalloutAccessoryView=leftView;
         
+        UIButton *button=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+        button.frame=CGRectMake(0, 0, 80, 40);
+        [button setBackgroundColor:[UIColor yellowColor]];
+        [button setTitle:@"come on" forState:UIControlStateNormal];
+        button.layer.cornerRadius=10;
+        pinView.rightCalloutAccessoryView=button;
+        pinView.animatesDrop=YES;
+        pinView.pinColor=MAPinAnnotationColorPurple;//大头针的颜色
+        pinView.draggable=YES;//是否能拖走
         
+    }else{
+        pinView.annotation=annotation;
     }
-    
-    
+    return pinView;
 }
--(void)createNa
+
+-(void)mapView:(MAMapView *)mapView annotationView:(MAAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
-    
-    UIView *naView =[[UIView alloc]initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH,49 )];
-    
-    naView.backgroundColor =[UIColor whiteColor];
-    [self.view addSubview:naView];
-    
-    UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [leftButton setFrame:CGRectMake(10, 10,30, 30)];
-    [leftButton setBackgroundImage:[UIImage imageNamed:@"u532"] forState:UIControlStateNormal];
-    [leftButton addTarget:self action:@selector(leftButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-    [naView addSubview:leftButton];
-    
-    UILabel *titleLabel =[GZRControl createLabelWithFrame:CGRectMake(SCREEN_WIDTH/6-10, 0, SCREEN_WIDTH-SCREEN_WIDTH/6, 49) Font:17 Text:@"附近的超市" TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
-    
-    [naView addSubview:titleLabel];
-    
-}
--(void)leftButtonClick:(UIButton *)btn
-{
+    CLLocationCoordinate2D coordinate=view.annotation.coordinate;
+    NSLog(@"经度:%f 纬度:%f",coordinate.latitude,coordinate.longitude);
+    NSLog(@"待我去这里%@",view.annotation.title);
     
     
 }
 
--(void)createMap
-{
-
-    _locationService =[[BMKLocationService alloc]init];
-    _locationService.delegate =self;
-    [BMKLocationService setLocationDistanceFilter:100];
-    [_locationService startUserLocationService];
-    
-    
-  
-    
-}
-
-#pragma mark 用户位置更新后，会调用此函数
-- (void)didUpdateUserLocation:(BMKUserLocation *)userLocation
-{
-    [_mapView updateLocationData:userLocation];
-}
-
-/**
- *在地图View停止定位后，会调用此函数
- *@param mapView 地图View
- 
- */
-- (void)didStopLocatingUser
-{
-    NSLog(@"stop locate");
-}
-
-/**
- *定位失败后，会调用此函数
- *@param mapView 地图View
- *@param error 错误号，参考CLError.h中定义的错误号
- */
-- (void)didFailToLocateUserWithError:(NSError *)error
-{
-    NSLog(@"location error");
-}
-
-
-//添加标注
-- (void)addPointAnnotationlatitude:( CGFloat)lat longitude:(CGFloat)lon
-{
-      BMKPointAnnotation  *pointAnnotation = [[BMKPointAnnotation alloc]init];
-        CLLocationCoordinate2D coor;
-        coor.latitude =lat ;
-        coor.longitude = lon;
-        pointAnnotation.coordinate = coor;
-        pointAnnotation.title = @"test";
-        pointAnnotation.subtitle = @"天安门";
-    
-    [_mapView setCenterCoordinate:coor animated:YES];
-    [_mapView addAnnotation:pointAnnotation];
-    
-}
-
-// 根据anntation生成对应的View
-- (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
-{
-    //普通annotation
-        NSString *AnnotationViewID = @"renameMark";
-        BMKPinAnnotationView *annotationView = (BMKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:AnnotationViewID];
-        if (annotationView == nil) {
-            annotationView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationViewID];
-            // 设置颜色
-            annotationView.pinColor = BMKPinAnnotationColorPurple;
-            // 从天上掉下效果
-            annotationView.animatesDrop = YES;
-            // 设置可拖拽
-            annotationView.draggable = YES;
-            
-        }
-        return annotationView;
-    
-    
-}
-
-// 当点击annotation view弹出的泡泡时，调用此接口
-- (void)mapView:(BMKMapView *)mapView annotationViewForBubble:(BMKAnnotationView *)view;
-{
-    NSLog(@"paopaoclick");
-    
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 /*
 #pragma mark - Navigation
 

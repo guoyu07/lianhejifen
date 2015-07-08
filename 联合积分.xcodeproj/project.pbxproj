@@ -7,20 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B45C5091B4B67C8000712CC /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B45C5081B4B67C8000712CC /* MapViewController.m */; };
 		4B6514361B43C7B7007C5E0F /* PaymentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6514341B43C7B7007C5E0F /* PaymentCell.m */; };
 		4B6514371B43C7B7007C5E0F /* PaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6514351B43C7B7007C5E0F /* PaymentCell.xib */; };
 		4B65143A1B43CFE6007C5E0F /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6514391B43CFE6007C5E0F /* ExchangeViewController.m */; };
 		4B65143E1B43DAA1007C5E0F /* ExchangeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B65143C1B43DAA1007C5E0F /* ExchangeCell.m */; };
 		4B65143F1B43DAA1007C5E0F /* ExchangeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B65143D1B43DAA1007C5E0F /* ExchangeCell.xib */; };
-		4B825BA81B4A5A110047575C /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B825BA71B4A5A110047575C /* BaiduMapAPI.framework */; };
 		4B825BAA1B4A5A5D0047575C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B825BA91B4A5A5D0047575C /* CoreLocation.framework */; };
 		4B825BAC1B4A5A740047575C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B825BAB1B4A5A740047575C /* QuartzCore.framework */; };
 		4B825BAE1B4A5A7F0047575C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B825BAD1B4A5A7F0047575C /* OpenGLES.framework */; };
 		4B825BB01B4A5A930047575C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B825BAF1B4A5A930047575C /* SystemConfiguration.framework */; };
 		4B825BB21B4A5A9F0047575C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B825BB11B4A5A9F0047575C /* CoreGraphics.framework */; };
 		4B825BB41B4A5AA90047575C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B825BB31B4A5AA90047575C /* Security.framework */; };
-		4B825BB61B4A5B690047575C /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4B825BB51B4A5B690047575C /* mapapi.bundle */; };
+		4BE584EA1B4CC621009ACDDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE584E91B4CC621009ACDDB /* UIKit.framework */; };
+		4BE584EC1B4CC62E009ACDDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE584EB1B4CC62E009ACDDB /* Foundation.framework */; };
+		4BE584EE1B4CC655009ACDDB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE584ED1B4CC655009ACDDB /* libz.dylib */; };
+		4BE584F01B4CC664009ACDDB /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE584EF1B4CC664009ACDDB /* libstdc++.6.0.9.dylib */; };
+		4BE584F91B4CCADC009ACDDB /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE584F81B4CCADC009ACDDB /* MapViewController.m */; };
+		4BE584FD1B4CCCBD009ACDDB /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4BE584FC1B4CCCBD009ACDDB /* AMap.bundle */; };
+		4BE585011B4CCEF2009ACDDB /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE585001B4CCEF2009ACDDB /* MAMapKit.framework */; };
 		4BF858CF1B44CE1C004717D8 /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF858CE1B44CE1C004717D8 /* BuyViewController.m */; };
 		4BF858D31B44E03D004717D8 /* HistoryBuyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF858D11B44E03D004717D8 /* HistoryBuyCell.m */; };
 		4BF858D41B44E03D004717D8 /* HistoryBuyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BF858D21B44E03D004717D8 /* HistoryBuyCell.xib */; };
@@ -242,30 +246,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
-		4B45C5071B4B67C8000712CC /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		4B45C5081B4B67C8000712CC /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		4B6514331B43C7B7007C5E0F /* PaymentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentCell.h; sourceTree = "<group>"; };
-		4B6514341B43C7B7007C5E0F /* PaymentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentCell.m; sourceTree = "<group>"; };
-		4B6514351B43C7B7007C5E0F /* PaymentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentCell.xib; sourceTree = "<group>"; };
-=======
 		4B6514331B43C7B7007C5E0F /* PaymentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentCell.h; path = ../PaymentCell.h; sourceTree = "<group>"; };
 		4B6514341B43C7B7007C5E0F /* PaymentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentCell.m; path = ../PaymentCell.m; sourceTree = "<group>"; };
 		4B6514351B43C7B7007C5E0F /* PaymentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PaymentCell.xib; path = ../PaymentCell.xib; sourceTree = "<group>"; };
->>>>>>> b52674b432e6c3f10013799dd4376683f5f3aa13
 		4B6514381B43CFE6007C5E0F /* ExchangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeViewController.h; sourceTree = "<group>"; };
 		4B6514391B43CFE6007C5E0F /* ExchangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeViewController.m; sourceTree = "<group>"; };
 		4B65143B1B43DAA1007C5E0F /* ExchangeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExchangeCell.h; path = ../ExchangeCell.h; sourceTree = "<group>"; };
 		4B65143C1B43DAA1007C5E0F /* ExchangeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExchangeCell.m; path = ../ExchangeCell.m; sourceTree = "<group>"; };
 		4B65143D1B43DAA1007C5E0F /* ExchangeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExchangeCell.xib; path = ../ExchangeCell.xib; sourceTree = "<group>"; };
-		4B825BA71B4A5A110047575C /* BaiduMapAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI.framework; sourceTree = "<group>"; };
 		4B825BA91B4A5A5D0047575C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4B825BAB1B4A5A740047575C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4B825BAD1B4A5A7F0047575C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		4B825BAF1B4A5A930047575C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4B825BB11B4A5A9F0047575C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4B825BB31B4A5AA90047575C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		4B825BB51B4A5B690047575C /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = ../Controllers/mapapi.bundle; sourceTree = "<group>"; };
+		4BE584E91B4CC621009ACDDB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4BE584EB1B4CC62E009ACDDB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4BE584ED1B4CC655009ACDDB /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		4BE584EF1B4CC664009ACDDB /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		4BE584F71B4CCADC009ACDDB /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		4BE584F81B4CCADC009ACDDB /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		4BE584FC1B4CCCBD009ACDDB /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
+		4BE585001B4CCEF2009ACDDB /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
 		4BF858CD1B44CE1C004717D8 /* BuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyViewController.h; sourceTree = "<group>"; };
 		4BF858CE1B44CE1C004717D8 /* BuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyViewController.m; sourceTree = "<group>"; };
 		4BF858D01B44E03D004717D8 /* HistoryBuyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryBuyCell.h; path = ../HistoryBuyCell.h; sourceTree = "<group>"; };
@@ -535,13 +537,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BE584F01B4CC664009ACDDB /* libstdc++.6.0.9.dylib in Frameworks */,
+				4BE584EE1B4CC655009ACDDB /* libz.dylib in Frameworks */,
+				4BE585011B4CCEF2009ACDDB /* MAMapKit.framework in Frameworks */,
+				4BE584EC1B4CC62E009ACDDB /* Foundation.framework in Frameworks */,
+				4BE584EA1B4CC621009ACDDB /* UIKit.framework in Frameworks */,
 				4B825BB41B4A5AA90047575C /* Security.framework in Frameworks */,
 				4B825BB21B4A5A9F0047575C /* CoreGraphics.framework in Frameworks */,
 				4B825BB01B4A5A930047575C /* SystemConfiguration.framework in Frameworks */,
 				4B825BAE1B4A5A7F0047575C /* OpenGLES.framework in Frameworks */,
 				4B825BAC1B4A5A740047575C /* QuartzCore.framework in Frameworks */,
 				4B825BAA1B4A5A5D0047575C /* CoreLocation.framework in Frameworks */,
-				4B825BA81B4A5A110047575C /* BaiduMapAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,13 +564,17 @@
 		4B825BA61B4A59C70047575C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4BE585001B4CCEF2009ACDDB /* MAMapKit.framework */,
+				4BE584EF1B4CC664009ACDDB /* libstdc++.6.0.9.dylib */,
+				4BE584ED1B4CC655009ACDDB /* libz.dylib */,
+				4BE584EB1B4CC62E009ACDDB /* Foundation.framework */,
+				4BE584E91B4CC621009ACDDB /* UIKit.framework */,
 				4B825BB31B4A5AA90047575C /* Security.framework */,
 				4B825BB11B4A5A9F0047575C /* CoreGraphics.framework */,
 				4B825BAF1B4A5A930047575C /* SystemConfiguration.framework */,
 				4B825BAD1B4A5A7F0047575C /* OpenGLES.framework */,
 				4B825BAB1B4A5A740047575C /* QuartzCore.framework */,
 				4B825BA91B4A5A5D0047575C /* CoreLocation.framework */,
-				4B825BA71B4A5A110047575C /* BaiduMapAPI.framework */,
 			);
 			name = Frameworks;
 			path = "联合积分/Frameworks";
@@ -717,8 +727,8 @@
 			children = (
 				726266C81B39653100B3302D /* RootViewController.h */,
 				726266C91B39653100B3302D /* RootViewController.m */,
-				4B45C5071B4B67C8000712CC /* MapViewController.h */,
-				4B45C5081B4B67C8000712CC /* MapViewController.m */,
+				4BE584F71B4CCADC009ACDDB /* MapViewController.h */,
+				4BE584F81B4CCADC009ACDDB /* MapViewController.m */,
 				72FE37F91B46700000B2537E /* login */,
 				72FE37FA1B46700000B2537E /* register */,
 				72E4581F1B4439AC004AAF09 /* sellORpurchase */,
@@ -753,7 +763,7 @@
 		729F9D231B3FFEF200741CC5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				4B825BB51B4A5B690047575C /* mapapi.bundle */,
+				4BE584FC1B4CCCBD009ACDDB /* AMap.bundle */,
 				726FA2501B43B5DB00D1A2DE /* bg.png */,
 				726FA24C1B43B5CB00D1A2DE /* 卡包.png */,
 				726FA24D1B43B5CB00D1A2DE /* 更多.png */,
@@ -1103,7 +1113,6 @@
 				726FA1861B42306000D1A2DE /* u37.png in Resources */,
 				726FA24F1B43B5CB00D1A2DE /* 更多.png in Resources */,
 				726FA1AA1B42306000D1A2DE /* u233.png in Resources */,
-				4B825BB61B4A5B690047575C /* mapapi.bundle in Resources */,
 				4BF858D41B44E03D004717D8 /* HistoryBuyCell.xib in Resources */,
 				726FA1BB1B42306000D1A2DE /* u406.png in Resources */,
 				726FA1DA1B42306000D1A2DE /* u688_line.png in Resources */,
@@ -1118,6 +1127,7 @@
 				726FA1881B42306000D1A2DE /* u46.png in Resources */,
 				726FA2451B43B59400D1A2DE /* VolumeCell.xib in Resources */,
 				726FA1EE1B42306000D1A2DE /* u824.png in Resources */,
+				4BE584FD1B4CCCBD009ACDDB /* AMap.bundle in Resources */,
 				726FA1F41B42306000D1A2DE /* u926.png in Resources */,
 				726FA1CC1B42306000D1A2DE /* u617.png in Resources */,
 				726FA17B1B42306000D1A2DE /* u2.png in Resources */,
@@ -1294,6 +1304,7 @@
 				72F37E2E1B3BAA73001D8A58 /* AFURLSessionManager.m in Sources */,
 				4B6514361B43C7B7007C5E0F /* PaymentCell.m in Sources */,
 				72E85F451B453BC400ECB862 /* FinancialViewController.m in Sources */,
+				4BE584F91B4CCADC009ACDDB /* MapViewController.m in Sources */,
 				72F37E2C1B3BAA73001D8A58 /* AFURLRequestSerialization.m in Sources */,
 				7258974B1B3AA9BD002098E2 /* CustomView.m in Sources */,
 				72F37E351B3BAA73001D8A58 /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -1327,7 +1338,6 @@
 				726FA23F1B43B59400D1A2DE /* CardCell.m in Sources */,
 				726FA2441B43B59400D1A2DE /* VolumeCell.m in Sources */,
 				72F37E2F1B3BAA73001D8A58 /* AFNetworkActivityIndicatorManager.m in Sources */,
-				4B45C5091B4B67C8000712CC /* MapViewController.m in Sources */,
 				726FA2311B43B57E00D1A2DE /* CardbagViewController.m in Sources */,
 				4B65143A1B43CFE6007C5E0F /* ExchangeViewController.m in Sources */,
 			);
@@ -1448,12 +1458,15 @@
 		726266BF1B395C4200B3302D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/联合积分/Frameworks",
+					"/Users/kaifabu-2/Downloads",
+					"$(PROJECT_DIR)/联合积分/Images",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/联合积分/PrefixHeader.pch";
 				INFOPLIST_FILE = "联合积分/Info.plist";
@@ -1469,12 +1482,15 @@
 		726266C01B395C4200B3302D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/联合积分/Frameworks",
+					"/Users/kaifabu-2/Downloads",
+					"$(PROJECT_DIR)/联合积分/Images",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/联合积分/PrefixHeader.pch";
 				INFOPLIST_FILE = "联合积分/Info.plist";

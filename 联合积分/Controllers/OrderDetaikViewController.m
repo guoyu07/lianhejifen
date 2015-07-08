@@ -97,7 +97,7 @@
     }
 
     
-    UIButton *relationButton = [GZRControl createButtonWithFrame:CGRectMake(10, 89+i*40,SCREEN_WIDTH-20, (SCREEN_HEIGHT-89-i*40-30)/2) ImageName:@"" Target:self Action:@selector(relationButtonClick:) Title:@"联系商家" titleColor: [UIColor blackColor]backColor:[UIColor whiteColor] cornerRadius:0 masks:YES];
+    UIButton *relationButton = [GZRControl createButtonWithFrame:CGRectMake(10, 89+i*40,SCREEN_WIDTH-20, 100) ImageName:@"" Target:self Action:@selector(relationButtonClick:) Title:@"联系商家" titleColor: [UIColor blackColor]backColor:[UIColor whiteColor] cornerRadius:0 masks:YES];
     relationButton.titleLabel.font =[UIFont systemFontOfSize:20];
     
     relationButton.layer.borderWidth = 1.0;//边框
@@ -105,7 +105,7 @@
 
     [self.view addSubview:relationButton];
     
-        UIButton *refundButton = [GZRControl createButtonWithFrame:CGRectMake(10, 89+i*40+(SCREEN_HEIGHT-89-i*40-30)/2+10,SCREEN_WIDTH-20, (SCREEN_HEIGHT-89-i*40-30)/2) ImageName:@"" Target:self Action:@selector(refundButtonClick:) Title:@"申请退款" titleColor: [UIColor redColor]backColor:[UIColor whiteColor] cornerRadius:0 masks:YES];
+        UIButton *refundButton = [GZRControl createButtonWithFrame:CGRectMake(10, 89+i*40+120,SCREEN_WIDTH-20, 100) ImageName:@"" Target:self Action:@selector(refundButtonClick:) Title:@"申请退款" titleColor: [UIColor redColor]backColor:[UIColor whiteColor] cornerRadius:0 masks:YES];
     
     refundButton.titleLabel.font =[UIFont systemFontOfSize:20];
     refundButton.layer.borderWidth = 1.0;//边框

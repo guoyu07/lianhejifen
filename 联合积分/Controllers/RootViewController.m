@@ -18,7 +18,6 @@
 #import "FinancialViewController.h"
 #import "BuyViewController.h"
 #import "EarnViewController.h"
-
 @interface RootViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 {
     UILabel         *_sourceLabel;     // 导航中显示积分的label标签
@@ -347,7 +346,6 @@
                 VC.titleName = @"极速注册";
                 [self.navigationController pushViewController:VC animated:YES];
             }
-            
             
         }
             break;

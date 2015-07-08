@@ -22,9 +22,11 @@
     
     RootViewController *root =[[RootViewController alloc]init];
 //    RegisterViewController *root = [[RegisterViewController alloc] init];
-    
     UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:root];
-    self.window.rootViewController = nav;
+    MapViewController *map =[[MapViewController alloc]init];
+    
+    self.window.rootViewController = map;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
