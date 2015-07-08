@@ -7,13 +7,17 @@
 //
 
 #import "ConsumeViewController.h"
+#import "ChooseView.h"
 
 @interface ConsumeViewController ()<UIScrollViewDelegate>
 {
+    UIScrollView  *_bgScrollView;
     UIPageControl *_pageControl;    // 页码指示器
     NSInteger     *_currentIndex;   // 标记当前页
     
     NSMutableArray *_btnArray;      // 存储操作按钮
+    
+    ChooseView     *_chooseView;    // 承载选择项的view视图
 }
 @end
 
@@ -23,9 +27,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    UIView *bgView = [GZRControl viewWithFrame:CGRectMake(0, 69, SCREEN_WIDTH, SCREEN_HEIGHT-69) bgColor:RGBCOLOR(235, 235, 235) cornerRadius:0 masks:NO];
-    [self.view addSubview:bgView];
     
+    [self configRootView];
     [self prepareData];
     [self createNav];
     if (self.isVouchers) {
@@ -44,6 +47,7 @@
     [navView addSubview:backBtn];
     
     UILabel *titleLabel = [GZRControl createLabelWithFrame:CGRectMake(35, 15, SCREEN_WIDTH-35, 20) Font:17 Text:self.titleName TextColor:[UIColor whiteColor] TextAligent:NSTextAlignmentLeft];
+    titleLabel.numberOfLines = 1;
     [navView addSubview:titleLabel];
 }
 
@@ -59,18 +63,44 @@
     _btnArray = [[NSMutableArray alloc] init];
 }
 
+- (void)configRootView {
+    UIView *bgView = [GZRControl viewWithFrame:CGRectMake(0, 69, SCREEN_WIDTH, SCREEN_HEIGHT-69) bgColor:RGBCOLOR(235, 235, 235) cornerRadius:0 masks:NO];
+    [self.view addSubview:bgView];
+    
+    _bgScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 69, SCREEN_WIDTH, SCREEN_HEIGHT-69-49)];
+    _bgScrollView.showsHorizontalScrollIndicator = NO;
+    _bgScrollView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:_bgScrollView];
+    
+    NSArray *colorArr = [NSArray arrayWithObjects:@"水蓝色",@"黄色",@"粉色", nil];
+    NSArray *sizeArr = [NSArray arrayWithObjects:@"1.2m",@"1.35m",@"1.5m",@"1.8m", nil];
+    _chooseView = [[ChooseView alloc] init];
+    _chooseView.frame = CGRectMake(0, 69, SCREEN_WIDTH, 300);
+    _chooseView.backgroundColor = [UIColor brownColor];
+    _chooseView.nameArray = [NSMutableArray arrayWithObjects:@"颜色",@"尺寸", nil];
+    _chooseView.contentArray = [NSMutableArray arrayWithObjects:colorArr,sizeArr, nil];
+    [_chooseView createUI];
+    [self.view addSubview:_chooseView];
+    
+}
+
 /**
  *  创建商品展示视图
  */
 - (void)createGoodsView {
-    UIView *bgView1 = [GZRControl viewWithFrame:CGRectMake(0, 69, SCREEN_WIDTH, (SCREEN_HEIGHT-69-20-49)*4/9) bgColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
-    [self.view addSubview:bgView1];
+    UIView *bgView1 = [GZRControl viewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, (SCREEN_HEIGHT-69-20-49)*4/9) bgColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
+    [_bgScrollView addSubview:bgView1];
     
     UIView *bgView2 = [GZRControl viewWithFrame:CGRectMake(0, CGRectGetMaxY(bgView1.frame)+10, SCREEN_WIDTH, (SCREEN_HEIGHT-69-20-49)*2/9) bgColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
-    [self.view addSubview:bgView2];
+    [_bgScrollView addSubview:bgView2];
     
-    UIView *bgView3 = [GZRControl viewWithFrame:CGRectMake(0, CGRectGetMaxY(bgView2.frame)+10, SCREEN_WIDTH, (SCREEN_HEIGHT-69-20-49)*3/9) bgColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
-    [self.view addSubview:bgView3];
+    UIView *bgViewAdd = [GZRControl viewWithFrame:CGRectMake(0, CGRectGetMaxY(bgView2.frame)+10, SCREEN_WIDTH, 50) bgColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
+    [_bgScrollView addSubview:bgViewAdd];
+    
+    UIView *bgView3 = [GZRControl viewWithFrame:CGRectMake(0, CGRectGetMaxY(bgViewAdd.frame)+10, SCREEN_WIDTH, 200) bgColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
+    [_bgScrollView addSubview:bgView3];
+    
+    _bgScrollView.contentSize = CGSizeMake(SCREEN_WIDTH, CGRectGetMaxY(bgView3.frame));
     
     UIButton *confirmBtn = [GZRControl createButtonWithFrame:CGRectMake(0, SCREEN_HEIGHT-49, SCREEN_WIDTH, 49) ImageName:nil Target:self Action:@selector(confirmBtnClicked) Title:@"确认兑换" titleColor:[UIColor whiteColor] backColor:RGBCOLOR(228, 35, 117) cornerRadius:0 masks:NO];
     [self.view addSubview:confirmBtn];
@@ -119,6 +149,15 @@
     lineLabel.transform = CGAffineTransformRotate(lineLabel.transform, 3.0);
     [bgView2 addSubview:lineLabel];
     
+    UILabel *chooseLabel = [GZRControl createLabelWithFrame:CGRectMake(20, 10, 150, 30) Font:15 Text:@"选择颜色、尺寸" TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
+    [bgViewAdd addSubview:chooseLabel];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureClicked)];
+    [bgViewAdd addGestureRecognizer:tap];
+    UIImageView *arrowImage = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH-40, 10, 30, 30)];
+    [arrowImage setImage:[UIImage imageNamed:@"u532"]];
+    arrowImage.transform = CGAffineTransformRotate(arrowImage.transform, 3.1);
+    [bgViewAdd addSubview:arrowImage];
+    
     /************创建商品说明视图***************/
     NSArray *nameArray = [NSArray arrayWithObjects:@"商品毛重：200.00g",@"偏光性：非偏光镜架",@"商品产地：意大利",@"材质：金属",@"人群：男式",@"功能：太阳镜镜片",@"风格：休闲",@"颜色：金色", nil];
     NSMutableArray *labelArr = [[NSMutableArray alloc] init];
@@ -128,8 +167,8 @@
         [labelArr addObject:explainLabel];
     }
     UILabel *lastLabel = [labelArr lastObject];
-    NSInteger serveH = bgView3.frame.size.height - CGRectGetMaxY(lastLabel.frame)+5;
-    UILabel *serveLabel = [GZRControl createLabelWithFrame:CGRectMake(20, bgView3.frame.size.height-5-serveH, SCREEN_WIDTH-40, serveH) Font:15 Text:@"服务：由雷朋官方旗舰店负责发货，并提供售后服务。16:00前完成下单，预计晚饭后到达" TextColor:[UIColor grayColor] TextAligent:NSTextAlignmentLeft];
+//    NSInteger serveH = bgView3.frame.size.height - CGRectGetMaxY(lastLabel.frame)+5;
+    UILabel *serveLabel = [GZRControl createLabelWithFrame:CGRectMake(20, CGRectGetMaxY(lastLabel.frame)+5, SCREEN_WIDTH-40, 80) Font:15 Text:@"服务：由雷朋官方旗舰店负责发货，并提供售后服务。16:00前完成下单，预计晚饭后到达" TextColor:[UIColor grayColor] TextAligent:NSTextAlignmentLeft];
     serveLabel.numberOfLines = 0;
     [bgView3 addSubview:serveLabel];
 }
@@ -197,6 +236,11 @@
     }
 }
 
+- (void)tapGestureClicked {
+    
+    
+}
+
 /**
  *  选择金额
  */
@@ -209,8 +253,6 @@
             currentBtn.selected = NO;
         }
     }
-    
-    
     
 }
 
