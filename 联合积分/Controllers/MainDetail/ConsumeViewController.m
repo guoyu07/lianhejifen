@@ -31,9 +31,9 @@
     [self configRootView];
     [self prepareData];
     [self createNav];
-    if (self.isVouchers) {
+    if (self.isVouchers) {  // 显示商品展示视图
         [self createVouchersView];
-    } else {
+    } else {    // 显示代金券展示视图
         [self createGoodsView];
     }
 }
@@ -78,14 +78,20 @@
     
     NSArray *colorArr = [NSArray arrayWithObjects:@"水蓝色",@"黄色",@"粉色", nil];
     NSArray *sizeArr = [NSArray arrayWithObjects:@"1.2m",@"1.35m",@"1.5m",@"1.8m", nil];
+    NSArray *moneyArr = [NSArray arrayWithObjects:@"10",@"50",@"100", nil];
     _chooseView = [[ChooseView alloc] init];
     _chooseView.frame = CGRectMake(0, 69, 0, 0);
     _chooseView.backgroundColor = [UIColor whiteColor];
     _chooseView.layer.borderColor = [[UIColor grayColor] CGColor];
     _chooseView.layer.borderWidth = 1.0;
     _chooseView.delegate = self;
-    _chooseView.nameArray = [NSMutableArray arrayWithObjects:@"颜色",@"尺寸",@"数量", nil];
-    _chooseView.contentArray = [NSMutableArray arrayWithObjects:colorArr,sizeArr, nil];
+    if (!self.isVouchers) {
+        _chooseView.nameArray = [NSMutableArray arrayWithObjects:@"颜色",@"尺寸",@"数量", nil];
+        _chooseView.contentArray = [NSMutableArray arrayWithObjects:colorArr,sizeArr, nil];
+    } else {
+        _chooseView.nameArray = [NSMutableArray arrayWithObjects:@"金额",@"数量", nil];
+        _chooseView.contentArray = [NSMutableArray arrayWithObjects:moneyArr, nil];
+    }
     [_chooseView createUI];
     [self.view addSubview:_chooseView];
     
@@ -180,18 +186,20 @@
  *  创建代金券展示视图
  */
 - (void)createVouchersView {
-    UIView *bgView1 = [GZRControl viewWithFrame:CGRectMake(0, 69, SCREEN_WIDTH, (SCREEN_HEIGHT-69-49-30)/5) bgColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
-    [self.view addSubview:bgView1];
+    UIView *bgView1 = [GZRControl viewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, (SCREEN_HEIGHT-69-49-30)/5) bgColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
+    [_bgScrollView addSubview:bgView1];
     
-    UIView *bgView2 = [GZRControl viewWithFrame:CGRectMake(0, CGRectGetMaxY(bgView1.frame)+10, SCREEN_WIDTH, (SCREEN_HEIGHT-69-49-30)/5) bgColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
-    [self.view addSubview:bgView2];
+    UIView *bgView2 = [GZRControl viewWithFrame:CGRectMake(0, CGRectGetMaxY(bgView1.frame)+10, SCREEN_WIDTH, 50) bgColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
+    [_bgScrollView addSubview:bgView2];
     
     UIView *bgView3 = [GZRControl viewWithFrame:CGRectMake(0, CGRectGetMaxY(bgView2.frame)+10, SCREEN_WIDTH, (SCREEN_HEIGHT-69-49-30)*2/5) bgColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
-    [self.view addSubview:bgView3];
+    [_bgScrollView addSubview:bgView3];
     
-    UIView *bgView4 = [GZRControl viewWithFrame:CGRectMake(0, CGRectGetMaxY(bgView3.frame)+10, SCREEN_WIDTH, (SCREEN_HEIGHT-69-49-30)/5) bgColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
-    [self.view addSubview:bgView4];
     
+    UIView *bgView4 = [GZRControl viewWithFrame:CGRectMake(0, CGRectGetMaxY(bgView3.frame)+10, SCREEN_WIDTH, 50+80*3) bgColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
+    [_bgScrollView addSubview:bgView4];
+    
+    _bgScrollView.contentSize = CGSizeMake(SCREEN_WIDTH, CGRectGetMaxY(bgView4.frame));
     
     /*********创建内容视图1**********/
     UILabel *nameLabel = [GZRControl createLabelWithFrame:CGRectMake(20, (bgView1.frame.size.height-40)/3, 120, 20) Font:17 Text:self.titleName TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
@@ -212,30 +220,40 @@
     [bgView1 addSubview:lineLabel];
     
     /**************创建内容视图2****************/
-    UILabel *titleLabel = [GZRControl createLabelWithFrame:CGRectMake(20, (bgView2.frame.size.height-60)/3, 80, 20) Font:15 Text:@"选择金额" TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
+    UILabel *titleLabel = [GZRControl createLabelWithFrame:CGRectMake(20, 15, 80, 20) Font:15 Text:@"选择金额" TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
     [bgView2 addSubview:titleLabel];
+    UIImageView *arrowImage = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH-40, 10, 30, 30)];
+    [arrowImage setImage:[UIImage imageNamed:@"u532"]];
+    arrowImage.transform = CGAffineTransformRotate(arrowImage.transform, 3.1);
+    [bgView2 addSubview:arrowImage];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureClicked)];
+    [bgView2 addGestureRecognizer:tap];
+
+    /***********创建内容视图3***********/
+    UILabel *introduceLabel = [GZRControl createLabelWithFrame:CGRectMake(20, 20, 50, 20) Font:15 Text:@"介绍" TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
+    [bgView3 addSubview:introduceLabel];
     
-    NSArray *moneyArr = [NSArray arrayWithObjects:@"10",@"20",@"50",@"100",@"200", nil];
-    NSInteger spw = (SCREEN_WIDTH-40-100)/4;
-    for (int i=0; i<5; i++) {
-        UIButton *chooseBtn = [GZRControl createButtonWithFrame:CGRectMake(20+(spw+20)*i, (bgView2.frame.size.height-60)/3*2+20, 20, 20) ImageName:@"u1147" Target:self Action:@selector(chooseBtnClicked:) Title:nil titleColor:[UIColor clearColor] backColor:[UIColor clearColor] cornerRadius:0 masks:NO];
-        [chooseBtn setBackgroundImage:[UIImage imageNamed:@"u1153"] forState:UIControlStateSelected];
-        if (i==0) {
-            chooseBtn.selected = YES;
-        }
-        chooseBtn.tag = 111+i;
-        [bgView2 addSubview:chooseBtn];
-        [_btnArray addObject:chooseBtn];
-        
-        UILabel *moneyLabel = [GZRControl createLabelWithFrame:CGRectMake(20+(spw+20)*i, (bgView2.frame.size.height-60)/3*2+40, 20, 20) Font:10 Text:[moneyArr objectAtIndex:i] TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentCenter];
-        [bgView2 addSubview:moneyLabel];
-        
-        if (i<4) {
-            UILabel *spaceLabel = [[UILabel alloc] initWithFrame:CGRectMake(40+(spw+20)*i, (bgView2.frame.size.height-60)/3*2+29, spw, 1)];
-            [spaceLabel setBackgroundColor:[UIColor lightGrayColor]];
-            [bgView2 addSubview:spaceLabel];
-        }
-    }
+    UILabel *explainLabel = [GZRControl createLabelWithFrame:CGRectMake(20, CGRectGetMaxY(introduceLabel.frame)+10, SCREEN_WIDTH-40, bgView3.frame.size.height-60) Font:15 Text:@"Lorem ipsum dolor sit amet,consectetur adipiscing elit.Aenean euismod basdf ksdk  wkjenf sajnianf jnsdi dkakmtua jndiak  kdfiwka df xi  is akne xijfkoas ki pwnduajdn nnin idnkmeia kdosan jasifk xkai aijdjnfuidfaj dfnewkmiwa iuaoi. AOnfad asdn idnxlawe asd,kaidn valk" TextColor:[UIColor lightGrayColor] TextAligent:NSTextAlignmentJustified];
+    [bgView3 addSubview:explainLabel];
+    
+    /**************创建内容视图4***************/
+    UILabel *shopLabel = [GZRControl createLabelWithFrame:CGRectMake(20, 20, 80, 20) Font:15 Text:@"商家信息" TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
+    [bgView4 addSubview:shopLabel];
+    
+    UIButton *checkMapBtn = [GZRControl createButtonWithFrame:CGRectMake(SCREEN_WIDTH-100, 20, 80, 20) ImageName:nil Target:self Action:@selector(checkMapBtnClicked) Title:@"查看地图" titleColor:RGBCOLOR(228, 35, 117) backColor:[UIColor clearColor] cornerRadius:0 masks:NO];
+    checkMapBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+    [checkMapBtn setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    [bgView4 addSubview:checkMapBtn];
+    
+    
+   
+}
+
+/**
+ *  点击查看地图信息
+ */
+- (void)checkMapBtnClicked {
+    
 }
 
 - (void)tapGestureClicked {
@@ -245,25 +263,11 @@
 }
 
 /**
- *  选择金额
- */
-- (void)chooseBtnClicked:(UIButton *)btn {
-    
-    for (UIButton *currentBtn in _btnArray) {
-        if (currentBtn.tag == btn.tag) {
-            currentBtn.selected = YES;
-        } else {
-            currentBtn.selected = NO;
-        }
-    }
-    
-}
-
-/**
  *  确认兑换操作响应
  */
 - (void)confirmBtnClicked {
-    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"亲，非常抱歉！系统暂时无法为您提供服务!😢" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+    [alert show];
 }
 
 #pragma mark - scrollView Delegate
@@ -276,7 +280,6 @@
 #pragma mark - ChooseViewDelegate
 - (void)makeViewRectY:(NSInteger)rectY {
     _chooseView.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, rectY);
-    logdebug(@"chooseViewHeight:%ld",rectY);
 }
 
 - (void)confirmAndgetInformation:(NSDictionary *)infoDic {
@@ -287,9 +290,9 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [UIView animateWithDuration:0.5 animations:^{
-        _chooseView.frame = CGRectMake(0, SCREEN_HEIGHT, _chooseView.frame.size.width, _chooseView.frame.size.height);
-    }];
+//    [UIView animateWithDuration:0.5 animations:^{
+//        _chooseView.frame = CGRectMake(0, SCREEN_HEIGHT, _chooseView.frame.size.width, _chooseView.frame.size.height);
+//    }];
 }
 
 - (void)didReceiveMemoryWarning {

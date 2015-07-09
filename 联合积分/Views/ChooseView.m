@@ -11,6 +11,7 @@
 @implementation ChooseView
 {
     NSMutableArray *_labelArr;
+    NSMutableArray *_buttonArr;
     UITextField    *_quantityTextField;
     
     NSMutableDictionary *_buttonDic;
@@ -21,6 +22,7 @@
     if (self) {
 //        [self createUI];
         _labelArr = [[NSMutableArray alloc] init];
+        _buttonArr = [[NSMutableArray alloc] init];
         _buttonDic = [[NSMutableDictionary alloc] init];
     }
     return self;
@@ -55,15 +57,32 @@
     for (int j=0; j<row; j++) {
         NSArray *currentArr = self.contentArray[j];
         UILabel *currentLabel = [_labelArr objectAtIndex:j];
-        for (int i=0; i<currentArr.count; i++) {
-            UIButton *button = [GZRControl createButtonWithFrame:CGRectMake(10+i%3*(5+btnW), (CGRectGetMaxY(currentLabel.frame)+5)+i/3*(5+40), btnW, 40) ImageName:nil Target:self Action:@selector(buttonClicked:) Title:[currentArr objectAtIndex:i] titleColor:[UIColor blackColor] backColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
-            [button setBackgroundImage:[UIImage imageNamed:@"btnBg"] forState:UIControlStateSelected];
-            button.layer.borderColor = [[UIColor grayColor] CGColor];
-            button.layer.borderWidth = 1.0;
-            button.tag = 111 + i;
-            [_buttonDic setValue:button forKey:[NSString stringWithFormat:@"%d",j]];
-            [self addSubview:button];
+        if (j==0) {
+            for (int i=0; i<currentArr.count; i++) {
+                UIButton *button = [GZRControl createButtonWithFrame:CGRectMake(10+i%3*(5+btnW), (CGRectGetMaxY(currentLabel.frame)+5)+i/3*(5+40), btnW, 40) ImageName:nil Target:self Action:@selector(buttonClicked:) Title:[currentArr objectAtIndex:i] titleColor:[UIColor blackColor] backColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
+                [button setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+                [button setBackgroundImage:[UIImage imageNamed:@"btnBg"] forState:UIControlStateSelected];
+                button.layer.borderColor = [[UIColor grayColor] CGColor];
+                button.layer.borderWidth = 1.0;
+                button.tag = 111 + i;
+//                [_buttonDic setValue:button forKey:[NSString stringWithFormat:@"%d",i]];
+                [_buttonArr addObject:button];
+                [self addSubview:button];
+            }
+        } else {
+            for (int i=0; i<currentArr.count; i++) {
+                UIButton *button = [GZRControl createButtonWithFrame:CGRectMake(10+i%3*(5+btnW), (CGRectGetMaxY(currentLabel.frame)+5)+i/3*(5+40), btnW, 40) ImageName:nil Target:self Action:@selector(buttonClicked:) Title:[currentArr objectAtIndex:i] titleColor:[UIColor blackColor] backColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
+                [button setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+                [button setBackgroundImage:[UIImage imageNamed:@"btnBg"] forState:UIControlStateSelected];
+                button.layer.borderColor = [[UIColor grayColor] CGColor];
+                button.layer.borderWidth = 1.0;
+                button.tag = 222 + i;
+//                [_buttonDic setValue:button forKey:[NSString stringWithFormat:@"%d",i]];
+                [_buttonArr addObject:button];
+                [self addSubview:button];
+            }
         }
+        
     }
     
     /**************创建数量选择视图****************/
@@ -83,7 +102,6 @@
     _quantityTextField.layer.borderColor = [[UIColor grayColor] CGColor];
     _quantityTextField.layer.borderWidth = 1.0;
     _quantityTextField.backgroundColor = [UIColor whiteColor];
-//    _quantityTextField.placeholder = @"1";
     _quantityTextField.textAlignment = NSTextAlignmentCenter;
     _quantityTextField.text = @"1";
     [self addSubview:_quantityTextField];
@@ -97,27 +115,30 @@
 }
 
 - (void)buttonClicked:(UIButton *)btn {
-    for (UIButton *currentBtn in _buttonDic) {
-        
-    }
     
-    NSInteger indexSum = self.contentArray.count;
-    for (int j=0; j<indexSum; j++) {
-        UIButton *currentBtn = [_buttonDic valueForKey:[NSString stringWithFormat:@"%d",j]];
-        if (currentBtn.tag == btn.tag) {
-            currentBtn.selected = YES;
+    for (UIButton *currentBtn in _buttonArr) {
+        if (btn.tag < 200) {
+            if (currentBtn.tag == btn.tag) {
+                currentBtn.selected = YES;
+            } else {
+                currentBtn.selected = NO;
+            }
         } else {
-            currentBtn.selected = NO;
+            if (currentBtn.tag == btn.tag) {
+                currentBtn.selected = YES;
+            } else {
+                currentBtn.selected = NO;
+            }
         }
     }
 }
 
 - (void)calculateBtnClicked:(UIButton *)btn {
     if (btn.tag-999 == 0) { // 数量减1
-        if ([_quantityTextField.text intValue] > 0) { // 判断数量是否大于零
+        if ([_quantityTextField.text intValue] > 1) { // 判断数量是否大于零
             _quantityTextField.text = [NSString stringWithFormat:@"%d",[_quantityTextField.text intValue]-1];
         }
-    } else {    // 数量加1
+    } else if ([_quantityTextField.text intValue] < 5){    // 数量加1
         _quantityTextField.text = [NSString stringWithFormat:@"%d",[_quantityTextField.text intValue]+1];
     }
 }

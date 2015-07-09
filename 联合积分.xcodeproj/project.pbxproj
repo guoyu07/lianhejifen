@@ -34,6 +34,7 @@
 		4BF858DF1B451CF6004717D8 /* CardDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF858DE1B451CF6004717D8 /* CardDetailViewController.m */; };
 		720CB2D61B4E0D170066FC49 /* ChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB2D31B4E0D170066FC49 /* ChooseView.m */; };
 		720CB2D71B4E0D170066FC49 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB2D51B4E0D170066FC49 /* CustomView.m */; };
+		720CB2DC1B4E26AC0066FC49 /* btnBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 720CB2DB1B4E26AC0066FC49 /* btnBg.png */; };
 		725897481B3A8B97002098E2 /* GZRControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 725897471B3A8B97002098E2 /* GZRControl.m */; };
 		726266A11B395C4200B3302D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 726266A01B395C4200B3302D /* main.m */; };
 		726266A41B395C4200B3302D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 726266A31B395C4200B3302D /* AppDelegate.mm */; };
@@ -249,8 +250,8 @@
 		4B6514331B43C7B7007C5E0F /* PaymentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentCell.h; path = ../PaymentCell.h; sourceTree = "<group>"; };
 		4B6514341B43C7B7007C5E0F /* PaymentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentCell.m; path = ../PaymentCell.m; sourceTree = "<group>"; };
 		4B6514351B43C7B7007C5E0F /* PaymentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PaymentCell.xib; path = ../PaymentCell.xib; sourceTree = "<group>"; };
-		4B6514381B43CFE6007C5E0F /* ExchangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeViewController.h; sourceTree = "<group>"; };
-		4B6514391B43CFE6007C5E0F /* ExchangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeViewController.m; sourceTree = "<group>"; };
+		4B6514381B43CFE6007C5E0F /* ExchangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExchangeViewController.h; path = ../ExchangeViewController.h; sourceTree = "<group>"; };
+		4B6514391B43CFE6007C5E0F /* ExchangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExchangeViewController.m; path = ../ExchangeViewController.m; sourceTree = "<group>"; };
 		4B65143B1B43DAA1007C5E0F /* ExchangeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExchangeCell.h; path = ../ExchangeCell.h; sourceTree = "<group>"; };
 		4B65143C1B43DAA1007C5E0F /* ExchangeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExchangeCell.m; path = ../ExchangeCell.m; sourceTree = "<group>"; };
 		4B65143D1B43DAA1007C5E0F /* ExchangeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExchangeCell.xib; path = ../ExchangeCell.xib; sourceTree = "<group>"; };
@@ -276,14 +277,15 @@
 		4BF858D51B4507C6004717D8 /* AddCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddCardCell.h; path = ../AddCardCell.h; sourceTree = "<group>"; };
 		4BF858D61B4507C6004717D8 /* AddCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddCardCell.m; path = ../AddCardCell.m; sourceTree = "<group>"; };
 		4BF858D71B4507C6004717D8 /* AddCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddCardCell.xib; path = ../AddCardCell.xib; sourceTree = "<group>"; };
-		4BF858DA1B4509FF004717D8 /* AddCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCardViewController.h; sourceTree = "<group>"; };
-		4BF858DB1B4509FF004717D8 /* AddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCardViewController.m; sourceTree = "<group>"; };
-		4BF858DD1B451CF6004717D8 /* CardDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardDetailViewController.h; sourceTree = "<group>"; };
-		4BF858DE1B451CF6004717D8 /* CardDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardDetailViewController.m; sourceTree = "<group>"; };
+		4BF858DA1B4509FF004717D8 /* AddCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddCardViewController.h; path = ../AddCardViewController.h; sourceTree = "<group>"; };
+		4BF858DB1B4509FF004717D8 /* AddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddCardViewController.m; path = ../AddCardViewController.m; sourceTree = "<group>"; };
+		4BF858DD1B451CF6004717D8 /* CardDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardDetailViewController.h; path = ../CardDetailViewController.h; sourceTree = "<group>"; };
+		4BF858DE1B451CF6004717D8 /* CardDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardDetailViewController.m; path = ../CardDetailViewController.m; sourceTree = "<group>"; };
 		720CB2D21B4E0D170066FC49 /* ChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseView.h; path = "联合积分/Views/ChooseView.h"; sourceTree = SOURCE_ROOT; };
 		720CB2D31B4E0D170066FC49 /* ChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseView.m; path = "联合积分/Views/ChooseView.m"; sourceTree = SOURCE_ROOT; };
 		720CB2D41B4E0D170066FC49 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomView.h; path = "联合积分/Views/CustomView.h"; sourceTree = SOURCE_ROOT; };
 		720CB2D51B4E0D170066FC49 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomView.m; path = "联合积分/Views/CustomView.m"; sourceTree = SOURCE_ROOT; };
+		720CB2DB1B4E26AC0066FC49 /* btnBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnBg.png; sourceTree = "<group>"; };
 		725897421B3A830A002098E2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		725897451B3A8398002098E2 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		725897461B3A8B97002098E2 /* GZRControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZRControl.h; sourceTree = "<group>"; };
@@ -454,12 +456,12 @@
 		726FA20B1B42360E00D1A2DE /* TlistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TlistCell.h; path = ../TlistCell.h; sourceTree = "<group>"; };
 		726FA20C1B42360E00D1A2DE /* TlistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TlistCell.m; path = ../TlistCell.m; sourceTree = "<group>"; };
 		726FA20E1B42362100D1A2DE /* TlistCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TlistCell.xib; path = ../TlistCell.xib; sourceTree = "<group>"; };
-		726FA22B1B43B57E00D1A2DE /* CardbagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardbagViewController.h; sourceTree = "<group>"; };
-		726FA22C1B43B57E00D1A2DE /* CardbagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardbagViewController.m; sourceTree = "<group>"; };
-		726FA22D1B43B57E00D1A2DE /* OrderDetaikViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDetaikViewController.h; sourceTree = "<group>"; };
-		726FA22E1B43B57E00D1A2DE /* OrderDetaikViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDetaikViewController.m; sourceTree = "<group>"; };
-		726FA22F1B43B57E00D1A2DE /* TradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeViewController.h; sourceTree = "<group>"; };
-		726FA2301B43B57E00D1A2DE /* TradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeViewController.m; sourceTree = "<group>"; };
+		726FA22B1B43B57E00D1A2DE /* CardbagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardbagViewController.h; path = ../CardbagViewController.h; sourceTree = "<group>"; };
+		726FA22C1B43B57E00D1A2DE /* CardbagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardbagViewController.m; path = ../CardbagViewController.m; sourceTree = "<group>"; };
+		726FA22D1B43B57E00D1A2DE /* OrderDetaikViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrderDetaikViewController.h; path = ../OrderDetaikViewController.h; sourceTree = "<group>"; };
+		726FA22E1B43B57E00D1A2DE /* OrderDetaikViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrderDetaikViewController.m; path = ../OrderDetaikViewController.m; sourceTree = "<group>"; };
+		726FA22F1B43B57E00D1A2DE /* TradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TradeViewController.h; path = ../TradeViewController.h; sourceTree = "<group>"; };
+		726FA2301B43B57E00D1A2DE /* TradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TradeViewController.m; path = ../TradeViewController.m; sourceTree = "<group>"; };
 		726FA2341B43B59400D1A2DE /* CardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardCell.h; path = ../CardCell.h; sourceTree = "<group>"; };
 		726FA2351B43B59400D1A2DE /* CardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardCell.m; path = ../CardCell.m; sourceTree = "<group>"; };
 		726FA2361B43B59400D1A2DE /* GoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoodsCell.h; path = ../GoodsCell.h; sourceTree = "<group>"; };
@@ -630,6 +632,25 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		720CB2D81B4E181C0066FC49 /* TopVC */ = {
+			isa = PBXGroup;
+			children = (
+				726FA22B1B43B57E00D1A2DE /* CardbagViewController.h */,
+				726FA22C1B43B57E00D1A2DE /* CardbagViewController.m */,
+				4BF858DA1B4509FF004717D8 /* AddCardViewController.h */,
+				4BF858DB1B4509FF004717D8 /* AddCardViewController.m */,
+				4BF858DD1B451CF6004717D8 /* CardDetailViewController.h */,
+				4BF858DE1B451CF6004717D8 /* CardDetailViewController.m */,
+				4B6514381B43CFE6007C5E0F /* ExchangeViewController.h */,
+				4B6514391B43CFE6007C5E0F /* ExchangeViewController.m */,
+				726FA22D1B43B57E00D1A2DE /* OrderDetaikViewController.h */,
+				726FA22E1B43B57E00D1A2DE /* OrderDetaikViewController.m */,
+				726FA22F1B43B57E00D1A2DE /* TradeViewController.h */,
+				726FA2301B43B57E00D1A2DE /* TradeViewController.m */,
+			);
+			path = TopVC;
+			sourceTree = "<group>";
+		};
 		725897441B3A835B002098E2 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -733,18 +754,7 @@
 				72FE37FA1B46700000B2537E /* register */,
 				72E4581F1B4439AC004AAF09 /* sellORpurchase */,
 				72E458201B4439AC004AAF09 /* MainDetail */,
-				726FA22B1B43B57E00D1A2DE /* CardbagViewController.h */,
-				726FA22C1B43B57E00D1A2DE /* CardbagViewController.m */,
-				4BF858DA1B4509FF004717D8 /* AddCardViewController.h */,
-				4BF858DB1B4509FF004717D8 /* AddCardViewController.m */,
-				4BF858DD1B451CF6004717D8 /* CardDetailViewController.h */,
-				4BF858DE1B451CF6004717D8 /* CardDetailViewController.m */,
-				4B6514381B43CFE6007C5E0F /* ExchangeViewController.h */,
-				4B6514391B43CFE6007C5E0F /* ExchangeViewController.m */,
-				726FA22D1B43B57E00D1A2DE /* OrderDetaikViewController.h */,
-				726FA22E1B43B57E00D1A2DE /* OrderDetaikViewController.m */,
-				726FA22F1B43B57E00D1A2DE /* TradeViewController.h */,
-				726FA2301B43B57E00D1A2DE /* TradeViewController.m */,
+				720CB2D81B4E181C0066FC49 /* TopVC */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -766,6 +776,7 @@
 				4BE584FC1B4CCCBD009ACDDB /* AMap.bundle */,
 				726FA2501B43B5DB00D1A2DE /* bg.png */,
 				726FA24C1B43B5CB00D1A2DE /* 卡包.png */,
+				720CB2DB1B4E26AC0066FC49 /* btnBg.png */,
 				726FA24D1B43B5CB00D1A2DE /* 更多.png */,
 				726FA0E91B42305F00D1A2DE /* transparent.gif */,
 				726FA0EA1B42305F00D1A2DE /* u2.png */,
@@ -1081,6 +1092,7 @@
 					};
 					726266B31B395C4200B3302D = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = H9KYW78QDY;
 						TestTargetID = 7262669A1B395C4200B3302D;
 					};
 				};
@@ -1170,6 +1182,7 @@
 				4BF858D91B4507C6004717D8 /* AddCardCell.xib in Resources */,
 				726FA1971B42306000D1A2DE /* u124.png in Resources */,
 				726FA1C51B42306000D1A2DE /* u565.png in Resources */,
+				720CB2DC1B4E26AC0066FC49 /* btnBg.png in Resources */,
 				726FA1B51B42306000D1A2DE /* u285.png in Resources */,
 				726FA1991B42306000D1A2DE /* u130.png in Resources */,
 				726FA1D41B42306000D1A2DE /* u642_line.png in Resources */,
@@ -1390,7 +1403,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: yan zhang (27CPF37646)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yan zhang (27CPF37646)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1412,6 +1426,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "13c60a92-f24b-43f5-ba60-2ac068dfc315";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1434,7 +1449,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: yan zhang (27CPF37646)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yan zhang (27CPF37646)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1449,6 +1465,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "13c60a92-f24b-43f5-ba60-2ac068dfc315";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1507,6 +1524,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1518,6 +1537,7 @@
 				INFOPLIST_FILE = "联合积分Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/联合积分.app/联合积分";
 			};
 			name = Debug;
@@ -1526,6 +1546,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1533,6 +1555,7 @@
 				INFOPLIST_FILE = "联合积分Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/联合积分.app/联合积分";
 			};
 			name = Release;
