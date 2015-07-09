@@ -48,6 +48,7 @@
     UITextField *cardNum =[[UITextField alloc]initWithFrame:CGRectMake(20, 120, SCREEN_WIDTH-80, 40)];
     cardNum.placeholder = @"卡号"; //默认显示的字
 
+    cardNum.keyboardType =UIKeyboardTypeNumberPad;
     [self.view addSubview:cardNum];
     
     UIImageView *iconImageView =[[UIImageView  alloc]initWithFrame:CGRectMake(SCREEN_WIDTH-60, 120, 40, 40)];
@@ -71,6 +72,11 @@
     
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

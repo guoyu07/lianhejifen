@@ -78,7 +78,6 @@
     [naView addSubview:leftButton];
     
     UILabel *titleLabel =[GZRControl createLabelWithFrame:CGRectMake(SCREEN_WIDTH/6-10, 0, SCREEN_WIDTH-SCREEN_WIDTH/6, 49) Font:17 Text:@"附近的超市" TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
-    
     [naView addSubview:titleLabel];
     
 }
@@ -88,7 +87,6 @@
     
     
 }
-
 //协议中的方法，用于显示大头针的提示框
 -(MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation
 {
@@ -125,14 +123,11 @@
     NSLog(@"经度:%f 纬度:%f",coordinate.latitude,coordinate.longitude);
     NSLog(@"待我去这里%@",view.annotation.title);
     
-    
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 /*
 #pragma mark - Navigation
 
