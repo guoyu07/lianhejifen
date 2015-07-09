@@ -32,9 +32,9 @@
 		4BF858D91B4507C6004717D8 /* AddCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BF858D71B4507C6004717D8 /* AddCardCell.xib */; };
 		4BF858DC1B4509FF004717D8 /* AddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF858DB1B4509FF004717D8 /* AddCardViewController.m */; };
 		4BF858DF1B451CF6004717D8 /* CardDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF858DE1B451CF6004717D8 /* CardDetailViewController.m */; };
-		720CB2CE1B4BBA3F0066FC49 /* ChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB2CD1B4BBA3F0066FC49 /* ChooseView.m */; };
+		720CB2D61B4E0D170066FC49 /* ChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB2D31B4E0D170066FC49 /* ChooseView.m */; };
+		720CB2D71B4E0D170066FC49 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB2D51B4E0D170066FC49 /* CustomView.m */; };
 		725897481B3A8B97002098E2 /* GZRControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 725897471B3A8B97002098E2 /* GZRControl.m */; };
-		7258974B1B3AA9BD002098E2 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7258974A1B3AA9BD002098E2 /* CustomView.m */; };
 		726266A11B395C4200B3302D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 726266A01B395C4200B3302D /* main.m */; };
 		726266A41B395C4200B3302D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 726266A31B395C4200B3302D /* AppDelegate.mm */; };
 		726266AC1B395C4200B3302D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726266AB1B395C4200B3302D /* Images.xcassets */; };
@@ -280,14 +280,14 @@
 		4BF858DB1B4509FF004717D8 /* AddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCardViewController.m; sourceTree = "<group>"; };
 		4BF858DD1B451CF6004717D8 /* CardDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardDetailViewController.h; sourceTree = "<group>"; };
 		4BF858DE1B451CF6004717D8 /* CardDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardDetailViewController.m; sourceTree = "<group>"; };
-		720CB2CC1B4BBA3F0066FC49 /* ChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseView.h; sourceTree = "<group>"; };
-		720CB2CD1B4BBA3F0066FC49 /* ChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseView.m; sourceTree = "<group>"; };
+		720CB2D21B4E0D170066FC49 /* ChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseView.h; path = "联合积分/Views/ChooseView.h"; sourceTree = SOURCE_ROOT; };
+		720CB2D31B4E0D170066FC49 /* ChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseView.m; path = "联合积分/Views/ChooseView.m"; sourceTree = SOURCE_ROOT; };
+		720CB2D41B4E0D170066FC49 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomView.h; path = "联合积分/Views/CustomView.h"; sourceTree = SOURCE_ROOT; };
+		720CB2D51B4E0D170066FC49 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomView.m; path = "联合积分/Views/CustomView.m"; sourceTree = SOURCE_ROOT; };
 		725897421B3A830A002098E2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		725897451B3A8398002098E2 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		725897461B3A8B97002098E2 /* GZRControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZRControl.h; sourceTree = "<group>"; };
 		725897471B3A8B97002098E2 /* GZRControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZRControl.m; sourceTree = "<group>"; };
-		725897491B3AA9BD002098E2 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomView.h; path = ../CustomView.h; sourceTree = "<group>"; };
-		7258974A1B3AA9BD002098E2 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomView.m; path = ../CustomView.m; sourceTree = "<group>"; };
 		7262669B1B395C4200B3302D /* 联合积分.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "联合积分.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7262669F1B395C4200B3302D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		726266A01B395C4200B3302D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -583,10 +583,10 @@
 		720CB2CA1B4BB9C60066FC49 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				725897491B3AA9BD002098E2 /* CustomView.h */,
-				7258974A1B3AA9BD002098E2 /* CustomView.m */,
-				720CB2CC1B4BBA3F0066FC49 /* ChooseView.h */,
-				720CB2CD1B4BBA3F0066FC49 /* ChooseView.m */,
+				720CB2D41B4E0D170066FC49 /* CustomView.h */,
+				720CB2D51B4E0D170066FC49 /* CustomView.m */,
+				720CB2D21B4E0D170066FC49 /* ChooseView.h */,
+				720CB2D31B4E0D170066FC49 /* ChooseView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1306,12 +1306,11 @@
 				72E85F451B453BC400ECB862 /* FinancialViewController.m in Sources */,
 				4BE584F91B4CCADC009ACDDB /* MapViewController.m in Sources */,
 				72F37E2C1B3BAA73001D8A58 /* AFURLRequestSerialization.m in Sources */,
-				7258974B1B3AA9BD002098E2 /* CustomView.m in Sources */,
 				72F37E351B3BAA73001D8A58 /* UIRefreshControl+AFNetworking.m in Sources */,
 				726FA0E61B422E1500D1A2DE /* SlistCell.m in Sources */,
 				4BF858DC1B4509FF004717D8 /* AddCardViewController.m in Sources */,
 				72F37E2D1B3BAA73001D8A58 /* AFURLResponseSerialization.m in Sources */,
-				720CB2CE1B4BBA3F0066FC49 /* ChooseView.m in Sources */,
+				720CB2D61B4E0D170066FC49 /* ChooseView.m in Sources */,
 				726FA2421B43B59400D1A2DE /* MoneyCell.m in Sources */,
 				726266A41B395C4200B3302D /* AppDelegate.mm in Sources */,
 				726FA2401B43B59400D1A2DE /* GoodsCell.m in Sources */,
@@ -1340,6 +1339,7 @@
 				72F37E2F1B3BAA73001D8A58 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				726FA2311B43B57E00D1A2DE /* CardbagViewController.m in Sources */,
 				4B65143A1B43CFE6007C5E0F /* ExchangeViewController.m in Sources */,
+				720CB2D71B4E0D170066FC49 /* CustomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
