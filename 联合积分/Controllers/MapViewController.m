@@ -22,8 +22,10 @@
     //配置用户Key
     [MAMapServices sharedServices].apiKey = @"56a4bcc2f6808b10cbaf67132c6aed4d";
     
-    _map = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))];
+    _map = [[MAMapView alloc] initWithFrame:CGRectMake(0, 69, CGRectGetWidth(self.view.bounds), SCREEN_HEIGHT-69)];
     _map.delegate = self;
+    _map.showsCompass =NO;
+    _map.showsScale =NO;
     
         MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
         pointAnnotation.coordinate = CLLocationCoordinate2DMake(39.989631, 116.481018);
@@ -32,26 +34,61 @@
     
     [_map setCenterCoordinate:pointAnnotation.coordinate animated:YES];
         [_map addAnnotation:pointAnnotation];
+    
+    for (int i = 1; i < 6; i++) {
+        MAPointAnnotation* annotation = [[MAPointAnnotation alloc]init];
+        CLLocationCoordinate2D coor;
+        coor.latitude = 39.915 + i*0.02;
+        coor.longitude = 116.404 + i*0.02;
+        annotation.coordinate = coor;
+        annotation.title = @"超市";
+        annotation.subtitle =@"地址";
+        [_map  addAnnotation:annotation];
+        logdebug(@"%d",i);
+        
+        
+    }
+
        [self.view addSubview:_map];
     
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    //    CLLocationCoordinate2D coordinate=CLLocationCoordinate2DMake(40.035139,116.311655);
-    //    CLLocationCoordinate2D coordinate=CLLocationCoordinate2DMake(40.037367,116.370463);
-
+//    // Do any additional setup after loading the view.
+//        CLLocationCoordinate2D coordinate=CLLocationCoordinate2DMake(40.035139,116.311655);
     
-    //    for (NSInteger i=0; i<20; i++) {
-    //        CLLocationCoordinate2D coordinate1=CLLocationCoordinate2DMake(40.035139+i*0.0005, 116.311655+i*0.01);
-    //        MAPointAnnotation *pin1=[[MAPointAnnotation alloc]init];
-    //        pin1.coordinate=coordinate1;
-    //        pin1.title=[NSString stringWithFormat:@"大头针%d标示",i];
-    //        [_map addAnnotation:pin1];
-    //    }
+    
+    
+    [self createNa];
     
 }
+-(void)createNa
+{
+    
+    UIView *naView =[[UIView alloc]initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH,49 )];
+    
+    naView.backgroundColor =[UIColor whiteColor];
+    [self.view addSubview:naView];
+    
+    UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [leftButton setFrame:CGRectMake(10, 10,30, 30)];
+    [leftButton setBackgroundImage:[UIImage imageNamed:@"u532"] forState:UIControlStateNormal];
+    [leftButton addTarget:self action:@selector(leftButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [naView addSubview:leftButton];
+    
+    UILabel *titleLabel =[GZRControl createLabelWithFrame:CGRectMake(SCREEN_WIDTH/6-10, 0, SCREEN_WIDTH-SCREEN_WIDTH/6, 49) Font:17 Text:@"附近的超市" TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
+    
+    [naView addSubview:titleLabel];
+    
+}
+
+-(void)leftButtonClick:(UIButton *)btn
+{
+    
+    
+}
+
 //协议中的方法，用于显示大头针的提示框
 -(MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation
 {
