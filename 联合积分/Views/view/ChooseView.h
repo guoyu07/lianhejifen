@@ -8,22 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol ChooseViewDelegate <NSObject>
-
-@required
-- (void)makeViewRectY:(NSInteger)rectY;
-
-- (void)confirmAndgetInformation:(NSDictionary *)infoDic;
-
-@end
-
 @interface ChooseView : UIView
 
 @property (nonatomic,strong) NSMutableArray *nameArray;
 
 @property (nonatomic,strong) NSMutableArray *contentArray;
-
-@property (nonatomic,weak) id<ChooseViewDelegate>delegate;
 
 - (instancetype)initWithFrame:(CGRect)frame;
 

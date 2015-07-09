@@ -24,7 +24,10 @@
 //    RegisterViewController *root = [[RegisterViewController alloc] init];
     UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:root];
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> f47a570238d2d6623a2d9c6b2ac320aa6f24cd83
     self.window.rootViewController = nav;
     
     self.window.backgroundColor = [UIColor whiteColor];

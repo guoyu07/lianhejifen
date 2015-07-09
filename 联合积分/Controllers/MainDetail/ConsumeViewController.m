@@ -9,7 +9,7 @@
 #import "ConsumeViewController.h"
 #import "ChooseView.h"
 
-@interface ConsumeViewController ()<UIScrollViewDelegate,ChooseViewDelegate>
+@interface ConsumeViewController ()<UIScrollViewDelegate>
 {
     UIScrollView  *_bgScrollView;
     UIPageControl *_pageControl;    // 页码指示器
@@ -72,19 +72,12 @@
     _bgScrollView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_bgScrollView];
     
-    UIButton *confirmBtn = [GZRControl createButtonWithFrame:CGRectMake(0, SCREEN_HEIGHT-49, SCREEN_WIDTH, 49) ImageName:nil Target:self Action:@selector(confirmBtnClicked) Title:@"确认兑换" titleColor:[UIColor whiteColor] backColor:RGBCOLOR(228, 35, 117) cornerRadius:0 masks:NO];
-    [self.view addSubview:confirmBtn];
-    
-    
     NSArray *colorArr = [NSArray arrayWithObjects:@"水蓝色",@"黄色",@"粉色", nil];
     NSArray *sizeArr = [NSArray arrayWithObjects:@"1.2m",@"1.35m",@"1.5m",@"1.8m", nil];
     _chooseView = [[ChooseView alloc] init];
-    _chooseView.frame = CGRectMake(0, 69, 0, 0);
-    _chooseView.backgroundColor = [UIColor whiteColor];
-    _chooseView.layer.borderColor = [[UIColor grayColor] CGColor];
-    _chooseView.layer.borderWidth = 1.0;
-    _chooseView.delegate = self;
-    _chooseView.nameArray = [NSMutableArray arrayWithObjects:@"颜色",@"尺寸",@"数量", nil];
+    _chooseView.frame = CGRectMake(0, 69, SCREEN_WIDTH, 300);
+    _chooseView.backgroundColor = [UIColor brownColor];
+    _chooseView.nameArray = [NSMutableArray arrayWithObjects:@"颜色",@"尺寸", nil];
     _chooseView.contentArray = [NSMutableArray arrayWithObjects:colorArr,sizeArr, nil];
     [_chooseView createUI];
     [self.view addSubview:_chooseView];
@@ -108,6 +101,9 @@
     [_bgScrollView addSubview:bgView3];
     
     _bgScrollView.contentSize = CGSizeMake(SCREEN_WIDTH, CGRectGetMaxY(bgView3.frame));
+    
+    UIButton *confirmBtn = [GZRControl createButtonWithFrame:CGRectMake(0, SCREEN_HEIGHT-49, SCREEN_WIDTH, 49) ImageName:nil Target:self Action:@selector(confirmBtnClicked) Title:@"确认兑换" titleColor:[UIColor whiteColor] backColor:RGBCOLOR(228, 35, 117) cornerRadius:0 masks:NO];
+    [self.view addSubview:confirmBtn];
     
     /**********创建内容视图1***********/
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, (SCREEN_HEIGHT-69-20-49)*4/9)];
@@ -192,6 +188,8 @@
     UIView *bgView4 = [GZRControl viewWithFrame:CGRectMake(0, CGRectGetMaxY(bgView3.frame)+10, SCREEN_WIDTH, (SCREEN_HEIGHT-69-49-30)/5) bgColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
     [self.view addSubview:bgView4];
     
+    UIButton *confirmBtn = [GZRControl createButtonWithFrame:CGRectMake(0, SCREEN_HEIGHT-49, SCREEN_WIDTH, 49) ImageName:nil Target:self Action:@selector(confirmBtnClicked) Title:@"确认兑换" titleColor:[UIColor whiteColor] backColor:RGBCOLOR(228, 35, 117) cornerRadius:0 masks:NO];
+    [self.view addSubview:confirmBtn];
     
     /*********创建内容视图1**********/
     UILabel *nameLabel = [GZRControl createLabelWithFrame:CGRectMake(20, (bgView1.frame.size.height-40)/3, 120, 20) Font:17 Text:self.titleName TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
@@ -239,9 +237,8 @@
 }
 
 - (void)tapGestureClicked {
-    [UIView animateWithDuration:0.3 animations:^{
-        _chooseView.frame = CGRectMake(0, SCREEN_HEIGHT-_chooseView.frame.size.height, _chooseView.frame.size.width, _chooseView.frame.size.height);
-    }];
+    
+    
 }
 
 /**
@@ -271,25 +268,6 @@
     CGPoint pt = scrollView.contentOffset;
     _pageControl.currentPage = pt.x/SCREEN_WIDTH;
 //    _currentIndex = pt.x/SCREEN_WIDTH;
-}
-
-#pragma mark - ChooseViewDelegate
-- (void)makeViewRectY:(NSInteger)rectY {
-    _chooseView.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, rectY);
-    logdebug(@"chooseViewHeight:%ld",rectY);
-}
-
-- (void)confirmAndgetInformation:(NSDictionary *)infoDic {
-    [UIView animateWithDuration:0.5 animations:^{
-        _chooseView.frame = CGRectMake(0, SCREEN_HEIGHT, _chooseView.frame.size.width, _chooseView.frame.size.height);
-    }];
-
-}
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [UIView animateWithDuration:0.5 animations:^{
-        _chooseView.frame = CGRectMake(0, SCREEN_HEIGHT, _chooseView.frame.size.width, _chooseView.frame.size.height);
-    }];
 }
 
 - (void)didReceiveMemoryWarning {
