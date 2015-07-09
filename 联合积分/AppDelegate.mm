@@ -25,7 +25,7 @@
     UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:root];
     MapViewController *map =[[MapViewController alloc]init];
     
-    self.window.rootViewController = map;
+    self.window.rootViewController = nav;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
