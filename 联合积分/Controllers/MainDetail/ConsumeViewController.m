@@ -8,7 +8,7 @@
 
 #import "ConsumeViewController.h"
 #import "ChooseView.h"
-
+#import "MapViewController.h"
 @interface ConsumeViewController ()<UIScrollViewDelegate,ChooseViewDelegate>
 {
     UIScrollView  *_bgScrollView;
@@ -253,6 +253,12 @@
  *  点击查看地图信息
  */
 - (void)checkMapBtnClicked {
+    
+    MapViewController *map =[[MapViewController alloc]init];
+    
+    [self.navigationController pushViewController:map animated:YES];
+    
+    
     
 }
 

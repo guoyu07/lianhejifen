@@ -58,7 +58,7 @@
 //    // Do any additional setup after loading the view.
 //        CLLocationCoordinate2D coordinate=CLLocationCoordinate2DMake(40.035139,116.311655);
     
-    
+    self.view.backgroundColor =[UIColor whiteColor];
     
     [self createNa];
     
@@ -84,6 +84,7 @@
 
 -(void)leftButtonClick:(UIButton *)btn
 {
+    [self.navigationController popViewControllerAnimated:YES];
     
     
 }
