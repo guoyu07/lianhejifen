@@ -24,6 +24,7 @@
     UIScrollView    *_bgScrollView;    // 承载所有界面的底层滚动视图
     UIScrollView    *_topScrollView;   // 承载展示列表的横向滚动视图
     UIView          *_listView;        // 承载横向滚动的view
+    UITableView     *_tableView;
     CustomView      *_customView;      // 自定义图形显示
     NSMutableArray  *_btnArray;
     NSMutableArray  *_tradeBtnArray;
@@ -125,7 +126,7 @@
     NSArray *listArray = [NSArray arrayWithObjects:@"花积分",@"积分理财",@"赚积分", nil];
     UIButton *listButton;
     for (int i=0; i<listArray.count; i++) {
-        listButton = [GZRControl createButtonWithFrame:CGRectMake((SCREEN_WIDTH / 3) * i, 0, SCREEN_WIDTH/3, 40) ImageName:nil Target:self Action:@selector(listButtonClicked:) Title:[listArray objectAtIndex:i] titleColor:[UIColor lightGrayColor] backColor:[UIColor clearColor] cornerRadius:0 masks:NO];
+        listButton = [GZRControl createButtonWithFrame:CGRectMake((SCREEN_WIDTH / 3) * i, 0, SCREEN_WIDTH/3, 40) ImageName:nil Target:self Action:@selector(listButtonClicked:) Title:[listArray objectAtIndex:i] titleColor:RGBCOLOR(243, 164, 203) backColor:[UIColor clearColor] cornerRadius:0 masks:NO];
         [listButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
         if (i==0) {
             listButton.selected = YES;
@@ -156,12 +157,12 @@
 - (void)createListViews {
     self.automaticallyAdjustsScrollViewInsets = NO;
     for (int i=0; i<3; i++) {
-        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH * i, 0, SCREEN_WIDTH, SCREEN_HEIGHT-69-40) style:UITableViewStylePlain];
-        tableView.separatorStyle = UITableViewCellAccessoryNone;
-        tableView.delegate = self;
-        tableView.dataSource = self;
-        tableView.tag = 444 + i;
-        [_topScrollView addSubview:tableView];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH * i, 0, SCREEN_WIDTH, SCREEN_HEIGHT-69-40) style:UITableViewStylePlain];
+        _tableView.separatorStyle = UITableViewCellAccessoryNone;
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.tag = 444 + i;
+        [_topScrollView addSubview:_tableView];
     }
 }
 
@@ -400,10 +401,16 @@
                 _customView.hidden = NO;
             }
         }
+    }
+    
+    CGFloat height = scrollView.frame.size.height;
+    CGFloat contentYoffset = scrollView.contentOffset.y;
+    CGFloat distanceFromBottom = scrollView.contentSize.height - contentYoffset;
+    if (scrollView == _tableView && distanceFromBottom <= height) {
+        _tableView.scrollEnabled = NO;
+        logdebug(@"asdkfnaoienfjiasdjf");
+    } else {
         
-//        CGPoint lt = _listView.frame.origin;
-//        NSInteger currentY = lt.y;
-//        _listView.frame = CGRectMake(0, currentY-(scrollView.contentOffset.y)/10, SCREEN_WIDTH, SCREEN_HEIGHT-69);
     }
 }
 
