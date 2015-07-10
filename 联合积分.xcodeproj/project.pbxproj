@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B6514361B43C7B7007C5E0F /* PaymentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6514341B43C7B7007C5E0F /* PaymentCell.m */; };
-		4B6514371B43C7B7007C5E0F /* PaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6514351B43C7B7007C5E0F /* PaymentCell.xib */; };
-		4B65143E1B43DAA1007C5E0F /* ExchangeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B65143C1B43DAA1007C5E0F /* ExchangeCell.m */; };
-		4B65143F1B43DAA1007C5E0F /* ExchangeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B65143D1B43DAA1007C5E0F /* ExchangeCell.xib */; };
 		4B825BAA1B4A5A5D0047575C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B825BA91B4A5A5D0047575C /* CoreLocation.framework */; };
 		4B825BAC1B4A5A740047575C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B825BAB1B4A5A740047575C /* QuartzCore.framework */; };
 		4B825BAE1B4A5A7F0047575C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B825BAD1B4A5A7F0047575C /* OpenGLES.framework */; };
@@ -25,10 +21,6 @@
 		4BE584FD1B4CCCBD009ACDDB /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4BE584FC1B4CCCBD009ACDDB /* AMap.bundle */; };
 		4BE585011B4CCEF2009ACDDB /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE585001B4CCEF2009ACDDB /* MAMapKit.framework */; };
 		4BF858CF1B44CE1C004717D8 /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF858CE1B44CE1C004717D8 /* BuyViewController.m */; };
-		4BF858D31B44E03D004717D8 /* HistoryBuyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF858D11B44E03D004717D8 /* HistoryBuyCell.m */; };
-		4BF858D41B44E03D004717D8 /* HistoryBuyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BF858D21B44E03D004717D8 /* HistoryBuyCell.xib */; };
-		4BF858D81B4507C6004717D8 /* AddCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF858D61B4507C6004717D8 /* AddCardCell.m */; };
-		4BF858D91B4507C6004717D8 /* AddCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BF858D71B4507C6004717D8 /* AddCardCell.xib */; };
 		720CB2D61B4E0D170066FC49 /* ChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB2D31B4E0D170066FC49 /* ChooseView.m */; };
 		720CB2D71B4E0D170066FC49 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB2D51B4E0D170066FC49 /* CustomView.m */; };
 		720CB2DC1B4E26AC0066FC49 /* btnBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 720CB2DB1B4E26AC0066FC49 /* btnBg.png */; };
@@ -38,6 +30,27 @@
 		720CB31E1B4F5A790066FC49 /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB3161B4F5A790066FC49 /* ExchangeViewController.m */; };
 		720CB31F1B4F5A790066FC49 /* OrderDetaikViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB3181B4F5A790066FC49 /* OrderDetaikViewController.m */; };
 		720CB3201B4F5A790066FC49 /* TradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB31A1B4F5A790066FC49 /* TradeViewController.m */; };
+		720CB3411B4F5E7E0066FC49 /* AddCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB3221B4F5E7E0066FC49 /* AddCardCell.m */; };
+		720CB3421B4F5E7E0066FC49 /* AddCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 720CB3231B4F5E7E0066FC49 /* AddCardCell.xib */; };
+		720CB3431B4F5E7E0066FC49 /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB3251B4F5E7E0066FC49 /* CardCell.m */; };
+		720CB3441B4F5E7E0066FC49 /* ExchangeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB3271B4F5E7E0066FC49 /* ExchangeCell.m */; };
+		720CB3451B4F5E7E0066FC49 /* ExchangeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 720CB3281B4F5E7E0066FC49 /* ExchangeCell.xib */; };
+		720CB3461B4F5E7E0066FC49 /* FlistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB32A1B4F5E7E0066FC49 /* FlistCell.m */; };
+		720CB3471B4F5E7E0066FC49 /* FlistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 720CB32B1B4F5E7E0066FC49 /* FlistCell.xib */; };
+		720CB3481B4F5E7E0066FC49 /* GoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB32D1B4F5E7E0066FC49 /* GoodsCell.m */; };
+		720CB3491B4F5E7E0066FC49 /* GoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 720CB32E1B4F5E7E0066FC49 /* GoodsCell.xib */; };
+		720CB34A1B4F5E7E0066FC49 /* HistoryBuyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB3301B4F5E7E0066FC49 /* HistoryBuyCell.m */; };
+		720CB34B1B4F5E7E0066FC49 /* HistoryBuyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 720CB3311B4F5E7E0066FC49 /* HistoryBuyCell.xib */; };
+		720CB34C1B4F5E7E0066FC49 /* MoneyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB3331B4F5E7E0066FC49 /* MoneyCell.m */; };
+		720CB34D1B4F5E7E0066FC49 /* MoneyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 720CB3341B4F5E7E0066FC49 /* MoneyCell.xib */; };
+		720CB34E1B4F5E7E0066FC49 /* PaymentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB3361B4F5E7E0066FC49 /* PaymentCell.m */; };
+		720CB34F1B4F5E7E0066FC49 /* PaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 720CB3371B4F5E7E0066FC49 /* PaymentCell.xib */; };
+		720CB3501B4F5E7E0066FC49 /* SlistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB3391B4F5E7E0066FC49 /* SlistCell.m */; };
+		720CB3511B4F5E7E0066FC49 /* SlistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 720CB33A1B4F5E7E0066FC49 /* SlistCell.xib */; };
+		720CB3521B4F5E7E0066FC49 /* TlistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB33C1B4F5E7E0066FC49 /* TlistCell.m */; };
+		720CB3531B4F5E7E0066FC49 /* TlistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 720CB33D1B4F5E7E0066FC49 /* TlistCell.xib */; };
+		720CB3541B4F5E7E0066FC49 /* VolumeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB33F1B4F5E7E0066FC49 /* VolumeCell.m */; };
+		720CB3551B4F5E7E0066FC49 /* VolumeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 720CB3401B4F5E7E0066FC49 /* VolumeCell.xib */; };
 		725897481B3A8B97002098E2 /* GZRControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 725897471B3A8B97002098E2 /* GZRControl.m */; };
 		726266A11B395C4200B3302D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 726266A01B395C4200B3302D /* main.m */; };
 		726266A41B395C4200B3302D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 726266A31B395C4200B3302D /* AppDelegate.mm */; };
@@ -45,10 +58,6 @@
 		726266AF1B395C4200B3302D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726266AD1B395C4200B3302D /* LaunchScreen.xib */; };
 		726266BB1B395C4200B3302D /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 726266BA1B395C4200B3302D /* ____Tests.m */; };
 		726266CA1B39653100B3302D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726266C91B39653100B3302D /* RootViewController.m */; };
-		726FA0E11B422B8C00D1A2DE /* FlistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA0E01B422B8C00D1A2DE /* FlistCell.m */; };
-		726FA0E31B422B9F00D1A2DE /* FlistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726FA0E21B422B9F00D1A2DE /* FlistCell.xib */; };
-		726FA0E61B422E1500D1A2DE /* SlistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA0E51B422E1500D1A2DE /* SlistCell.m */; };
-		726FA0E81B422E1E00D1A2DE /* SlistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726FA0E71B422E1E00D1A2DE /* SlistCell.xib */; };
 		726FA17A1B42306000D1A2DE /* transparent.gif in Resources */ = {isa = PBXBuildFile; fileRef = 726FA0E91B42305F00D1A2DE /* transparent.gif */; };
 		726FA17B1B42306000D1A2DE /* u2.png in Resources */ = {isa = PBXBuildFile; fileRef = 726FA0EA1B42305F00D1A2DE /* u2.png */; };
 		726FA17C1B42306000D1A2DE /* u4.png in Resources */ = {isa = PBXBuildFile; fileRef = 726FA0EB1B42305F00D1A2DE /* u4.png */; };
@@ -194,15 +203,6 @@
 		726FA2081B42306000D1A2DE /* u1146_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 726FA1771B42306000D1A2DE /* u1146_line.png */; };
 		726FA2091B42306000D1A2DE /* u1147.png in Resources */ = {isa = PBXBuildFile; fileRef = 726FA1781B42306000D1A2DE /* u1147.png */; };
 		726FA20A1B42306000D1A2DE /* u1153.png in Resources */ = {isa = PBXBuildFile; fileRef = 726FA1791B42306000D1A2DE /* u1153.png */; };
-		726FA20D1B42360E00D1A2DE /* TlistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA20C1B42360E00D1A2DE /* TlistCell.m */; };
-		726FA20F1B42362100D1A2DE /* TlistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726FA20E1B42362100D1A2DE /* TlistCell.xib */; };
-		726FA23F1B43B59400D1A2DE /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA2351B43B59400D1A2DE /* CardCell.m */; };
-		726FA2401B43B59400D1A2DE /* GoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA2371B43B59400D1A2DE /* GoodsCell.m */; };
-		726FA2411B43B59400D1A2DE /* GoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726FA2381B43B59400D1A2DE /* GoodsCell.xib */; };
-		726FA2421B43B59400D1A2DE /* MoneyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA23A1B43B59400D1A2DE /* MoneyCell.m */; };
-		726FA2431B43B59400D1A2DE /* MoneyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726FA23B1B43B59400D1A2DE /* MoneyCell.xib */; };
-		726FA2441B43B59400D1A2DE /* VolumeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA23D1B43B59400D1A2DE /* VolumeCell.m */; };
-		726FA2451B43B59400D1A2DE /* VolumeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726FA23E1B43B59400D1A2DE /* VolumeCell.xib */; };
 		726FA24A1B43B5B300D1A2DE /* CardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA2471B43B5B300D1A2DE /* CardModel.m */; };
 		726FA24B1B43B5B300D1A2DE /* GoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA2491B43B5B300D1A2DE /* GoodsModel.m */; };
 		726FA24E1B43B5CB00D1A2DE /* 卡包.png in Resources */ = {isa = PBXBuildFile; fileRef = 726FA24C1B43B5CB00D1A2DE /* 卡包.png */; };
@@ -247,12 +247,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4B6514331B43C7B7007C5E0F /* PaymentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentCell.h; path = ../PaymentCell.h; sourceTree = "<group>"; };
-		4B6514341B43C7B7007C5E0F /* PaymentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentCell.m; path = ../PaymentCell.m; sourceTree = "<group>"; };
-		4B6514351B43C7B7007C5E0F /* PaymentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PaymentCell.xib; path = ../PaymentCell.xib; sourceTree = "<group>"; };
-		4B65143B1B43DAA1007C5E0F /* ExchangeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExchangeCell.h; path = ../ExchangeCell.h; sourceTree = "<group>"; };
-		4B65143C1B43DAA1007C5E0F /* ExchangeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExchangeCell.m; path = ../ExchangeCell.m; sourceTree = "<group>"; };
-		4B65143D1B43DAA1007C5E0F /* ExchangeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExchangeCell.xib; path = ../ExchangeCell.xib; sourceTree = "<group>"; };
 		4B825BA91B4A5A5D0047575C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4B825BAB1B4A5A740047575C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4B825BAD1B4A5A7F0047575C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -269,12 +263,6 @@
 		4BE585001B4CCEF2009ACDDB /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
 		4BF858CD1B44CE1C004717D8 /* BuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyViewController.h; sourceTree = "<group>"; };
 		4BF858CE1B44CE1C004717D8 /* BuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyViewController.m; sourceTree = "<group>"; };
-		4BF858D01B44E03D004717D8 /* HistoryBuyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryBuyCell.h; path = ../HistoryBuyCell.h; sourceTree = "<group>"; };
-		4BF858D11B44E03D004717D8 /* HistoryBuyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryBuyCell.m; path = ../HistoryBuyCell.m; sourceTree = "<group>"; };
-		4BF858D21B44E03D004717D8 /* HistoryBuyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HistoryBuyCell.xib; path = ../HistoryBuyCell.xib; sourceTree = "<group>"; };
-		4BF858D51B4507C6004717D8 /* AddCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddCardCell.h; path = ../AddCardCell.h; sourceTree = "<group>"; };
-		4BF858D61B4507C6004717D8 /* AddCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddCardCell.m; path = ../AddCardCell.m; sourceTree = "<group>"; };
-		4BF858D71B4507C6004717D8 /* AddCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddCardCell.xib; path = ../AddCardCell.xib; sourceTree = "<group>"; };
 		720CB2D21B4E0D170066FC49 /* ChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseView.h; path = "联合积分/Views/ChooseView.h"; sourceTree = SOURCE_ROOT; };
 		720CB2D31B4E0D170066FC49 /* ChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseView.m; path = "联合积分/Views/ChooseView.m"; sourceTree = SOURCE_ROOT; };
 		720CB2D41B4E0D170066FC49 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomView.h; path = "联合积分/Views/CustomView.h"; sourceTree = SOURCE_ROOT; };
@@ -292,6 +280,38 @@
 		720CB3181B4F5A790066FC49 /* OrderDetaikViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDetaikViewController.m; sourceTree = "<group>"; };
 		720CB3191B4F5A790066FC49 /* TradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeViewController.h; sourceTree = "<group>"; };
 		720CB31A1B4F5A790066FC49 /* TradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeViewController.m; sourceTree = "<group>"; };
+		720CB3211B4F5E7E0066FC49 /* AddCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCardCell.h; sourceTree = "<group>"; };
+		720CB3221B4F5E7E0066FC49 /* AddCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCardCell.m; sourceTree = "<group>"; };
+		720CB3231B4F5E7E0066FC49 /* AddCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCardCell.xib; sourceTree = "<group>"; };
+		720CB3241B4F5E7E0066FC49 /* CardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCell.h; sourceTree = "<group>"; };
+		720CB3251B4F5E7E0066FC49 /* CardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCell.m; sourceTree = "<group>"; };
+		720CB3261B4F5E7E0066FC49 /* ExchangeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeCell.h; sourceTree = "<group>"; };
+		720CB3271B4F5E7E0066FC49 /* ExchangeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeCell.m; sourceTree = "<group>"; };
+		720CB3281B4F5E7E0066FC49 /* ExchangeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExchangeCell.xib; sourceTree = "<group>"; };
+		720CB3291B4F5E7E0066FC49 /* FlistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlistCell.h; sourceTree = "<group>"; };
+		720CB32A1B4F5E7E0066FC49 /* FlistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlistCell.m; sourceTree = "<group>"; };
+		720CB32B1B4F5E7E0066FC49 /* FlistCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlistCell.xib; sourceTree = "<group>"; };
+		720CB32C1B4F5E7E0066FC49 /* GoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsCell.h; sourceTree = "<group>"; };
+		720CB32D1B4F5E7E0066FC49 /* GoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsCell.m; sourceTree = "<group>"; };
+		720CB32E1B4F5E7E0066FC49 /* GoodsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsCell.xib; sourceTree = "<group>"; };
+		720CB32F1B4F5E7E0066FC49 /* HistoryBuyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryBuyCell.h; sourceTree = "<group>"; };
+		720CB3301B4F5E7E0066FC49 /* HistoryBuyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryBuyCell.m; sourceTree = "<group>"; };
+		720CB3311B4F5E7E0066FC49 /* HistoryBuyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryBuyCell.xib; sourceTree = "<group>"; };
+		720CB3321B4F5E7E0066FC49 /* MoneyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyCell.h; sourceTree = "<group>"; };
+		720CB3331B4F5E7E0066FC49 /* MoneyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyCell.m; sourceTree = "<group>"; };
+		720CB3341B4F5E7E0066FC49 /* MoneyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoneyCell.xib; sourceTree = "<group>"; };
+		720CB3351B4F5E7E0066FC49 /* PaymentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentCell.h; sourceTree = "<group>"; };
+		720CB3361B4F5E7E0066FC49 /* PaymentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentCell.m; sourceTree = "<group>"; };
+		720CB3371B4F5E7E0066FC49 /* PaymentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentCell.xib; sourceTree = "<group>"; };
+		720CB3381B4F5E7E0066FC49 /* SlistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlistCell.h; sourceTree = "<group>"; };
+		720CB3391B4F5E7E0066FC49 /* SlistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlistCell.m; sourceTree = "<group>"; };
+		720CB33A1B4F5E7E0066FC49 /* SlistCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlistCell.xib; sourceTree = "<group>"; };
+		720CB33B1B4F5E7E0066FC49 /* TlistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TlistCell.h; sourceTree = "<group>"; };
+		720CB33C1B4F5E7E0066FC49 /* TlistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TlistCell.m; sourceTree = "<group>"; };
+		720CB33D1B4F5E7E0066FC49 /* TlistCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TlistCell.xib; sourceTree = "<group>"; };
+		720CB33E1B4F5E7E0066FC49 /* VolumeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeCell.h; sourceTree = "<group>"; };
+		720CB33F1B4F5E7E0066FC49 /* VolumeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumeCell.m; sourceTree = "<group>"; };
+		720CB3401B4F5E7E0066FC49 /* VolumeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VolumeCell.xib; sourceTree = "<group>"; };
 		725897421B3A830A002098E2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		725897451B3A8398002098E2 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		725897461B3A8B97002098E2 /* GZRControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZRControl.h; sourceTree = "<group>"; };
@@ -308,12 +328,6 @@
 		726266BA1B395C4200B3302D /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
 		726266C81B39653100B3302D /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		726266C91B39653100B3302D /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		726FA0DF1B422B8C00D1A2DE /* FlistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlistCell.h; path = ../FlistCell.h; sourceTree = "<group>"; };
-		726FA0E01B422B8C00D1A2DE /* FlistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlistCell.m; path = ../FlistCell.m; sourceTree = "<group>"; };
-		726FA0E21B422B9F00D1A2DE /* FlistCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FlistCell.xib; path = ../FlistCell.xib; sourceTree = "<group>"; };
-		726FA0E41B422E1500D1A2DE /* SlistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlistCell.h; path = ../SlistCell.h; sourceTree = "<group>"; };
-		726FA0E51B422E1500D1A2DE /* SlistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SlistCell.m; path = ../SlistCell.m; sourceTree = "<group>"; };
-		726FA0E71B422E1E00D1A2DE /* SlistCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SlistCell.xib; path = ../SlistCell.xib; sourceTree = "<group>"; };
 		726FA0E91B42305F00D1A2DE /* transparent.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = transparent.gif; sourceTree = "<group>"; };
 		726FA0EA1B42305F00D1A2DE /* u2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = u2.png; sourceTree = "<group>"; };
 		726FA0EB1B42305F00D1A2DE /* u4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = u4.png; sourceTree = "<group>"; };
@@ -459,20 +473,6 @@
 		726FA1771B42306000D1A2DE /* u1146_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = u1146_line.png; sourceTree = "<group>"; };
 		726FA1781B42306000D1A2DE /* u1147.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = u1147.png; sourceTree = "<group>"; };
 		726FA1791B42306000D1A2DE /* u1153.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = u1153.png; sourceTree = "<group>"; };
-		726FA20B1B42360E00D1A2DE /* TlistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TlistCell.h; path = ../TlistCell.h; sourceTree = "<group>"; };
-		726FA20C1B42360E00D1A2DE /* TlistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TlistCell.m; path = ../TlistCell.m; sourceTree = "<group>"; };
-		726FA20E1B42362100D1A2DE /* TlistCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TlistCell.xib; path = ../TlistCell.xib; sourceTree = "<group>"; };
-		726FA2341B43B59400D1A2DE /* CardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardCell.h; path = ../CardCell.h; sourceTree = "<group>"; };
-		726FA2351B43B59400D1A2DE /* CardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardCell.m; path = ../CardCell.m; sourceTree = "<group>"; };
-		726FA2361B43B59400D1A2DE /* GoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoodsCell.h; path = ../GoodsCell.h; sourceTree = "<group>"; };
-		726FA2371B43B59400D1A2DE /* GoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoodsCell.m; path = ../GoodsCell.m; sourceTree = "<group>"; };
-		726FA2381B43B59400D1A2DE /* GoodsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GoodsCell.xib; path = ../GoodsCell.xib; sourceTree = "<group>"; };
-		726FA2391B43B59400D1A2DE /* MoneyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoneyCell.h; path = ../MoneyCell.h; sourceTree = "<group>"; };
-		726FA23A1B43B59400D1A2DE /* MoneyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoneyCell.m; path = ../MoneyCell.m; sourceTree = "<group>"; };
-		726FA23B1B43B59400D1A2DE /* MoneyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MoneyCell.xib; path = ../MoneyCell.xib; sourceTree = "<group>"; };
-		726FA23C1B43B59400D1A2DE /* VolumeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VolumeCell.h; path = ../VolumeCell.h; sourceTree = "<group>"; };
-		726FA23D1B43B59400D1A2DE /* VolumeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VolumeCell.m; path = ../VolumeCell.m; sourceTree = "<group>"; };
-		726FA23E1B43B59400D1A2DE /* VolumeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VolumeCell.xib; path = ../VolumeCell.xib; sourceTree = "<group>"; };
 		726FA2461B43B5B300D1A2DE /* CardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardModel.h; sourceTree = "<group>"; };
 		726FA2471B43B5B300D1A2DE /* CardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardModel.m; sourceTree = "<group>"; };
 		726FA2481B43B5B300D1A2DE /* GoodsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsModel.h; sourceTree = "<group>"; };
@@ -596,38 +596,38 @@
 		720CB2CB1B4BB9DD0066FC49 /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				726FA0DF1B422B8C00D1A2DE /* FlistCell.h */,
-				726FA0E01B422B8C00D1A2DE /* FlistCell.m */,
-				726FA0E21B422B9F00D1A2DE /* FlistCell.xib */,
-				726FA0E41B422E1500D1A2DE /* SlistCell.h */,
-				726FA0E51B422E1500D1A2DE /* SlistCell.m */,
-				726FA0E71B422E1E00D1A2DE /* SlistCell.xib */,
-				726FA20B1B42360E00D1A2DE /* TlistCell.h */,
-				726FA20C1B42360E00D1A2DE /* TlistCell.m */,
-				726FA20E1B42362100D1A2DE /* TlistCell.xib */,
-				726FA2341B43B59400D1A2DE /* CardCell.h */,
-				726FA2351B43B59400D1A2DE /* CardCell.m */,
-				4BF858D51B4507C6004717D8 /* AddCardCell.h */,
-				4BF858D61B4507C6004717D8 /* AddCardCell.m */,
-				4BF858D71B4507C6004717D8 /* AddCardCell.xib */,
-				4B65143B1B43DAA1007C5E0F /* ExchangeCell.h */,
-				4B65143C1B43DAA1007C5E0F /* ExchangeCell.m */,
-				4B65143D1B43DAA1007C5E0F /* ExchangeCell.xib */,
-				726FA2361B43B59400D1A2DE /* GoodsCell.h */,
-				726FA2371B43B59400D1A2DE /* GoodsCell.m */,
-				726FA2381B43B59400D1A2DE /* GoodsCell.xib */,
-				726FA2391B43B59400D1A2DE /* MoneyCell.h */,
-				726FA23A1B43B59400D1A2DE /* MoneyCell.m */,
-				726FA23B1B43B59400D1A2DE /* MoneyCell.xib */,
-				726FA23C1B43B59400D1A2DE /* VolumeCell.h */,
-				726FA23D1B43B59400D1A2DE /* VolumeCell.m */,
-				726FA23E1B43B59400D1A2DE /* VolumeCell.xib */,
-				4B6514331B43C7B7007C5E0F /* PaymentCell.h */,
-				4B6514341B43C7B7007C5E0F /* PaymentCell.m */,
-				4B6514351B43C7B7007C5E0F /* PaymentCell.xib */,
-				4BF858D01B44E03D004717D8 /* HistoryBuyCell.h */,
-				4BF858D11B44E03D004717D8 /* HistoryBuyCell.m */,
-				4BF858D21B44E03D004717D8 /* HistoryBuyCell.xib */,
+				720CB3211B4F5E7E0066FC49 /* AddCardCell.h */,
+				720CB3221B4F5E7E0066FC49 /* AddCardCell.m */,
+				720CB3231B4F5E7E0066FC49 /* AddCardCell.xib */,
+				720CB3241B4F5E7E0066FC49 /* CardCell.h */,
+				720CB3251B4F5E7E0066FC49 /* CardCell.m */,
+				720CB3261B4F5E7E0066FC49 /* ExchangeCell.h */,
+				720CB3271B4F5E7E0066FC49 /* ExchangeCell.m */,
+				720CB3281B4F5E7E0066FC49 /* ExchangeCell.xib */,
+				720CB3291B4F5E7E0066FC49 /* FlistCell.h */,
+				720CB32A1B4F5E7E0066FC49 /* FlistCell.m */,
+				720CB32B1B4F5E7E0066FC49 /* FlistCell.xib */,
+				720CB32C1B4F5E7E0066FC49 /* GoodsCell.h */,
+				720CB32D1B4F5E7E0066FC49 /* GoodsCell.m */,
+				720CB32E1B4F5E7E0066FC49 /* GoodsCell.xib */,
+				720CB32F1B4F5E7E0066FC49 /* HistoryBuyCell.h */,
+				720CB3301B4F5E7E0066FC49 /* HistoryBuyCell.m */,
+				720CB3311B4F5E7E0066FC49 /* HistoryBuyCell.xib */,
+				720CB3321B4F5E7E0066FC49 /* MoneyCell.h */,
+				720CB3331B4F5E7E0066FC49 /* MoneyCell.m */,
+				720CB3341B4F5E7E0066FC49 /* MoneyCell.xib */,
+				720CB3351B4F5E7E0066FC49 /* PaymentCell.h */,
+				720CB3361B4F5E7E0066FC49 /* PaymentCell.m */,
+				720CB3371B4F5E7E0066FC49 /* PaymentCell.xib */,
+				720CB3381B4F5E7E0066FC49 /* SlistCell.h */,
+				720CB3391B4F5E7E0066FC49 /* SlistCell.m */,
+				720CB33A1B4F5E7E0066FC49 /* SlistCell.xib */,
+				720CB33B1B4F5E7E0066FC49 /* TlistCell.h */,
+				720CB33C1B4F5E7E0066FC49 /* TlistCell.m */,
+				720CB33D1B4F5E7E0066FC49 /* TlistCell.xib */,
+				720CB33E1B4F5E7E0066FC49 /* VolumeCell.h */,
+				720CB33F1B4F5E7E0066FC49 /* VolumeCell.m */,
+				720CB3401B4F5E7E0066FC49 /* VolumeCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -1125,9 +1125,9 @@
 				726FA1861B42306000D1A2DE /* u37.png in Resources */,
 				726FA24F1B43B5CB00D1A2DE /* 更多.png in Resources */,
 				726FA1AA1B42306000D1A2DE /* u233.png in Resources */,
-				4BF858D41B44E03D004717D8 /* HistoryBuyCell.xib in Resources */,
 				726FA1BB1B42306000D1A2DE /* u406.png in Resources */,
 				726FA1DA1B42306000D1A2DE /* u688_line.png in Resources */,
+				720CB34D1B4F5E7E0066FC49 /* MoneyCell.xib in Resources */,
 				726FA1D21B42306000D1A2DE /* u640_line.png in Resources */,
 				726FA1A51B42306000D1A2DE /* u214.png in Resources */,
 				726FA1EF1B42306000D1A2DE /* u834.png in Resources */,
@@ -1137,7 +1137,6 @@
 				726FA17F1B42306000D1A2DE /* u10.png in Resources */,
 				726FA17D1B42306000D1A2DE /* u6.png in Resources */,
 				726FA1881B42306000D1A2DE /* u46.png in Resources */,
-				726FA2451B43B59400D1A2DE /* VolumeCell.xib in Resources */,
 				726FA1EE1B42306000D1A2DE /* u824.png in Resources */,
 				4BE584FD1B4CCCBD009ACDDB /* AMap.bundle in Resources */,
 				726FA1F41B42306000D1A2DE /* u926.png in Resources */,
@@ -1147,7 +1146,6 @@
 				726FA1EA1B42306000D1A2DE /* u785.png in Resources */,
 				726FA1B81B42306000D1A2DE /* u303.png in Resources */,
 				726FA1F71B42306000D1A2DE /* u969.png in Resources */,
-				726FA20F1B42362100D1A2DE /* TlistCell.xib in Resources */,
 				726FA1C81B42306000D1A2DE /* u581.png in Resources */,
 				726FA19B1B42306000D1A2DE /* u136.jpg in Resources */,
 				726FA1D11B42306000D1A2DE /* u639_line.png in Resources */,
@@ -1176,28 +1174,29 @@
 				726FA1EB1B42306000D1A2DE /* u799_line.png in Resources */,
 				726FA1841B42306000D1A2DE /* u26.png in Resources */,
 				726FA1C31B42306000D1A2DE /* u532.png in Resources */,
+				720CB3421B4F5E7E0066FC49 /* AddCardCell.xib in Resources */,
 				726FA1821B42306000D1A2DE /* u19.png in Resources */,
 				726FA1A21B42306000D1A2DE /* u204.png in Resources */,
 				726FA2091B42306000D1A2DE /* u1147.png in Resources */,
-				4BF858D91B4507C6004717D8 /* AddCardCell.xib in Resources */,
 				726FA1971B42306000D1A2DE /* u124.png in Resources */,
 				726FA1C51B42306000D1A2DE /* u565.png in Resources */,
 				720CB2DC1B4E26AC0066FC49 /* btnBg.png in Resources */,
 				726FA1B51B42306000D1A2DE /* u285.png in Resources */,
+				720CB3451B4F5E7E0066FC49 /* ExchangeCell.xib in Resources */,
 				726FA1991B42306000D1A2DE /* u130.png in Resources */,
+				720CB3551B4F5E7E0066FC49 /* VolumeCell.xib in Resources */,
 				726FA1D41B42306000D1A2DE /* u642_line.png in Resources */,
 				726266AF1B395C4200B3302D /* LaunchScreen.xib in Resources */,
 				726FA1D81B42306000D1A2DE /* u673.png in Resources */,
 				726FA2031B42306000D1A2DE /* u1051.png in Resources */,
 				726FA2011B42306000D1A2DE /* u1044.png in Resources */,
 				726FA1891B42306000D1A2DE /* u48.png in Resources */,
+				720CB3491B4F5E7E0066FC49 /* GoodsCell.xib in Resources */,
 				726FA1FA1B42306000D1A2DE /* u999.png in Resources */,
 				726FA1FC1B42306000D1A2DE /* u1003.png in Resources */,
-				4B65143F1B43DAA1007C5E0F /* ExchangeCell.xib in Resources */,
 				726FA1AD1B42306000D1A2DE /* u251.png in Resources */,
 				726FA1A81B42306000D1A2DE /* u221.png in Resources */,
 				726FA2071B42306000D1A2DE /* u1089_line.png in Resources */,
-				4B6514371B43C7B7007C5E0F /* PaymentCell.xib in Resources */,
 				726FA1ED1B42306000D1A2DE /* u820.png in Resources */,
 				726FA1E51B42306000D1A2DE /* u758.png in Resources */,
 				726FA1C91B42306000D1A2DE /* u589.png in Resources */,
@@ -1210,8 +1209,8 @@
 				726FA1E01B42306000D1A2DE /* u742.png in Resources */,
 				726FA1BA1B42306000D1A2DE /* u367.png in Resources */,
 				726FA1B21B42306000D1A2DE /* u274.png in Resources */,
+				720CB34B1B4F5E7E0066FC49 /* HistoryBuyCell.xib in Resources */,
 				726FA1901B42306000D1A2DE /* u72.jpg in Resources */,
-				726FA2411B43B59400D1A2DE /* GoodsCell.xib in Resources */,
 				726FA1CB1B42306000D1A2DE /* u615.png in Resources */,
 				726FA2061B42306000D1A2DE /* u1077.png in Resources */,
 				729F9D271B3FFEF200741CC5 /* rightItem.png in Resources */,
@@ -1233,10 +1232,10 @@
 				726FA1FD1B42306000D1A2DE /* u1008.png in Resources */,
 				726FA1E91B42306000D1A2DE /* u783.png in Resources */,
 				726FA1CF1B42306000D1A2DE /* u633.png in Resources */,
-				726FA0E31B422B9F00D1A2DE /* FlistCell.xib in Resources */,
 				726FA2041B42306000D1A2DE /* u1057.png in Resources */,
 				726FA1CD1B42306000D1A2DE /* u624.png in Resources */,
 				726266AC1B395C4200B3302D /* Images.xcassets in Resources */,
+				720CB34F1B4F5E7E0066FC49 /* PaymentCell.xib in Resources */,
 				726FA1C71B42306000D1A2DE /* u575.png in Resources */,
 				726FA1921B42306000D1A2DE /* u78.png in Resources */,
 				726FA1801B42306000D1A2DE /* u12.png in Resources */,
@@ -1245,7 +1244,6 @@
 				726FA1981B42306000D1A2DE /* u126.png in Resources */,
 				726FA1C41B42306000D1A2DE /* u549.png in Resources */,
 				726FA1B41B42306000D1A2DE /* u283.png in Resources */,
-				726FA2431B43B59400D1A2DE /* MoneyCell.xib in Resources */,
 				726FA1DD1B42306000D1A2DE /* u715_line.png in Resources */,
 				726FA1F11B42306000D1A2DE /* u871.png in Resources */,
 				726FA1FE1B42306000D1A2DE /* u1016.png in Resources */,
@@ -1255,10 +1253,12 @@
 				726FA18E1B42306000D1A2DE /* u64.jpg in Resources */,
 				726FA1911B42306000D1A2DE /* u76.png in Resources */,
 				726FA1E41B42306000D1A2DE /* u754.png in Resources */,
+				720CB3511B4F5E7E0066FC49 /* SlistCell.xib in Resources */,
 				726FA1AB1B42306000D1A2DE /* u239.png in Resources */,
 				726FA1851B42306000D1A2DE /* u28.png in Resources */,
 				726FA1A11B42306000D1A2DE /* u192.png in Resources */,
 				726FA19D1B42306000D1A2DE /* u159.png in Resources */,
+				720CB3471B4F5E7E0066FC49 /* FlistCell.xib in Resources */,
 				726FA1BC1B42306000D1A2DE /* u426.png in Resources */,
 				726FA1DC1B42306000D1A2DE /* u691.png in Resources */,
 				726FA1B01B42306000D1A2DE /* u257.png in Resources */,
@@ -1273,7 +1273,7 @@
 				726FA1BD1B42306000D1A2DE /* u434.png in Resources */,
 				726FA1E81B42306000D1A2DE /* u776_line.png in Resources */,
 				726FA1C01B42306000D1A2DE /* u442.png in Resources */,
-				726FA0E81B422E1E00D1A2DE /* SlistCell.xib in Resources */,
+				720CB3531B4F5E7E0066FC49 /* TlistCell.xib in Resources */,
 				726FA1E11B42306000D1A2DE /* u744.png in Resources */,
 				726FA17E1B42306000D1A2DE /* u8.png in Resources */,
 				726FA1AF1B42306000D1A2DE /* u255.png in Resources */,
@@ -1310,46 +1310,46 @@
 				726FA24A1B43B5B300D1A2DE /* CardModel.m in Sources */,
 				72F37E291B3BAA73001D8A58 /* AFNetworkReachabilityManager.m in Sources */,
 				720CB31F1B4F5A790066FC49 /* OrderDetaikViewController.m in Sources */,
-				726FA20D1B42360E00D1A2DE /* TlistCell.m in Sources */,
 				72FE38001B46853900B2537E /* RegisterViewController1.m in Sources */,
-				4B65143E1B43DAA1007C5E0F /* ExchangeCell.m in Sources */,
 				72F37E341B3BAA73001D8A58 /* UIProgressView+AFNetworking.m in Sources */,
 				72F37E2E1B3BAA73001D8A58 /* AFURLSessionManager.m in Sources */,
-				4B6514361B43C7B7007C5E0F /* PaymentCell.m in Sources */,
+				720CB3501B4F5E7E0066FC49 /* SlistCell.m in Sources */,
 				72E85F451B453BC400ECB862 /* FinancialViewController.m in Sources */,
 				4BE584F91B4CCADC009ACDDB /* MapViewController.m in Sources */,
+				720CB34A1B4F5E7E0066FC49 /* HistoryBuyCell.m in Sources */,
+				720CB3541B4F5E7E0066FC49 /* VolumeCell.m in Sources */,
 				72F37E2C1B3BAA73001D8A58 /* AFURLRequestSerialization.m in Sources */,
+				720CB3521B4F5E7E0066FC49 /* TlistCell.m in Sources */,
 				72F37E351B3BAA73001D8A58 /* UIRefreshControl+AFNetworking.m in Sources */,
-				726FA0E61B422E1500D1A2DE /* SlistCell.m in Sources */,
+				720CB3431B4F5E7E0066FC49 /* CardCell.m in Sources */,
+				720CB3411B4F5E7E0066FC49 /* AddCardCell.m in Sources */,
 				72F37E2D1B3BAA73001D8A58 /* AFURLResponseSerialization.m in Sources */,
 				720CB2D61B4E0D170066FC49 /* ChooseView.m in Sources */,
-				726FA2421B43B59400D1A2DE /* MoneyCell.m in Sources */,
 				726266A41B395C4200B3302D /* AppDelegate.mm in Sources */,
-				726FA2401B43B59400D1A2DE /* GoodsCell.m in Sources */,
 				72E458231B443A08004AAF09 /* SellViewController.m in Sources */,
+				720CB34E1B4F5E7E0066FC49 /* PaymentCell.m in Sources */,
 				72F37E3A1B3BC634001D8A58 /* NSString+Hashing.m in Sources */,
 				72F37E331B3BAA73001D8A58 /* UIImageView+AFNetworking.m in Sources */,
 				726266A11B395C4200B3302D /* main.m in Sources */,
 				72F37E311B3BAA73001D8A58 /* UIAlertView+AFNetworking.m in Sources */,
-				4BF858D81B4507C6004717D8 /* AddCardCell.m in Sources */,
+				720CB3481B4F5E7E0066FC49 /* GoodsCell.m in Sources */,
 				72F37E271B3BAA73001D8A58 /* AFHTTPRequestOperationManager.m in Sources */,
-				726FA0E11B422B8C00D1A2DE /* FlistCell.m in Sources */,
 				72F37E2A1B3BAA73001D8A58 /* AFSecurityPolicy.m in Sources */,
 				72F37E361B3BAA73001D8A58 /* UIWebView+AFNetworking.m in Sources */,
+				720CB3441B4F5E7E0066FC49 /* ExchangeCell.m in Sources */,
 				720CB31C1B4F5A790066FC49 /* CardbagViewController.m in Sources */,
 				720CB31D1B4F5A790066FC49 /* CardDetailViewController.m in Sources */,
 				4BF858CF1B44CE1C004717D8 /* BuyViewController.m in Sources */,
 				726266CA1B39653100B3302D /* RootViewController.m in Sources */,
 				72FE37FD1B4671A200B2537E /* RegisterViewController.m in Sources */,
+				720CB34C1B4F5E7E0066FC49 /* MoneyCell.m in Sources */,
 				72FA0EEF1B4A522B00044A6E /* EarnViewController.m in Sources */,
 				725897481B3A8B97002098E2 /* GZRControl.m in Sources */,
+				720CB3461B4F5E7E0066FC49 /* FlistCell.m in Sources */,
 				72F37E281B3BAA73001D8A58 /* AFHTTPSessionManager.m in Sources */,
 				720CB31B1B4F5A790066FC49 /* AddCardViewController.m in Sources */,
 				726FA24B1B43B5B300D1A2DE /* GoodsModel.m in Sources */,
 				72F37E301B3BAA73001D8A58 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				4BF858D31B44E03D004717D8 /* HistoryBuyCell.m in Sources */,
-				726FA23F1B43B59400D1A2DE /* CardCell.m in Sources */,
-				726FA2441B43B59400D1A2DE /* VolumeCell.m in Sources */,
 				72F37E2F1B3BAA73001D8A58 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				720CB2D71B4E0D170066FC49 /* CustomView.m in Sources */,
 				720CB3201B4F5A790066FC49 /* TradeViewController.m in Sources */,
