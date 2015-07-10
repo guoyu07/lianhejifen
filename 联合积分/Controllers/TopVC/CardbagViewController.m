@@ -45,10 +45,15 @@
     [self.view addSubview:naView];
     
     UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [leftButton setFrame:CGRectMake(5, 9, 70, 40)];
-    [leftButton setBackgroundImage:[UIImage imageNamed:@"卡包"] forState:UIControlStateNormal];
-    [leftButton addTarget:self action:@selector(leftButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    [leftButton setFrame:CGRectMake(10, 10, 30, 30)];
+    [leftButton setBackgroundImage:[UIImage imageNamed:@"u257"] forState:UIControlStateNormal];
+    [leftButton addTarget:self action:@selector(leftButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [naView addSubview:leftButton];
+    
+    UILabel *titleLabel =[GZRControl createLabelWithFrame:CGRectMake(SCREEN_WIDTH/6-10, 0, SCREEN_WIDTH-SCREEN_WIDTH/6, 49) Font:19 Text:@"卡包" TextColor:[UIColor whiteColor ] TextAligent:NSTextAlignmentLeft];
+    
+    [naView addSubview:titleLabel];
+
     
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [rightButton setFrame:CGRectMake(SCREEN_WIDTH-80, 9, 70, 40)];
@@ -60,7 +65,7 @@
     
 }
 
-- (void)leftButtonClicked {
+- (void)leftButtonClicked:(UIButton *)btn {
     
     [self.navigationController popViewControllerAnimated:YES];
     
