@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4B6514361B43C7B7007C5E0F /* PaymentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6514341B43C7B7007C5E0F /* PaymentCell.m */; };
 		4B6514371B43C7B7007C5E0F /* PaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6514351B43C7B7007C5E0F /* PaymentCell.xib */; };
-		4B65143A1B43CFE6007C5E0F /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6514391B43CFE6007C5E0F /* ExchangeViewController.m */; };
 		4B65143E1B43DAA1007C5E0F /* ExchangeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B65143C1B43DAA1007C5E0F /* ExchangeCell.m */; };
 		4B65143F1B43DAA1007C5E0F /* ExchangeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B65143D1B43DAA1007C5E0F /* ExchangeCell.xib */; };
 		4B825BAA1B4A5A5D0047575C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B825BA91B4A5A5D0047575C /* CoreLocation.framework */; };
@@ -30,11 +29,15 @@
 		4BF858D41B44E03D004717D8 /* HistoryBuyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BF858D21B44E03D004717D8 /* HistoryBuyCell.xib */; };
 		4BF858D81B4507C6004717D8 /* AddCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF858D61B4507C6004717D8 /* AddCardCell.m */; };
 		4BF858D91B4507C6004717D8 /* AddCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BF858D71B4507C6004717D8 /* AddCardCell.xib */; };
-		4BF858DC1B4509FF004717D8 /* AddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF858DB1B4509FF004717D8 /* AddCardViewController.m */; };
-		4BF858DF1B451CF6004717D8 /* CardDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF858DE1B451CF6004717D8 /* CardDetailViewController.m */; };
 		720CB2D61B4E0D170066FC49 /* ChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB2D31B4E0D170066FC49 /* ChooseView.m */; };
 		720CB2D71B4E0D170066FC49 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB2D51B4E0D170066FC49 /* CustomView.m */; };
 		720CB2DC1B4E26AC0066FC49 /* btnBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 720CB2DB1B4E26AC0066FC49 /* btnBg.png */; };
+		720CB31B1B4F5A790066FC49 /* AddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB3101B4F5A790066FC49 /* AddCardViewController.m */; };
+		720CB31C1B4F5A790066FC49 /* CardbagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB3121B4F5A790066FC49 /* CardbagViewController.m */; };
+		720CB31D1B4F5A790066FC49 /* CardDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB3141B4F5A790066FC49 /* CardDetailViewController.m */; };
+		720CB31E1B4F5A790066FC49 /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB3161B4F5A790066FC49 /* ExchangeViewController.m */; };
+		720CB31F1B4F5A790066FC49 /* OrderDetaikViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB3181B4F5A790066FC49 /* OrderDetaikViewController.m */; };
+		720CB3201B4F5A790066FC49 /* TradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB31A1B4F5A790066FC49 /* TradeViewController.m */; };
 		725897481B3A8B97002098E2 /* GZRControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 725897471B3A8B97002098E2 /* GZRControl.m */; };
 		726266A11B395C4200B3302D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 726266A01B395C4200B3302D /* main.m */; };
 		726266A41B395C4200B3302D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 726266A31B395C4200B3302D /* AppDelegate.mm */; };
@@ -193,9 +196,6 @@
 		726FA20A1B42306000D1A2DE /* u1153.png in Resources */ = {isa = PBXBuildFile; fileRef = 726FA1791B42306000D1A2DE /* u1153.png */; };
 		726FA20D1B42360E00D1A2DE /* TlistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA20C1B42360E00D1A2DE /* TlistCell.m */; };
 		726FA20F1B42362100D1A2DE /* TlistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726FA20E1B42362100D1A2DE /* TlistCell.xib */; };
-		726FA2311B43B57E00D1A2DE /* CardbagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA22C1B43B57E00D1A2DE /* CardbagViewController.m */; };
-		726FA2321B43B57E00D1A2DE /* OrderDetaikViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA22E1B43B57E00D1A2DE /* OrderDetaikViewController.m */; };
-		726FA2331B43B57E00D1A2DE /* TradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA2301B43B57E00D1A2DE /* TradeViewController.m */; };
 		726FA23F1B43B59400D1A2DE /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA2351B43B59400D1A2DE /* CardCell.m */; };
 		726FA2401B43B59400D1A2DE /* GoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 726FA2371B43B59400D1A2DE /* GoodsCell.m */; };
 		726FA2411B43B59400D1A2DE /* GoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726FA2381B43B59400D1A2DE /* GoodsCell.xib */; };
@@ -250,8 +250,6 @@
 		4B6514331B43C7B7007C5E0F /* PaymentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentCell.h; path = ../PaymentCell.h; sourceTree = "<group>"; };
 		4B6514341B43C7B7007C5E0F /* PaymentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentCell.m; path = ../PaymentCell.m; sourceTree = "<group>"; };
 		4B6514351B43C7B7007C5E0F /* PaymentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PaymentCell.xib; path = ../PaymentCell.xib; sourceTree = "<group>"; };
-		4B6514381B43CFE6007C5E0F /* ExchangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExchangeViewController.h; path = ../ExchangeViewController.h; sourceTree = "<group>"; };
-		4B6514391B43CFE6007C5E0F /* ExchangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExchangeViewController.m; path = ../ExchangeViewController.m; sourceTree = "<group>"; };
 		4B65143B1B43DAA1007C5E0F /* ExchangeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExchangeCell.h; path = ../ExchangeCell.h; sourceTree = "<group>"; };
 		4B65143C1B43DAA1007C5E0F /* ExchangeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExchangeCell.m; path = ../ExchangeCell.m; sourceTree = "<group>"; };
 		4B65143D1B43DAA1007C5E0F /* ExchangeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExchangeCell.xib; path = ../ExchangeCell.xib; sourceTree = "<group>"; };
@@ -277,15 +275,23 @@
 		4BF858D51B4507C6004717D8 /* AddCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddCardCell.h; path = ../AddCardCell.h; sourceTree = "<group>"; };
 		4BF858D61B4507C6004717D8 /* AddCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddCardCell.m; path = ../AddCardCell.m; sourceTree = "<group>"; };
 		4BF858D71B4507C6004717D8 /* AddCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddCardCell.xib; path = ../AddCardCell.xib; sourceTree = "<group>"; };
-		4BF858DA1B4509FF004717D8 /* AddCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddCardViewController.h; path = ../AddCardViewController.h; sourceTree = "<group>"; };
-		4BF858DB1B4509FF004717D8 /* AddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddCardViewController.m; path = ../AddCardViewController.m; sourceTree = "<group>"; };
-		4BF858DD1B451CF6004717D8 /* CardDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardDetailViewController.h; path = ../CardDetailViewController.h; sourceTree = "<group>"; };
-		4BF858DE1B451CF6004717D8 /* CardDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardDetailViewController.m; path = ../CardDetailViewController.m; sourceTree = "<group>"; };
 		720CB2D21B4E0D170066FC49 /* ChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseView.h; path = "联合积分/Views/ChooseView.h"; sourceTree = SOURCE_ROOT; };
 		720CB2D31B4E0D170066FC49 /* ChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseView.m; path = "联合积分/Views/ChooseView.m"; sourceTree = SOURCE_ROOT; };
 		720CB2D41B4E0D170066FC49 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomView.h; path = "联合积分/Views/CustomView.h"; sourceTree = SOURCE_ROOT; };
 		720CB2D51B4E0D170066FC49 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomView.m; path = "联合积分/Views/CustomView.m"; sourceTree = SOURCE_ROOT; };
 		720CB2DB1B4E26AC0066FC49 /* btnBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnBg.png; sourceTree = "<group>"; };
+		720CB30F1B4F5A790066FC49 /* AddCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCardViewController.h; sourceTree = "<group>"; };
+		720CB3101B4F5A790066FC49 /* AddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCardViewController.m; sourceTree = "<group>"; };
+		720CB3111B4F5A790066FC49 /* CardbagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardbagViewController.h; sourceTree = "<group>"; };
+		720CB3121B4F5A790066FC49 /* CardbagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardbagViewController.m; sourceTree = "<group>"; };
+		720CB3131B4F5A790066FC49 /* CardDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardDetailViewController.h; sourceTree = "<group>"; };
+		720CB3141B4F5A790066FC49 /* CardDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardDetailViewController.m; sourceTree = "<group>"; };
+		720CB3151B4F5A790066FC49 /* ExchangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeViewController.h; sourceTree = "<group>"; };
+		720CB3161B4F5A790066FC49 /* ExchangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeViewController.m; sourceTree = "<group>"; };
+		720CB3171B4F5A790066FC49 /* OrderDetaikViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDetaikViewController.h; sourceTree = "<group>"; };
+		720CB3181B4F5A790066FC49 /* OrderDetaikViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDetaikViewController.m; sourceTree = "<group>"; };
+		720CB3191B4F5A790066FC49 /* TradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeViewController.h; sourceTree = "<group>"; };
+		720CB31A1B4F5A790066FC49 /* TradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeViewController.m; sourceTree = "<group>"; };
 		725897421B3A830A002098E2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		725897451B3A8398002098E2 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		725897461B3A8B97002098E2 /* GZRControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZRControl.h; sourceTree = "<group>"; };
@@ -456,12 +462,6 @@
 		726FA20B1B42360E00D1A2DE /* TlistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TlistCell.h; path = ../TlistCell.h; sourceTree = "<group>"; };
 		726FA20C1B42360E00D1A2DE /* TlistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TlistCell.m; path = ../TlistCell.m; sourceTree = "<group>"; };
 		726FA20E1B42362100D1A2DE /* TlistCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TlistCell.xib; path = ../TlistCell.xib; sourceTree = "<group>"; };
-		726FA22B1B43B57E00D1A2DE /* CardbagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardbagViewController.h; path = ../CardbagViewController.h; sourceTree = "<group>"; };
-		726FA22C1B43B57E00D1A2DE /* CardbagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardbagViewController.m; path = ../CardbagViewController.m; sourceTree = "<group>"; };
-		726FA22D1B43B57E00D1A2DE /* OrderDetaikViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrderDetaikViewController.h; path = ../OrderDetaikViewController.h; sourceTree = "<group>"; };
-		726FA22E1B43B57E00D1A2DE /* OrderDetaikViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrderDetaikViewController.m; path = ../OrderDetaikViewController.m; sourceTree = "<group>"; };
-		726FA22F1B43B57E00D1A2DE /* TradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TradeViewController.h; path = ../TradeViewController.h; sourceTree = "<group>"; };
-		726FA2301B43B57E00D1A2DE /* TradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TradeViewController.m; path = ../TradeViewController.m; sourceTree = "<group>"; };
 		726FA2341B43B59400D1A2DE /* CardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardCell.h; path = ../CardCell.h; sourceTree = "<group>"; };
 		726FA2351B43B59400D1A2DE /* CardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardCell.m; path = ../CardCell.m; sourceTree = "<group>"; };
 		726FA2361B43B59400D1A2DE /* GoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoodsCell.h; path = ../GoodsCell.h; sourceTree = "<group>"; };
@@ -635,18 +635,18 @@
 		720CB2D81B4E181C0066FC49 /* TopVC */ = {
 			isa = PBXGroup;
 			children = (
-				726FA22B1B43B57E00D1A2DE /* CardbagViewController.h */,
-				726FA22C1B43B57E00D1A2DE /* CardbagViewController.m */,
-				4BF858DA1B4509FF004717D8 /* AddCardViewController.h */,
-				4BF858DB1B4509FF004717D8 /* AddCardViewController.m */,
-				4BF858DD1B451CF6004717D8 /* CardDetailViewController.h */,
-				4BF858DE1B451CF6004717D8 /* CardDetailViewController.m */,
-				4B6514381B43CFE6007C5E0F /* ExchangeViewController.h */,
-				4B6514391B43CFE6007C5E0F /* ExchangeViewController.m */,
-				726FA22D1B43B57E00D1A2DE /* OrderDetaikViewController.h */,
-				726FA22E1B43B57E00D1A2DE /* OrderDetaikViewController.m */,
-				726FA22F1B43B57E00D1A2DE /* TradeViewController.h */,
-				726FA2301B43B57E00D1A2DE /* TradeViewController.m */,
+				720CB30F1B4F5A790066FC49 /* AddCardViewController.h */,
+				720CB3101B4F5A790066FC49 /* AddCardViewController.m */,
+				720CB3111B4F5A790066FC49 /* CardbagViewController.h */,
+				720CB3121B4F5A790066FC49 /* CardbagViewController.m */,
+				720CB3131B4F5A790066FC49 /* CardDetailViewController.h */,
+				720CB3141B4F5A790066FC49 /* CardDetailViewController.m */,
+				720CB3151B4F5A790066FC49 /* ExchangeViewController.h */,
+				720CB3161B4F5A790066FC49 /* ExchangeViewController.m */,
+				720CB3171B4F5A790066FC49 /* OrderDetaikViewController.h */,
+				720CB3181B4F5A790066FC49 /* OrderDetaikViewController.m */,
+				720CB3191B4F5A790066FC49 /* TradeViewController.h */,
+				720CB31A1B4F5A790066FC49 /* TradeViewController.m */,
 			);
 			path = TopVC;
 			sourceTree = "<group>";
@@ -1304,12 +1304,12 @@
 			files = (
 				72F37E2B1B3BAA73001D8A58 /* AFURLConnectionOperation.m in Sources */,
 				72F37E261B3BAA73001D8A58 /* AFHTTPRequestOperation.m in Sources */,
-				726FA2331B43B57E00D1A2DE /* TradeViewController.m in Sources */,
 				72E85F421B4503CD00ECB862 /* ConsumeViewController.m in Sources */,
+				720CB31E1B4F5A790066FC49 /* ExchangeViewController.m in Sources */,
 				72F37E321B3BAA73001D8A58 /* UIButton+AFNetworking.m in Sources */,
-				726FA2321B43B57E00D1A2DE /* OrderDetaikViewController.m in Sources */,
 				726FA24A1B43B5B300D1A2DE /* CardModel.m in Sources */,
 				72F37E291B3BAA73001D8A58 /* AFNetworkReachabilityManager.m in Sources */,
+				720CB31F1B4F5A790066FC49 /* OrderDetaikViewController.m in Sources */,
 				726FA20D1B42360E00D1A2DE /* TlistCell.m in Sources */,
 				72FE38001B46853900B2537E /* RegisterViewController1.m in Sources */,
 				4B65143E1B43DAA1007C5E0F /* ExchangeCell.m in Sources */,
@@ -1321,7 +1321,6 @@
 				72F37E2C1B3BAA73001D8A58 /* AFURLRequestSerialization.m in Sources */,
 				72F37E351B3BAA73001D8A58 /* UIRefreshControl+AFNetworking.m in Sources */,
 				726FA0E61B422E1500D1A2DE /* SlistCell.m in Sources */,
-				4BF858DC1B4509FF004717D8 /* AddCardViewController.m in Sources */,
 				72F37E2D1B3BAA73001D8A58 /* AFURLResponseSerialization.m in Sources */,
 				720CB2D61B4E0D170066FC49 /* ChooseView.m in Sources */,
 				726FA2421B43B59400D1A2DE /* MoneyCell.m in Sources */,
@@ -1335,24 +1334,25 @@
 				4BF858D81B4507C6004717D8 /* AddCardCell.m in Sources */,
 				72F37E271B3BAA73001D8A58 /* AFHTTPRequestOperationManager.m in Sources */,
 				726FA0E11B422B8C00D1A2DE /* FlistCell.m in Sources */,
-				4BF858DF1B451CF6004717D8 /* CardDetailViewController.m in Sources */,
 				72F37E2A1B3BAA73001D8A58 /* AFSecurityPolicy.m in Sources */,
 				72F37E361B3BAA73001D8A58 /* UIWebView+AFNetworking.m in Sources */,
+				720CB31C1B4F5A790066FC49 /* CardbagViewController.m in Sources */,
+				720CB31D1B4F5A790066FC49 /* CardDetailViewController.m in Sources */,
 				4BF858CF1B44CE1C004717D8 /* BuyViewController.m in Sources */,
 				726266CA1B39653100B3302D /* RootViewController.m in Sources */,
 				72FE37FD1B4671A200B2537E /* RegisterViewController.m in Sources */,
 				72FA0EEF1B4A522B00044A6E /* EarnViewController.m in Sources */,
 				725897481B3A8B97002098E2 /* GZRControl.m in Sources */,
 				72F37E281B3BAA73001D8A58 /* AFHTTPSessionManager.m in Sources */,
+				720CB31B1B4F5A790066FC49 /* AddCardViewController.m in Sources */,
 				726FA24B1B43B5B300D1A2DE /* GoodsModel.m in Sources */,
 				72F37E301B3BAA73001D8A58 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				4BF858D31B44E03D004717D8 /* HistoryBuyCell.m in Sources */,
 				726FA23F1B43B59400D1A2DE /* CardCell.m in Sources */,
 				726FA2441B43B59400D1A2DE /* VolumeCell.m in Sources */,
 				72F37E2F1B3BAA73001D8A58 /* AFNetworkActivityIndicatorManager.m in Sources */,
-				726FA2311B43B57E00D1A2DE /* CardbagViewController.m in Sources */,
-				4B65143A1B43CFE6007C5E0F /* ExchangeViewController.m in Sources */,
 				720CB2D71B4E0D170066FC49 /* CustomView.m in Sources */,
+				720CB3201B4F5A790066FC49 /* TradeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
