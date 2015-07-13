@@ -63,6 +63,10 @@
                     <constraint firstAttribute="trailingMargin" secondItem="zr1-YI-Ip8" secondAttribute="trailing" constant="-8" id="dsf-6b-7Tz"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="iconImageView" destination="kzj-VQ-KGy" id="hen-lf-4zH"/>
+                <outlet property="nameLabel" destination="JmE-Tb-3hN" id="6CI-ra-SGq"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>

@@ -33,7 +33,7 @@
      moreView.hidden =YES;
     isMore =NO;
     [self createData];
-    [self createBottom];
+ //   [self createBottom];
     
 }
 
@@ -154,8 +154,7 @@
 }
 -(void)createUI
 {
-    cardTableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 69, SCREEN_WIDTH, SCREEN_HEIGHT-149) style:UITableViewStylePlain];
-    
+    cardTableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 69, SCREEN_WIDTH, SCREEN_HEIGHT-69) style:UITableViewStylePlain];
     
     cardTableView.delegate =self;
     cardTableView.dataSource =self;
@@ -176,18 +175,20 @@
     
     [dataArray addObject:card];
     
-    for (int i =0; i<10; i++) {
-        
-        CardModel *card =[[CardModel alloc]init];
-        
-        card.cardName =[NSString stringWithFormat:@"银行卡%d",i];
-        
-        card.cardNum =[NSString stringWithFormat:@"%d",i+10000];
-        
-        
-        [dataArray addObject:card];
-        
-    }
+    CardModel *card1 =[[CardModel alloc]init];
+    card1.cardName =@"国航知音卡";
+    card1.cardNum =@"1992";
+    [dataArray addObject:card1];
+    CardModel *card2 =[[CardModel alloc]init];
+    card2.cardName =@"天猫积分";
+    card2.cardNum =@"3342";
+    [dataArray addObject:card2];
+    
+    CardModel *card3 =[[CardModel alloc]init];
+    card3.cardName =@"移动积分";
+    card3.cardNum =@"9388";
+    [dataArray addObject:card3];
+
 
     
 }
