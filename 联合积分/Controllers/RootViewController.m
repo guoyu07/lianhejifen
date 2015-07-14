@@ -19,6 +19,7 @@
 #import "BuyViewController.h"
 #import "EarnViewController.h"
 @interface RootViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
+
 {
     UILabel         *_sourceLabel;     // 导航中显示积分的label标签
     UIScrollView    *_bgScrollView;    // 承载所有界面的底层滚动视图
@@ -86,6 +87,7 @@
 }
 
 - (void)rightButtonClicked {
+    
     TradeViewController *trade =[[TradeViewController alloc]init];
     
     [self.navigationController pushViewController:trade animated:YES];

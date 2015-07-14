@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B12DC601B53BF230041F4EA /* SendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B12DC5F1B53BF230041F4EA /* SendViewController.m */; };
 		4B825BAA1B4A5A5D0047575C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B825BA91B4A5A5D0047575C /* CoreLocation.framework */; };
 		4B825BAC1B4A5A740047575C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B825BAB1B4A5A740047575C /* QuartzCore.framework */; };
 		4B825BAE1B4A5A7F0047575C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B825BAD1B4A5A7F0047575C /* OpenGLES.framework */; };
 		4B825BB01B4A5A930047575C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B825BAF1B4A5A930047575C /* SystemConfiguration.framework */; };
 		4B825BB21B4A5A9F0047575C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B825BB11B4A5A9F0047575C /* CoreGraphics.framework */; };
 		4B825BB41B4A5AA90047575C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B825BB31B4A5AA90047575C /* Security.framework */; };
+		4BAEA61B1B54BB73002191F8 /* VerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEA61A1B54BB73002191F8 /* VerifyViewController.m */; };
+		4BAEA61E1B54D2B1002191F8 /* BoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEA61D1B54D2B1002191F8 /* BoundViewController.m */; };
+		4BAEA6211B54ED54002191F8 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEA6201B54ED54002191F8 /* AboutViewController.m */; };
 		4BE584EA1B4CC621009ACDDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE584E91B4CC621009ACDDB /* UIKit.framework */; };
 		4BE584EC1B4CC62E009ACDDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE584EB1B4CC62E009ACDDB /* Foundation.framework */; };
 		4BE584EE1B4CC655009ACDDB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE584ED1B4CC655009ACDDB /* libz.dylib */; };
@@ -20,6 +24,7 @@
 		4BE584F91B4CCADC009ACDDB /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE584F81B4CCADC009ACDDB /* MapViewController.m */; };
 		4BE584FD1B4CCCBD009ACDDB /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4BE584FC1B4CCCBD009ACDDB /* AMap.bundle */; };
 		4BE585011B4CCEF2009ACDDB /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE585001B4CCEF2009ACDDB /* MAMapKit.framework */; };
+		4BF3C2661B53A3C9007A6FD0 /* DonationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3C2651B53A3C9007A6FD0 /* DonationViewController.m */; };
 		4BF858CF1B44CE1C004717D8 /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF858CE1B44CE1C004717D8 /* BuyViewController.m */; };
 		720CB2D61B4E0D170066FC49 /* ChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB2D31B4E0D170066FC49 /* ChooseView.m */; };
 		720CB2D71B4E0D170066FC49 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB2D51B4E0D170066FC49 /* CustomView.m */; };
@@ -247,12 +252,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B12DC5E1B53BF230041F4EA /* SendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendViewController.h; sourceTree = "<group>"; };
+		4B12DC5F1B53BF230041F4EA /* SendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendViewController.m; sourceTree = "<group>"; };
 		4B825BA91B4A5A5D0047575C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4B825BAB1B4A5A740047575C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4B825BAD1B4A5A7F0047575C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		4B825BAF1B4A5A930047575C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4B825BB11B4A5A9F0047575C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4B825BB31B4A5AA90047575C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4BAEA6191B54BB73002191F8 /* VerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifyViewController.h; sourceTree = "<group>"; };
+		4BAEA61A1B54BB73002191F8 /* VerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifyViewController.m; sourceTree = "<group>"; };
+		4BAEA61C1B54D2B1002191F8 /* BoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoundViewController.h; sourceTree = "<group>"; };
+		4BAEA61D1B54D2B1002191F8 /* BoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoundViewController.m; sourceTree = "<group>"; };
+		4BAEA61F1B54ED54002191F8 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		4BAEA6201B54ED54002191F8 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		4BE584E91B4CC621009ACDDB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4BE584EB1B4CC62E009ACDDB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4BE584ED1B4CC655009ACDDB /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -261,6 +274,8 @@
 		4BE584F81B4CCADC009ACDDB /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		4BE584FC1B4CCCBD009ACDDB /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
 		4BE585001B4CCEF2009ACDDB /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
+		4BF3C2641B53A3C9007A6FD0 /* DonationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonationViewController.h; sourceTree = "<group>"; };
+		4BF3C2651B53A3C9007A6FD0 /* DonationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonationViewController.m; sourceTree = "<group>"; };
 		4BF858CD1B44CE1C004717D8 /* BuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyViewController.h; sourceTree = "<group>"; };
 		4BF858CE1B44CE1C004717D8 /* BuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyViewController.m; sourceTree = "<group>"; };
 		720CB2D21B4E0D170066FC49 /* ChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseView.h; path = "联合积分/Views/ChooseView.h"; sourceTree = SOURCE_ROOT; };
@@ -639,8 +654,18 @@
 				720CB3101B4F5A790066FC49 /* AddCardViewController.m */,
 				720CB3111B4F5A790066FC49 /* CardbagViewController.h */,
 				720CB3121B4F5A790066FC49 /* CardbagViewController.m */,
+				4BAEA61F1B54ED54002191F8 /* AboutViewController.h */,
+				4BAEA6201B54ED54002191F8 /* AboutViewController.m */,
+				4BF3C2641B53A3C9007A6FD0 /* DonationViewController.h */,
+				4BF3C2651B53A3C9007A6FD0 /* DonationViewController.m */,
+				4B12DC5E1B53BF230041F4EA /* SendViewController.h */,
+				4B12DC5F1B53BF230041F4EA /* SendViewController.m */,
 				720CB3131B4F5A790066FC49 /* CardDetailViewController.h */,
 				720CB3141B4F5A790066FC49 /* CardDetailViewController.m */,
+				4BAEA6191B54BB73002191F8 /* VerifyViewController.h */,
+				4BAEA61A1B54BB73002191F8 /* VerifyViewController.m */,
+				4BAEA61C1B54D2B1002191F8 /* BoundViewController.h */,
+				4BAEA61D1B54D2B1002191F8 /* BoundViewController.m */,
 				720CB3151B4F5A790066FC49 /* ExchangeViewController.h */,
 				720CB3161B4F5A790066FC49 /* ExchangeViewController.m */,
 				720CB3171B4F5A790066FC49 /* OrderDetaikViewController.h */,
@@ -1312,6 +1337,7 @@
 				720CB31F1B4F5A790066FC49 /* OrderDetaikViewController.m in Sources */,
 				72FE38001B46853900B2537E /* RegisterViewController1.m in Sources */,
 				72F37E341B3BAA73001D8A58 /* UIProgressView+AFNetworking.m in Sources */,
+				4BAEA6211B54ED54002191F8 /* AboutViewController.m in Sources */,
 				72F37E2E1B3BAA73001D8A58 /* AFURLSessionManager.m in Sources */,
 				720CB3501B4F5E7E0066FC49 /* SlistCell.m in Sources */,
 				72E85F451B453BC400ECB862 /* FinancialViewController.m in Sources */,
@@ -1325,6 +1351,7 @@
 				720CB3411B4F5E7E0066FC49 /* AddCardCell.m in Sources */,
 				72F37E2D1B3BAA73001D8A58 /* AFURLResponseSerialization.m in Sources */,
 				720CB2D61B4E0D170066FC49 /* ChooseView.m in Sources */,
+				4BAEA61E1B54D2B1002191F8 /* BoundViewController.m in Sources */,
 				726266A41B395C4200B3302D /* AppDelegate.mm in Sources */,
 				72E458231B443A08004AAF09 /* SellViewController.m in Sources */,
 				720CB34E1B4F5E7E0066FC49 /* PaymentCell.m in Sources */,
@@ -1339,13 +1366,16 @@
 				720CB3441B4F5E7E0066FC49 /* ExchangeCell.m in Sources */,
 				720CB31C1B4F5A790066FC49 /* CardbagViewController.m in Sources */,
 				720CB31D1B4F5A790066FC49 /* CardDetailViewController.m in Sources */,
+				4BAEA61B1B54BB73002191F8 /* VerifyViewController.m in Sources */,
 				4BF858CF1B44CE1C004717D8 /* BuyViewController.m in Sources */,
+				4BF3C2661B53A3C9007A6FD0 /* DonationViewController.m in Sources */,
 				726266CA1B39653100B3302D /* RootViewController.m in Sources */,
 				72FE37FD1B4671A200B2537E /* RegisterViewController.m in Sources */,
 				720CB34C1B4F5E7E0066FC49 /* MoneyCell.m in Sources */,
 				72FA0EEF1B4A522B00044A6E /* EarnViewController.m in Sources */,
 				725897481B3A8B97002098E2 /* GZRControl.m in Sources */,
 				720CB3461B4F5E7E0066FC49 /* FlistCell.m in Sources */,
+				4B12DC601B53BF230041F4EA /* SendViewController.m in Sources */,
 				72F37E281B3BAA73001D8A58 /* AFHTTPSessionManager.m in Sources */,
 				720CB31B1B4F5A790066FC49 /* AddCardViewController.m in Sources */,
 				726FA24B1B43B5B300D1A2DE /* GoodsModel.m in Sources */,

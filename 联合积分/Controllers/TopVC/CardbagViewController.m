@@ -12,6 +12,9 @@
 #import "ExchangeViewController.h"
 #import "AddCardCell.h"
 #import "AddCardViewController.h"
+#import "DonationViewController.h"
+#import "SendViewController.h"
+#import "AboutViewController.h"
 @interface CardbagViewController ()<UITableViewDataSource,UITableViewDelegate,MyProtocalDelegate>
 {
     UITableView *cardTableView; //卡包中包含的积分类别
@@ -138,17 +141,20 @@
     [self.navigationController pushViewController:exchange animated:YES];
 
 }
-
+//反馈
 -(void)firstButton
 {
     
     logdebug(@"反馈") ;
 }
-
+//关于
 -(void)secondButton
 {
+    AboutViewController *about =[[AboutViewController alloc]init];
     
-    logdebug(@"关于");
+    [self.navigationController pushViewController:about animated:YES];
+    
+    
     
     
 }
@@ -160,7 +166,6 @@
     cardTableView.dataSource =self;
     cardTableView.separatorStyle = UITableViewCellSelectionStyleNone;
     [self.view addSubview:cardTableView];
-    
     
 }
 
@@ -231,14 +236,19 @@
 
 -(void)leftButtonClick
 {
-    logdebug(@"转增");
+
+    DonationViewController *donation =[[DonationViewController alloc]init];
+    
+    [self.navigationController pushViewController:donation animated:YES];
     
     
 }
 
 -(void)rightButtonClick
 {
-    logdebug(@"转出积分");
+    SendViewController *send =[[SendViewController alloc]init];
+    
+    [self.navigationController pushViewController:send animated:YES];
     
     
 }
@@ -248,8 +258,6 @@
     ExchangeViewController *exchange =[[ExchangeViewController alloc]init];
     
     [self.navigationController pushViewController:exchange animated:YES];
-    
-    
     
 }
 
@@ -279,6 +287,12 @@
 {
     
     return 120.0f;
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    moreView.hidden =YES;
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

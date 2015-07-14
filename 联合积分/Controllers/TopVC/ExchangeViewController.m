@@ -28,6 +28,7 @@
     [self createUI];
     [self createBottom];
     
+    
 }
 -(void)createNa
 {
