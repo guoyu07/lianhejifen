@@ -26,8 +26,6 @@
         // Initialization code
         
         
-        
-        
     }
     return self;
 }
@@ -56,17 +54,28 @@
     self.contentView.layer.shadowOffset =CGSizeMake(3, 3);
     self.contentView.layer.shadowOpacity = 0.5;//不透明度
     
-    iconImageView =[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"u251"]];
+    iconImageView =[[UIImageView alloc]init];
     iconImageView.frame =CGRectMake(10, 20, 30, 30);
     [bgImageView addSubview:iconImageView];
-    
+    if (index.row ==0) {
+        iconImageView.image =[UIImage imageNamed:@"u251"];
+    }
+    if (index.row ==1) {
+        iconImageView.image =[UIImage imageNamed:@"u221"];
+    }
+    if (index.row ==2) {
+        iconImageView.image =[UIImage imageNamed:@"u233"];
+    }
+    if (index.row ==3) {
+        iconImageView.image =[UIImage imageNamed:@"u997"];
+    }
     
     cardNameLabel =[[UILabel alloc]init];
-    cardNameLabel.frame =CGRectMake(50, 25,80 ,25 );
+    cardNameLabel.frame =CGRectMake(50, 25,120 ,25 );
     [bgImageView addSubview:cardNameLabel];
     
     cardNumLabel =[[UILabel alloc]init];
-    cardNumLabel.frame =CGRectMake(SCREEN_WIDTH-100, 25,80 , 25);
+    cardNumLabel.frame =CGRectMake(SCREEN_WIDTH-100, 25,120 , 25);
     [bgImageView addSubview:cardNumLabel];
 
     cardNameLabel.text =model.cardName;
@@ -74,10 +83,10 @@
 
     if (index.row==0) {
         
-       [bgImageView addSubview: [GZRControl createButtonWithFrame:CGRectMake(SCREEN_WIDTH -230, 70,100 , 30) ImageName:@"" Target:self Action:@selector(leftButtonClick:) Title:@"转赠" titleColor:[UIColor blackColor] backColor:[UIColor grayColor] cornerRadius:15 masks:YES]];
+       [bgImageView addSubview: [GZRControl createButtonWithFrame:CGRectMake(SCREEN_WIDTH -230, 70,100 , 30) ImageName:@"" Target:self Action:@selector(leftButtonClick:) Title:@"转赠" titleColor:[UIColor blackColor] backColor:[UIColor whiteColor] cornerRadius:15 masks:YES]];
         
         
-       [bgImageView addSubview: [GZRControl createButtonWithFrame:CGRectMake(SCREEN_WIDTH -120, 70,100 , 30) ImageName:@"" Target:self Action:@selector(rightButtonClick:) Title:@"转出积分" titleColor:[UIColor blackColor] backColor:[UIColor grayColor] cornerRadius:15 masks:YES]];
+       [bgImageView addSubview: [GZRControl createButtonWithFrame:CGRectMake(SCREEN_WIDTH -120, 70,100 , 30) ImageName:@"" Target:self Action:@selector(rightButtonClick:) Title:@"转出积分" titleColor:[UIColor blackColor] backColor:[UIColor whiteColor] cornerRadius:15 masks:YES]];
         
     }
     else

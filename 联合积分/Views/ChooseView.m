@@ -13,10 +13,9 @@
     NSMutableArray *_labelArr;
     NSMutableArray *_buttonArr;
     UITextField    *_quantityTextField;
-    
     NSMutableDictionary *_buttonDic;
+    
 }
-
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {

@@ -1,18 +1,19 @@
 //
-//  CardDetailViewController.m
+//  VerifyViewController.m
 //  联合积分
 //
-//  Created by kaifabu－2 on 15/7/2.
+//  Created by kaifabu－2 on 15/7/14.
 //  Copyright (c) 2015年 arong. All rights reserved.
-//
+//验证手机号视图控制器
 
-#import "CardDetailViewController.h"
 #import "VerifyViewController.h"
-@interface CardDetailViewController ()
+#import "BoundViewController.h"
+@interface VerifyViewController ()
 
 @end
 
-@implementation CardDetailViewController
+@implementation VerifyViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -22,7 +23,9 @@
     [self createNa];
     
     [self createUI];
+   
 }
+
 -(void)createNa
 {
     
@@ -43,29 +46,36 @@
     
 }
 
+
 -(void)createUI
 {
-    UITextField *cardNum =[[UITextField alloc]initWithFrame:CGRectMake(20, 120, SCREEN_WIDTH-80, 40)];
-    cardNum.placeholder = @"卡号"; //默认显示的字
-
+    UITextField *cardNum =[[UITextField alloc]initWithFrame:CGRectMake(20, 120, SCREEN_WIDTH-120, 40)];
+    cardNum.placeholder = @"验证码"; //默认显示的字
+    
     cardNum.keyboardType =UIKeyboardTypeNumberPad;
     [self.view addSubview:cardNum];
     
-    UIImageView *iconImageView =[[UIImageView  alloc]initWithFrame:CGRectMake(SCREEN_WIDTH-60, 120, 40, 40)];
-    iconImageView.backgroundColor =RGBCOLOR(228, 35, 117);
-    iconImageView.image =[UIImage imageNamed:@""];
+    UIButton *verifyButton =[GZRControl createButtonWithFrame:CGRectMake(SCREEN_WIDTH-100, 120, 80, 30) ImageName:@"" Target:self Action:@selector(verifyButtonClick:) Title:@"发送验证码" titleColor:[UIColor blackColor] backColor:[UIColor grayColor]cornerRadius:0 masks:YES];
     
-    [self.view addSubview:iconImageView];
+    verifyButton.titleLabel.font =[UIFont systemFontOfSize:15];
+    [self.view addSubview: verifyButton];
+    
     UIButton *addButton =[GZRControl createButtonWithFrame:CGRectMake(30, 170, SCREEN_WIDTH-60, 60) ImageName:@"" Target:self Action:@selector(addButtonClick:) Title:@"继续" titleColor:[UIColor whiteColor] backColor:RGBCOLOR(228, 35, 117) cornerRadius:1 masks:YES];
     [self.view addSubview:addButton];
     
 }
+
+-(void)verifyButtonClick:(UIButton *)btn
+{
+    logdebug(@"发送验证码");
+    
+}
 -(void)addButtonClick:(UIButton *)btn
 {
-
-    VerifyViewController * verify =[[VerifyViewController alloc]init];
+    BoundViewController *bound =[[BoundViewController alloc]init];
     
-    [self.navigationController pushViewController:verify animated:YES];
+    [self.navigationController pushViewController:bound animated:YES];
+    
     
     
 }
@@ -81,6 +91,9 @@
     [self.view endEditing:YES];
     
 }
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

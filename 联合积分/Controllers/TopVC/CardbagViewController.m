@@ -12,6 +12,9 @@
 #import "ExchangeViewController.h"
 #import "AddCardCell.h"
 #import "AddCardViewController.h"
+#import "DonationViewController.h"
+#import "SendViewController.h"
+#import "AboutViewController.h"
 @interface CardbagViewController ()<UITableViewDataSource,UITableViewDelegate,MyProtocalDelegate>
 {
     UITableView *cardTableView; //卡包中包含的积分类别
@@ -33,7 +36,7 @@
      moreView.hidden =YES;
     isMore =NO;
     [self createData];
-    [self createBottom];
+ //   [self createBottom];
     
 }
 
@@ -45,10 +48,15 @@
     [self.view addSubview:naView];
     
     UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [leftButton setFrame:CGRectMake(5, 9, 70, 40)];
-    [leftButton setBackgroundImage:[UIImage imageNamed:@"卡包"] forState:UIControlStateNormal];
-    [leftButton addTarget:self action:@selector(leftButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    [leftButton setFrame:CGRectMake(10, 10, 30, 30)];
+    [leftButton setBackgroundImage:[UIImage imageNamed:@"u257"] forState:UIControlStateNormal];
+    [leftButton addTarget:self action:@selector(leftButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [naView addSubview:leftButton];
+    
+    UILabel *titleLabel =[GZRControl createLabelWithFrame:CGRectMake(SCREEN_WIDTH/6-10, 0, SCREEN_WIDTH-SCREEN_WIDTH/6, 49) Font:19 Text:@"卡包" TextColor:[UIColor whiteColor ] TextAligent:NSTextAlignmentLeft];
+    
+    [naView addSubview:titleLabel];
+
     
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [rightButton setFrame:CGRectMake(SCREEN_WIDTH-80, 9, 70, 40)];
@@ -60,7 +68,7 @@
     
 }
 
-- (void)leftButtonClicked {
+- (void)leftButtonClicked:(UIButton *)btn {
     
     [self.navigationController popViewControllerAnimated:YES];
     
@@ -133,30 +141,31 @@
     [self.navigationController pushViewController:exchange animated:YES];
 
 }
-
+//反馈
 -(void)firstButton
 {
     
     logdebug(@"反馈") ;
 }
-
+//关于
 -(void)secondButton
 {
+    AboutViewController *about =[[AboutViewController alloc]init];
     
-    logdebug(@"关于");
+    [self.navigationController pushViewController:about animated:YES];
+    
+    
     
     
 }
 -(void)createUI
 {
-    cardTableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 69, SCREEN_WIDTH, SCREEN_HEIGHT-149) style:UITableViewStylePlain];
-    
+    cardTableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 69, SCREEN_WIDTH, SCREEN_HEIGHT-69) style:UITableViewStylePlain];
     
     cardTableView.delegate =self;
     cardTableView.dataSource =self;
     cardTableView.separatorStyle = UITableViewCellSelectionStyleNone;
     [self.view addSubview:cardTableView];
-    
     
 }
 
@@ -171,18 +180,20 @@
     
     [dataArray addObject:card];
     
-    for (int i =0; i<10; i++) {
-        
-        CardModel *card =[[CardModel alloc]init];
-        
-        card.cardName =[NSString stringWithFormat:@"银行卡%d",i];
-        
-        card.cardNum =[NSString stringWithFormat:@"%d",i+10000];
-        
-        
-        [dataArray addObject:card];
-        
-    }
+    CardModel *card1 =[[CardModel alloc]init];
+    card1.cardName =@"国航知音卡";
+    card1.cardNum =@"1992";
+    [dataArray addObject:card1];
+    CardModel *card2 =[[CardModel alloc]init];
+    card2.cardName =@"天猫积分";
+    card2.cardNum =@"3342";
+    [dataArray addObject:card2];
+    
+    CardModel *card3 =[[CardModel alloc]init];
+    card3.cardName =@"移动积分";
+    card3.cardNum =@"9388";
+    [dataArray addObject:card3];
+
 
     
 }
@@ -225,14 +236,19 @@
 
 -(void)leftButtonClick
 {
-    logdebug(@"转增");
+
+    DonationViewController *donation =[[DonationViewController alloc]init];
+    
+    [self.navigationController pushViewController:donation animated:YES];
     
     
 }
 
 -(void)rightButtonClick
 {
-    logdebug(@"转出积分");
+    SendViewController *send =[[SendViewController alloc]init];
+    
+    [self.navigationController pushViewController:send animated:YES];
     
     
 }
@@ -242,8 +258,6 @@
     ExchangeViewController *exchange =[[ExchangeViewController alloc]init];
     
     [self.navigationController pushViewController:exchange animated:YES];
-    
-    
     
 }
 
@@ -273,6 +287,12 @@
 {
     
     return 120.0f;
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    moreView.hidden =YES;
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

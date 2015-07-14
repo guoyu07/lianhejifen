@@ -23,13 +23,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor =[UIColor whiteColor];
-    
     [self createNa];
-    
     [self createData];
-    
     [self createUI];
     [self createBottom];
+    
     
 }
 -(void)createNa
@@ -44,10 +42,13 @@
     [leftButton setBackgroundImage:[UIImage imageNamed:@"u257"] forState:UIControlStateNormal];
     [leftButton addTarget:self action:@selector(leftButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [naView addSubview:leftButton];
+    UILabel *titleLabel =[GZRControl createLabelWithFrame:CGRectMake(SCREEN_WIDTH/6-10, 0, SCREEN_WIDTH-SCREEN_WIDTH/6, 49) Font:19 Text:@"转为联合积分" TextColor:[UIColor whiteColor ] TextAligent:NSTextAlignmentLeft];
     
-    UILabel *titleLabel =[GZRControl createLabelWithFrame:CGRectMake(20, 75, SCREEN_WIDTH-20, 40) Font:17 Text:@"将其他账号积分转化为联合积分" TextColor:[UIColor grayColor] TextAligent:NSTextAlignmentLeft];
+    [naView addSubview:titleLabel];
     
-    [self.view addSubview:titleLabel];
+//    UILabel *titleLabel =[GZRControl createLabelWithFrame:CGRectMake(20, 75, SCREEN_WIDTH-20, 40) Font:17 Text:@"将其他账号积分转化为联合积分" TextColor:[UIColor grayColor] TextAligent:NSTextAlignmentLeft];
+//    
+//    [self.view addSubview:titleLabel];
     
     
 }
@@ -62,7 +63,7 @@
 -(void)createUI
 {
     
-    cardTableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 115, SCREEN_WIDTH, SCREEN_HEIGHT-115-80) style:UITableViewStylePlain];
+    cardTableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 69, SCREEN_WIDTH, SCREEN_HEIGHT-69-80) style:UITableViewStylePlain];
     cardTableView.dataSource =self;
     cardTableView.delegate =self;
     
@@ -114,7 +115,7 @@
 {
     cardArray =[[NSMutableArray alloc]init];
     
-    for (int i=0; i<10; i++) {
+    for (int i=0; i<4; i++) {
         
         NSString *str =[NSString stringWithFormat:@"商品%d",i];
         
@@ -143,6 +144,8 @@
         
         
     }
+    [cell loadData:indexPath];
+    
     return cell;
     
     
