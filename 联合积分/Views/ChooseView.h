@@ -17,6 +17,9 @@
 
 @end
 
+/**
+ *   自定义种类筛选视图
+ */
 @interface ChooseView : UIView
 
 @property (nonatomic,strong) NSMutableArray *nameArray;

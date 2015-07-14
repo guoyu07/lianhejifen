@@ -20,15 +20,33 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    RootViewController *root =[[RootViewController alloc]init];
+//    RootViewController *root =[[RootViewController alloc]init];
 //    RegisterViewController *root = [[RegisterViewController alloc] init];
-    UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:root];
-    
-    self.window.rootViewController = nav;
+//    UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:root];
+//    self.window.rootViewController = nav;
+    [self insertApp];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)insertApp {
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    if (![def objectForKey:@"register"]) {
+        RegisterViewController *VC = [[RegisterViewController alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:VC];
+        
+        self.window.rootViewController = nav;
+        
+        [def setObject:@"123" forKey:@"register"];
+        [def synchronize];
+    } else {
+        RootViewController *root =[[RootViewController alloc]init];
+        UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:root];
+        
+        self.window.rootViewController = nav;
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

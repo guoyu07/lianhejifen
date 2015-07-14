@@ -1,5 +1,5 @@
 //
-//  RegisterViewController.h
+//  RegisterViewController3.h
 //  联合积分
 //
 //  Created by arong on 15/7/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RegisterViewController : UIViewController
+@interface RegisterViewController3 : UIViewController
 
 @end
