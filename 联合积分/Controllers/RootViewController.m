@@ -328,7 +328,7 @@
             
             if (indexPath.row == 0) {
                 cell.sourceLabel.hidden = YES;
-                cell.bgImageView.backgroundColor = [UIColor brownColor];
+                cell.bgImageView.backgroundColor =RGBCOLOR(255, 134, 78);
             } else {
                 cell.sourceLabel.hidden = NO;
                 cell.titleLabel.text = [_dataArrayT objectAtIndex:indexPath.row-1];
