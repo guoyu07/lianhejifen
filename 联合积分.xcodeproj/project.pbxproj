@@ -30,6 +30,11 @@
 		7208F8A81B54EE99005D2E09 /* RegisterViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = 7208F8A71B54EE99005D2E09 /* RegisterViewController4.m */; };
 		7208F8AA1B54FC57005D2E09 /* bingou.png in Resources */ = {isa = PBXBuildFile; fileRef = 7208F8A91B54FC57005D2E09 /* bingou.png */; };
 		7208F8AD1B5505B3005D2E09 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7208F8AC1B5505B3005D2E09 /* LoginViewController.m */; };
+		7208F8B81B55EA16005D2E09 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7208F8AF1B55EA16005D2E09 /* AboutViewController.m */; };
+		7208F8B91B55EA16005D2E09 /* BoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7208F8B11B55EA16005D2E09 /* BoundViewController.m */; };
+		7208F8BA1B55EA16005D2E09 /* DonationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7208F8B31B55EA16005D2E09 /* DonationViewController.m */; };
+		7208F8BB1B55EA16005D2E09 /* SendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7208F8B51B55EA16005D2E09 /* SendViewController.m */; };
+		7208F8BC1B55EA16005D2E09 /* VerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7208F8B71B55EA16005D2E09 /* VerifyViewController.m */; };
 		720CB2D61B4E0D170066FC49 /* ChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB2D31B4E0D170066FC49 /* ChooseView.m */; };
 		720CB2D71B4E0D170066FC49 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB2D51B4E0D170066FC49 /* CustomView.m */; };
 		720CB2DC1B4E26AC0066FC49 /* btnBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 720CB2DB1B4E26AC0066FC49 /* btnBg.png */; };
@@ -286,6 +291,16 @@
 		7208F8A91B54FC57005D2E09 /* bingou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bingou.png; sourceTree = "<group>"; };
 		7208F8AB1B5505B3005D2E09 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		7208F8AC1B5505B3005D2E09 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		7208F8AE1B55EA16005D2E09 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		7208F8AF1B55EA16005D2E09 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		7208F8B01B55EA16005D2E09 /* BoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoundViewController.h; sourceTree = "<group>"; };
+		7208F8B11B55EA16005D2E09 /* BoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoundViewController.m; sourceTree = "<group>"; };
+		7208F8B21B55EA16005D2E09 /* DonationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonationViewController.h; sourceTree = "<group>"; };
+		7208F8B31B55EA16005D2E09 /* DonationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonationViewController.m; sourceTree = "<group>"; };
+		7208F8B41B55EA16005D2E09 /* SendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendViewController.h; sourceTree = "<group>"; };
+		7208F8B51B55EA16005D2E09 /* SendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendViewController.m; sourceTree = "<group>"; };
+		7208F8B61B55EA16005D2E09 /* VerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifyViewController.h; sourceTree = "<group>"; };
+		7208F8B71B55EA16005D2E09 /* VerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifyViewController.m; sourceTree = "<group>"; };
 		720CB2D21B4E0D170066FC49 /* ChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseView.h; path = "联合积分/Views/ChooseView.h"; sourceTree = SOURCE_ROOT; };
 		720CB2D31B4E0D170066FC49 /* ChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseView.m; path = "联合积分/Views/ChooseView.m"; sourceTree = SOURCE_ROOT; };
 		720CB2D41B4E0D170066FC49 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomView.h; path = "联合积分/Views/CustomView.h"; sourceTree = SOURCE_ROOT; };
@@ -675,6 +690,16 @@
 		720CB2D81B4E181C0066FC49 /* TopVC */ = {
 			isa = PBXGroup;
 			children = (
+				7208F8AE1B55EA16005D2E09 /* AboutViewController.h */,
+				7208F8AF1B55EA16005D2E09 /* AboutViewController.m */,
+				7208F8B01B55EA16005D2E09 /* BoundViewController.h */,
+				7208F8B11B55EA16005D2E09 /* BoundViewController.m */,
+				7208F8B21B55EA16005D2E09 /* DonationViewController.h */,
+				7208F8B31B55EA16005D2E09 /* DonationViewController.m */,
+				7208F8B41B55EA16005D2E09 /* SendViewController.h */,
+				7208F8B51B55EA16005D2E09 /* SendViewController.m */,
+				7208F8B61B55EA16005D2E09 /* VerifyViewController.h */,
+				7208F8B71B55EA16005D2E09 /* VerifyViewController.m */,
 				720CB30F1B4F5A790066FC49 /* AddCardViewController.h */,
 				720CB3101B4F5A790066FC49 /* AddCardViewController.m */,
 				720CB3111B4F5A790066FC49 /* CardbagViewController.h */,
@@ -1370,10 +1395,12 @@
 				72F37E3A1B3BC634001D8A58 /* NSString+Hashing.m in Sources */,
 				72F37E331B3BAA73001D8A58 /* UIImageView+AFNetworking.m in Sources */,
 				726266A11B395C4200B3302D /* main.m in Sources */,
+				7208F8BA1B55EA16005D2E09 /* DonationViewController.m in Sources */,
 				72F37E311B3BAA73001D8A58 /* UIAlertView+AFNetworking.m in Sources */,
 				7208F8AD1B5505B3005D2E09 /* LoginViewController.m in Sources */,
 				720CB3481B4F5E7E0066FC49 /* GoodsCell.m in Sources */,
 				72F37E271B3BAA73001D8A58 /* AFHTTPRequestOperationManager.m in Sources */,
+				7208F8BB1B55EA16005D2E09 /* SendViewController.m in Sources */,
 				72F37E2A1B3BAA73001D8A58 /* AFSecurityPolicy.m in Sources */,
 				72F37E361B3BAA73001D8A58 /* UIWebView+AFNetworking.m in Sources */,
 				720CB3441B4F5E7E0066FC49 /* ExchangeCell.m in Sources */,
@@ -1387,12 +1414,15 @@
 				720CB3461B4F5E7E0066FC49 /* FlistCell.m in Sources */,
 				7208F8A51B54E354005D2E09 /* RegisterViewController3.m in Sources */,
 				72F37E281B3BAA73001D8A58 /* AFHTTPSessionManager.m in Sources */,
+				7208F8BC1B55EA16005D2E09 /* VerifyViewController.m in Sources */,
 				7208F89D1B54B9EC005D2E09 /* RegisterViewController1.m in Sources */,
 				7208F8A81B54EE99005D2E09 /* RegisterViewController4.m in Sources */,
 				720CB31B1B4F5A790066FC49 /* AddCardViewController.m in Sources */,
+				7208F8B81B55EA16005D2E09 /* AboutViewController.m in Sources */,
 				726FA24B1B43B5B300D1A2DE /* GoodsModel.m in Sources */,
 				72F37E301B3BAA73001D8A58 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				72F37E2F1B3BAA73001D8A58 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				7208F8B91B55EA16005D2E09 /* BoundViewController.m in Sources */,
 				720CB2D71B4E0D170066FC49 /* CustomView.m in Sources */,
 				720CB3201B4F5A790066FC49 /* TradeViewController.m in Sources */,
 			);
