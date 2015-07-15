@@ -16,6 +16,7 @@
     NSMutableDictionary *_buttonDic;
     
 }
+
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -64,7 +65,6 @@
                 button.layer.borderColor = [[UIColor grayColor] CGColor];
                 button.layer.borderWidth = 1.0;
                 button.tag = 111 + i;
-//                [_buttonDic setValue:button forKey:[NSString stringWithFormat:@"%d",i]];
                 [_buttonArr addObject:button];
                 [self addSubview:button];
             }
@@ -76,7 +76,6 @@
                 button.layer.borderColor = [[UIColor grayColor] CGColor];
                 button.layer.borderWidth = 1.0;
                 button.tag = 222 + i;
-//                [_buttonDic setValue:button forKey:[NSString stringWithFormat:@"%d",i]];
                 [_buttonArr addObject:button];
                 [self addSubview:button];
             }
@@ -113,6 +112,11 @@
     }
 }
 
+/**
+ *  选择分类
+ *
+ *  @param btn <#btn description#>
+ */
 - (void)buttonClicked:(UIButton *)btn {
     
     for (UIButton *currentBtn in _buttonArr) {
@@ -139,12 +143,15 @@
         }
     } else if ([_quantityTextField.text intValue] < 5){    // 数量加1
         _quantityTextField.text = [NSString stringWithFormat:@"%d",[_quantityTextField.text intValue]+1];
+    } else if ([_quantityTextField.text intValue] >= 5) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"数量超出范围" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+        [alert show];
     }
 }
 
 // 确定并提交所选择的信息字典
 - (void)confirmBtnClicked {
-#warning 此处需要判断用户是否选择了商品类别，如果没有选择需要提醒用户
+    
     if ([self.delegate respondsToSelector:@selector(confirmAndgetInformation:)]) {
         [self.delegate confirmAndgetInformation:nil];
     }
