@@ -8,7 +8,9 @@
 
 #import "ConsumeViewController.h"
 #import "ChooseView.h"
+#import "ShopView.h"
 #import "MapViewController.h"
+
 @interface ConsumeViewController ()<UIScrollViewDelegate,ChooseViewDelegate>
 {
     UIScrollView  *_bgScrollView;
@@ -245,8 +247,15 @@
     [checkMapBtn setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
     [bgView4 addSubview:checkMapBtn];
     
-    
-   
+    ShopView *shopView = [[ShopView alloc] initWithFrame:CGRectMake(0, 60, SCREEN_WIDTH, 60)];
+    shopView.backgroundColor = [UIColor whiteColor];
+    shopView.shopName = @"1、世纪华联（建国南路店）";
+    shopView.shopLocation = @"朝阳区建国南路117号";
+    shopView.shopDistance = @"距离300米";
+    [shopView createShopCell];
+    shopView.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    shopView.layer.borderWidth = 0.5;
+    [bgView4 addSubview:shopView];
 }
 
 /**

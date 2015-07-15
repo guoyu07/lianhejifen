@@ -2,15 +2,16 @@
 //  RegisterViewController1.m
 //  联合积分
 //
-//  Created by arong on 15/7/3.
+//  Created by arong on 15/7/14.
 //  Copyright (c) 2015年 arong. All rights reserved.
 //
 
 #import "RegisterViewController1.h"
+#import "RegisterViewController2.h"
 
 @interface RegisterViewController1 ()
 {
-    UITextField *_passwordTextField;
+    UITextField  *_cardTexdField;
 }
 @end
 
@@ -18,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self createNav];
@@ -26,51 +26,48 @@
 }
 
 - (void)createNav {
-    UIView *navView = [[UIView alloc] initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, 49)];
-    [navView setBackgroundColor:RGBCOLOR(228, 35, 117)];
-    [self.view addSubview:navView];
+    UIButton *backButton = [GZRControl createButtonWithFrame:CGRectMake(20, 30, 30, 30) ImageName:@"u532.png" Target:self Action:@selector(backButtonClicked) Title:nil titleColor:nil backColor:[UIColor whiteColor] cornerRadius:0 masks:NO];
+    [self.view addSubview:backButton];
     
-    UIButton *backBtn = [GZRControl createButtonWithFrame:CGRectMake(5, 10, 30, 30) ImageName:@"u257" Target:self Action:@selector(backBtnClicked) Title:nil titleColor:nil backColor:nil cornerRadius:0 masks:NO];
-    [navView addSubview:backBtn];
-    
-    UILabel *titleLabel =[GZRControl createLabelWithFrame:CGRectMake((SCREEN_WIDTH-80)/2, 0, 80, 49) Font:17 Text:@"设置密码" TextColor:[UIColor whiteColor] TextAligent:NSTextAlignmentLeft];
-    [titleLabel setTextAlignment:NSTextAlignmentCenter];
-    [navView addSubview:titleLabel];
-    
+    UILabel *titleLabel = [GZRControl createLabelWithFrame:CGRectMake(70, 35, 120, 20) Font:17 Text:@"登录银行卡" TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
+    [self.view addSubview:titleLabel];
 }
 
-- (void)backBtnClicked {
+- (void)backButtonClicked {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)configUI {
-    UILabel *tipLabel = [GZRControl createLabelWithFrame:CGRectMake(20, 69+30, SCREEN_WIDTH-40, 20) Font:15 Text:@"下次可用手机号和密码登录联合积分" TextColor:[UIColor grayColor] TextAligent:NSTextAlignmentLeft];
-    [self.view addSubview:tipLabel];
+    UILabel *cardLabel = [GZRControl createLabelWithFrame:CGRectMake(30, 114, 30, 20) Font:15 Text:@"卡号" TextColor:[UIColor grayColor] TextAligent:NSTextAlignmentLeft];
+    [self.view addSubview:cardLabel];
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 50)];
+    UIButton *cameraButton = [GZRControl createButtonWithFrame:CGRectMake(SCREEN_WIDTH-60, 104, 30, 30) ImageName:@"camera" Target:self Action:@selector(cameraButtonClicked) Title:nil titleColor:nil backColor:[UIColor clearColor] cornerRadius:0 masks:NO];
+    [self.view addSubview:cameraButton];
     
-    _passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, 69+70, SCREEN_WIDTH-40, 50)];
-    _passwordTextField.placeholder = @"输入字母和数字组合的密码";
-    _passwordTextField.secureTextEntry = YES;
-    _passwordTextField.layer.borderColor = [[UIColor grayColor] CGColor];
-    _passwordTextField.layer.borderWidth = 1;
-    _passwordTextField.leftView = view;
-    _passwordTextField.leftViewMode = UITextFieldViewModeAlways;
-    [self.view addSubview:_passwordTextField];
+    _cardTexdField = [GZRControl createTextFieldWithFrame:CGRectMake(70, 104, SCREEN_WIDTH-140, 40) placeholder:@"请输入银行卡号" password:NO leftImageView:nil rightImageView:nil Font:17];
+    _cardTexdField.keyboardType = UIKeyboardTypeNumberPad;
+    _cardTexdField.keyboardType = UIKeyboardAppearanceLight;
+    [self.view addSubview:_cardTexdField];
     
-    UIButton *confirmButton = [GZRControl createButtonWithFrame:CGRectMake(20, 69+70+70, SCREEN_WIDTH-40, 50) ImageName:nil Target:self Action:@selector(confirmButtonClicked) Title:@"确 定" titleColor:[UIColor whiteColor] backColor:RGBCOLOR(228, 35, 117) cornerRadius:0 masks:NO];
-    [self.view addSubview:confirmButton];
+    UILabel *lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 144, SCREEN_WIDTH-60, 1)];
+    [lineLabel setBackgroundColor:[UIColor grayColor]];
+    [self.view addSubview:lineLabel];
+    
+    UIButton *nextButton = [GZRControl createButtonWithFrame:CGRectMake(30, CGRectGetMaxY(lineLabel.frame)+20, SCREEN_WIDTH-60, 50) ImageName:nil Target:self Action:@selector(nextButtonClicked) Title:@"继 续" titleColor:[UIColor whiteColor] backColor:RGBCOLOR(228, 35, 117) cornerRadius:5 masks:YES];
+    [self.view addSubview:nextButton];
 }
 
-/**
- *  确认并提交密码到服务器
- */
-- (void)confirmButtonClicked {
+- (void)cameraButtonClicked {
     
+}
+
+- (void)nextButtonClicked {
+    RegisterViewController2 *VC = [[RegisterViewController2 alloc]init];
+    [self.navigationController pushViewController:VC animated:YES];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [_passwordTextField resignFirstResponder];
+    [_cardTexdField resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {

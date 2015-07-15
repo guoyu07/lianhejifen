@@ -1,5 +1,5 @@
 //
-//  RegisterViewController.h
+//  LoginViewController.h
 //  联合积分
 //
 //  Created by arong on 15/7/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RegisterViewController : UIViewController
+@interface LoginViewController : UIViewController
 
 @end

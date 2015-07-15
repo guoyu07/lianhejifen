@@ -21,15 +21,6 @@
 		4BE584FD1B4CCCBD009ACDDB /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4BE584FC1B4CCCBD009ACDDB /* AMap.bundle */; };
 		4BE585011B4CCEF2009ACDDB /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE585001B4CCEF2009ACDDB /* MAMapKit.framework */; };
 		4BF858CF1B44CE1C004717D8 /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF858CE1B44CE1C004717D8 /* BuyViewController.m */; };
-		7208F8981B54A7A9005D2E09 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7208F8971B54A7A9005D2E09 /* RegisterViewController.m */; };
-		7208F89A1B54A8F0005D2E09 /* head.png in Resources */ = {isa = PBXBuildFile; fileRef = 7208F8991B54A8EF005D2E09 /* head.png */; };
-		7208F89D1B54B9EC005D2E09 /* RegisterViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7208F89C1B54B9EC005D2E09 /* RegisterViewController1.m */; };
-		7208F89F1B54D7AA005D2E09 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 7208F89E1B54D7AA005D2E09 /* camera.png */; };
-		7208F8A21B54DF77005D2E09 /* RegisterViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 7208F8A11B54DF77005D2E09 /* RegisterViewController2.m */; };
-		7208F8A51B54E354005D2E09 /* RegisterViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 7208F8A41B54E354005D2E09 /* RegisterViewController3.m */; };
-		7208F8A81B54EE99005D2E09 /* RegisterViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = 7208F8A71B54EE99005D2E09 /* RegisterViewController4.m */; };
-		7208F8AA1B54FC57005D2E09 /* bingou.png in Resources */ = {isa = PBXBuildFile; fileRef = 7208F8A91B54FC57005D2E09 /* bingou.png */; };
-		7208F8AD1B5505B3005D2E09 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7208F8AC1B5505B3005D2E09 /* LoginViewController.m */; };
 		720CB2D61B4E0D170066FC49 /* ChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB2D31B4E0D170066FC49 /* ChooseView.m */; };
 		720CB2D71B4E0D170066FC49 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB2D51B4E0D170066FC49 /* CustomView.m */; };
 		720CB2DC1B4E26AC0066FC49 /* btnBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 720CB2DB1B4E26AC0066FC49 /* btnBg.png */; };
@@ -60,7 +51,6 @@
 		720CB3531B4F5E7E0066FC49 /* TlistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 720CB33D1B4F5E7E0066FC49 /* TlistCell.xib */; };
 		720CB3541B4F5E7E0066FC49 /* VolumeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB33F1B4F5E7E0066FC49 /* VolumeCell.m */; };
 		720CB3551B4F5E7E0066FC49 /* VolumeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 720CB3401B4F5E7E0066FC49 /* VolumeCell.xib */; };
-		720CB3581B4F63080066FC49 /* ShopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CB3571B4F63080066FC49 /* ShopView.m */; };
 		725897481B3A8B97002098E2 /* GZRControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 725897471B3A8B97002098E2 /* GZRControl.m */; };
 		726266A11B395C4200B3302D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 726266A01B395C4200B3302D /* main.m */; };
 		726266A41B395C4200B3302D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 726266A31B395C4200B3302D /* AppDelegate.mm */; };
@@ -242,6 +232,8 @@
 		72F37E361B3BAA73001D8A58 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F37E251B3BAA73001D8A58 /* UIWebView+AFNetworking.m */; };
 		72F37E3A1B3BC634001D8A58 /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F37E391B3BC634001D8A58 /* NSString+Hashing.m */; };
 		72FA0EEF1B4A522B00044A6E /* EarnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FA0EEE1B4A522B00044A6E /* EarnViewController.m */; };
+		72FE37FD1B4671A200B2537E /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE37FC1B4671A200B2537E /* RegisterViewController.m */; };
+		72FE38001B46853900B2537E /* RegisterViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE37FF1B46853900B2537E /* RegisterViewController1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -271,21 +263,6 @@
 		4BE585001B4CCEF2009ACDDB /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
 		4BF858CD1B44CE1C004717D8 /* BuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyViewController.h; sourceTree = "<group>"; };
 		4BF858CE1B44CE1C004717D8 /* BuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyViewController.m; sourceTree = "<group>"; };
-		7208F8961B54A7A9005D2E09 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
-		7208F8971B54A7A9005D2E09 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		7208F8991B54A8EF005D2E09 /* head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head.png; sourceTree = "<group>"; };
-		7208F89B1B54B9EC005D2E09 /* RegisterViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController1.h; sourceTree = "<group>"; };
-		7208F89C1B54B9EC005D2E09 /* RegisterViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController1.m; sourceTree = "<group>"; };
-		7208F89E1B54D7AA005D2E09 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
-		7208F8A01B54DF77005D2E09 /* RegisterViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController2.h; sourceTree = "<group>"; };
-		7208F8A11B54DF77005D2E09 /* RegisterViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController2.m; sourceTree = "<group>"; };
-		7208F8A31B54E354005D2E09 /* RegisterViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController3.h; sourceTree = "<group>"; };
-		7208F8A41B54E354005D2E09 /* RegisterViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController3.m; sourceTree = "<group>"; };
-		7208F8A61B54EE99005D2E09 /* RegisterViewController4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController4.h; sourceTree = "<group>"; };
-		7208F8A71B54EE99005D2E09 /* RegisterViewController4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController4.m; sourceTree = "<group>"; };
-		7208F8A91B54FC57005D2E09 /* bingou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bingou.png; sourceTree = "<group>"; };
-		7208F8AB1B5505B3005D2E09 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		7208F8AC1B5505B3005D2E09 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		720CB2D21B4E0D170066FC49 /* ChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseView.h; path = "联合积分/Views/ChooseView.h"; sourceTree = SOURCE_ROOT; };
 		720CB2D31B4E0D170066FC49 /* ChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseView.m; path = "联合积分/Views/ChooseView.m"; sourceTree = SOURCE_ROOT; };
 		720CB2D41B4E0D170066FC49 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomView.h; path = "联合积分/Views/CustomView.h"; sourceTree = SOURCE_ROOT; };
@@ -335,8 +312,6 @@
 		720CB33E1B4F5E7E0066FC49 /* VolumeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeCell.h; sourceTree = "<group>"; };
 		720CB33F1B4F5E7E0066FC49 /* VolumeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumeCell.m; sourceTree = "<group>"; };
 		720CB3401B4F5E7E0066FC49 /* VolumeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VolumeCell.xib; sourceTree = "<group>"; };
-		720CB3561B4F63080066FC49 /* ShopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShopView.h; path = "联合积分/Views/ShopView.h"; sourceTree = SOURCE_ROOT; };
-		720CB3571B4F63080066FC49 /* ShopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShopView.m; path = "联合积分/Views/ShopView.m"; sourceTree = SOURCE_ROOT; };
 		725897421B3A830A002098E2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		725897451B3A8398002098E2 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		725897461B3A8B97002098E2 /* GZRControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZRControl.h; sourceTree = "<group>"; };
@@ -553,6 +528,10 @@
 		72F37E391B3BC634001D8A58 /* NSString+Hashing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hashing.m"; sourceTree = "<group>"; };
 		72FA0EED1B4A522B00044A6E /* EarnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EarnViewController.h; sourceTree = "<group>"; };
 		72FA0EEE1B4A522B00044A6E /* EarnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EarnViewController.m; sourceTree = "<group>"; };
+		72FE37FB1B4671A200B2537E /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		72FE37FC1B4671A200B2537E /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		72FE37FE1B46853900B2537E /* RegisterViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController1.h; sourceTree = "<group>"; };
+		72FE37FF1B46853900B2537E /* RegisterViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController1.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -603,23 +582,6 @@
 			path = "联合积分/Frameworks";
 			sourceTree = "<group>";
 		};
-		7208F8951B54A796005D2E09 /* register */ = {
-			isa = PBXGroup;
-			children = (
-				7208F8961B54A7A9005D2E09 /* RegisterViewController.h */,
-				7208F8971B54A7A9005D2E09 /* RegisterViewController.m */,
-				7208F89B1B54B9EC005D2E09 /* RegisterViewController1.h */,
-				7208F89C1B54B9EC005D2E09 /* RegisterViewController1.m */,
-				7208F8A01B54DF77005D2E09 /* RegisterViewController2.h */,
-				7208F8A11B54DF77005D2E09 /* RegisterViewController2.m */,
-				7208F8A31B54E354005D2E09 /* RegisterViewController3.h */,
-				7208F8A41B54E354005D2E09 /* RegisterViewController3.m */,
-				7208F8A61B54EE99005D2E09 /* RegisterViewController4.h */,
-				7208F8A71B54EE99005D2E09 /* RegisterViewController4.m */,
-			);
-			path = register;
-			sourceTree = "<group>";
-		};
 		720CB2CA1B4BB9C60066FC49 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -627,8 +589,6 @@
 				720CB2D51B4E0D170066FC49 /* CustomView.m */,
 				720CB2D21B4E0D170066FC49 /* ChooseView.h */,
 				720CB2D31B4E0D170066FC49 /* ChooseView.m */,
-				720CB3561B4F63080066FC49 /* ShopView.h */,
-				720CB3571B4F63080066FC49 /* ShopView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -790,8 +750,8 @@
 				726266C91B39653100B3302D /* RootViewController.m */,
 				4BE584F71B4CCADC009ACDDB /* MapViewController.h */,
 				4BE584F81B4CCADC009ACDDB /* MapViewController.m */,
-				7208F8951B54A796005D2E09 /* register */,
 				72FE37F91B46700000B2537E /* login */,
+				72FE37FA1B46700000B2537E /* register */,
 				72E4581F1B4439AC004AAF09 /* sellORpurchase */,
 				72E458201B4439AC004AAF09 /* MainDetail */,
 				720CB2D81B4E181C0066FC49 /* TopVC */,
@@ -813,9 +773,6 @@
 		729F9D231B3FFEF200741CC5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				7208F8A91B54FC57005D2E09 /* bingou.png */,
-				7208F89E1B54D7AA005D2E09 /* camera.png */,
-				7208F8991B54A8EF005D2E09 /* head.png */,
 				4BE584FC1B4CCCBD009ACDDB /* AMap.bundle */,
 				726FA2501B43B5DB00D1A2DE /* bg.png */,
 				726FA24C1B43B5CB00D1A2DE /* 卡包.png */,
@@ -1067,10 +1024,19 @@
 		72FE37F91B46700000B2537E /* login */ = {
 			isa = PBXGroup;
 			children = (
-				7208F8AB1B5505B3005D2E09 /* LoginViewController.h */,
-				7208F8AC1B5505B3005D2E09 /* LoginViewController.m */,
 			);
 			path = login;
+			sourceTree = "<group>";
+		};
+		72FE37FA1B46700000B2537E /* register */ = {
+			isa = PBXGroup;
+			children = (
+				72FE37FB1B4671A200B2537E /* RegisterViewController.h */,
+				72FE37FC1B4671A200B2537E /* RegisterViewController.m */,
+				72FE37FE1B46853900B2537E /* RegisterViewController1.h */,
+				72FE37FF1B46853900B2537E /* RegisterViewController1.m */,
+			);
+			path = register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1204,7 +1170,6 @@
 				726FA1B31B42306000D1A2DE /* u278.png in Resources */,
 				726FA1D61B42306000D1A2DE /* u651.png in Resources */,
 				726FA19C1B42306000D1A2DE /* u142.png in Resources */,
-				7208F8AA1B54FC57005D2E09 /* bingou.png in Resources */,
 				726FA1B61B42306000D1A2DE /* u289.png in Resources */,
 				726FA1EB1B42306000D1A2DE /* u799_line.png in Resources */,
 				726FA1841B42306000D1A2DE /* u26.png in Resources */,
@@ -1257,7 +1222,6 @@
 				726FA1F01B42306000D1A2DE /* u838.png in Resources */,
 				726FA1A91B42306000D1A2DE /* u229.png in Resources */,
 				726FA17C1B42306000D1A2DE /* u4.png in Resources */,
-				7208F89A1B54A8F0005D2E09 /* head.png in Resources */,
 				726FA20A1B42306000D1A2DE /* u1153.png in Resources */,
 				726FA1811B42306000D1A2DE /* u14.png in Resources */,
 				726FA1A31B42306000D1A2DE /* u208.png in Resources */,
@@ -1308,7 +1272,6 @@
 				726FA18C1B42306000D1A2DE /* u58.jpg in Resources */,
 				726FA1BD1B42306000D1A2DE /* u434.png in Resources */,
 				726FA1E81B42306000D1A2DE /* u776_line.png in Resources */,
-				7208F89F1B54D7AA005D2E09 /* camera.png in Resources */,
 				726FA1C01B42306000D1A2DE /* u442.png in Resources */,
 				720CB3531B4F5E7E0066FC49 /* TlistCell.xib in Resources */,
 				726FA1E11B42306000D1A2DE /* u744.png in Resources */,
@@ -1340,7 +1303,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				72F37E2B1B3BAA73001D8A58 /* AFURLConnectionOperation.m in Sources */,
-				7208F8981B54A7A9005D2E09 /* RegisterViewController.m in Sources */,
 				72F37E261B3BAA73001D8A58 /* AFHTTPRequestOperation.m in Sources */,
 				72E85F421B4503CD00ECB862 /* ConsumeViewController.m in Sources */,
 				720CB31E1B4F5A790066FC49 /* ExchangeViewController.m in Sources */,
@@ -1348,6 +1310,7 @@
 				726FA24A1B43B5B300D1A2DE /* CardModel.m in Sources */,
 				72F37E291B3BAA73001D8A58 /* AFNetworkReachabilityManager.m in Sources */,
 				720CB31F1B4F5A790066FC49 /* OrderDetaikViewController.m in Sources */,
+				72FE38001B46853900B2537E /* RegisterViewController1.m in Sources */,
 				72F37E341B3BAA73001D8A58 /* UIProgressView+AFNetworking.m in Sources */,
 				72F37E2E1B3BAA73001D8A58 /* AFURLSessionManager.m in Sources */,
 				720CB3501B4F5E7E0066FC49 /* SlistCell.m in Sources */,
@@ -1355,14 +1318,12 @@
 				4BE584F91B4CCADC009ACDDB /* MapViewController.m in Sources */,
 				720CB34A1B4F5E7E0066FC49 /* HistoryBuyCell.m in Sources */,
 				720CB3541B4F5E7E0066FC49 /* VolumeCell.m in Sources */,
-				7208F8A21B54DF77005D2E09 /* RegisterViewController2.m in Sources */,
 				72F37E2C1B3BAA73001D8A58 /* AFURLRequestSerialization.m in Sources */,
 				720CB3521B4F5E7E0066FC49 /* TlistCell.m in Sources */,
 				72F37E351B3BAA73001D8A58 /* UIRefreshControl+AFNetworking.m in Sources */,
 				720CB3431B4F5E7E0066FC49 /* CardCell.m in Sources */,
 				720CB3411B4F5E7E0066FC49 /* AddCardCell.m in Sources */,
 				72F37E2D1B3BAA73001D8A58 /* AFURLResponseSerialization.m in Sources */,
-				720CB3581B4F63080066FC49 /* ShopView.m in Sources */,
 				720CB2D61B4E0D170066FC49 /* ChooseView.m in Sources */,
 				726266A41B395C4200B3302D /* AppDelegate.mm in Sources */,
 				72E458231B443A08004AAF09 /* SellViewController.m in Sources */,
@@ -1371,7 +1332,6 @@
 				72F37E331B3BAA73001D8A58 /* UIImageView+AFNetworking.m in Sources */,
 				726266A11B395C4200B3302D /* main.m in Sources */,
 				72F37E311B3BAA73001D8A58 /* UIAlertView+AFNetworking.m in Sources */,
-				7208F8AD1B5505B3005D2E09 /* LoginViewController.m in Sources */,
 				720CB3481B4F5E7E0066FC49 /* GoodsCell.m in Sources */,
 				72F37E271B3BAA73001D8A58 /* AFHTTPRequestOperationManager.m in Sources */,
 				72F37E2A1B3BAA73001D8A58 /* AFSecurityPolicy.m in Sources */,
@@ -1381,14 +1341,12 @@
 				720CB31D1B4F5A790066FC49 /* CardDetailViewController.m in Sources */,
 				4BF858CF1B44CE1C004717D8 /* BuyViewController.m in Sources */,
 				726266CA1B39653100B3302D /* RootViewController.m in Sources */,
+				72FE37FD1B4671A200B2537E /* RegisterViewController.m in Sources */,
 				720CB34C1B4F5E7E0066FC49 /* MoneyCell.m in Sources */,
 				72FA0EEF1B4A522B00044A6E /* EarnViewController.m in Sources */,
 				725897481B3A8B97002098E2 /* GZRControl.m in Sources */,
 				720CB3461B4F5E7E0066FC49 /* FlistCell.m in Sources */,
-				7208F8A51B54E354005D2E09 /* RegisterViewController3.m in Sources */,
 				72F37E281B3BAA73001D8A58 /* AFHTTPSessionManager.m in Sources */,
-				7208F89D1B54B9EC005D2E09 /* RegisterViewController1.m in Sources */,
-				7208F8A81B54EE99005D2E09 /* RegisterViewController4.m in Sources */,
 				720CB31B1B4F5A790066FC49 /* AddCardViewController.m in Sources */,
 				726FA24B1B43B5B300D1A2DE /* GoodsModel.m in Sources */,
 				72F37E301B3BAA73001D8A58 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
