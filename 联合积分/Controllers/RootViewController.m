@@ -112,7 +112,7 @@
     _customView.strArray = @[@"当前积分",@"10267",@"积分价值￥102.67"];
     [_bgScrollView addSubview:_customView];
     
-#warning mark - 需要判断是否登录(显示按钮不同)
+    
     NSArray *title = [NSArray arrayWithObjects:@"卖出",@"收购", nil];
     for (int i=0; i<2; i++) {
         UIButton *buttonItem = [GZRControl createButtonWithFrame:CGRectMake((SCREEN_WIDTH-250)/2+i*130, CGRectGetMaxY(_customView.frame)+10, 120, 40)ImageName:nil Target:self Action:@selector(buttonItemClicked:) Title:[title objectAtIndex:i] titleColor:nil backColor:[UIColor whiteColor] cornerRadius:20 masks:YES];
@@ -127,14 +127,14 @@
         [_bgScrollView addSubview:buttonItem];
     }
     
-    _listView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_customView.frame)+10+40+20, SCREEN_WIDTH, SCREEN_HEIGHT-69-40)];
+    _listView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_customView.frame)+10+40+20, SCREEN_WIDTH, SCREEN_HEIGHT-69)];
     _listView.backgroundColor = RGBCOLOR(228, 35, 117);
     [_bgScrollView addSubview:_listView];
     
     _fixedH = _listView.frame.origin.y;
     _gapDis = (_fixedH-49)/2;
     
-    _bgScrollView.contentSize = CGSizeMake(SCREEN_WIDTH, CGRectGetMaxY(_listView.frame)-_gapDis);
+    _bgScrollView.contentSize = CGSizeMake(SCREEN_WIDTH, _bgScrollView.frame.size.height+_gapDis);
     
     NSArray *listArray = [NSArray arrayWithObjects:@"花积分",@"积分理财",@"赚积分", nil];
     UIButton *listButton;
@@ -175,7 +175,7 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tag = 444 + i;
-        _tableView.scrollEnabled = NO;
+//        _tableView.scrollEnabled = NO;
         [_topScrollView addSubview:_tableView];
     }
 }
@@ -374,11 +374,13 @@
 #pragma mark - scrollView Delegate
 // 即将开始拖拽的时候
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-//    logdebug(@"gapDis:%d",_gapDis);
-    if (scrollView.contentOffset.y < _gapDis) {
-        _tableView.scrollEnabled = NO;
+    
+    if (scrollView.contentOffset.y < _gapDis && scrollView.tag == 888) {
+//        _tableView.scrollEnabled = NO;
+//        _bgScrollView.scrollEnabled = YES;
     } else {
-        _tableView.scrollEnabled = YES;
+//        _bgScrollView.scrollEnabled = NO;
+//        _tableView.scrollEnabled = YES;
     }
     
 }
@@ -388,16 +390,17 @@
         logdebug(@"xxxxx:%f yyyyyy:%f",scrollView.contentOffset.x,scrollView.contentOffset.y);
         
         NSInteger currentPosition = scrollView.contentOffset.y;
-        
-        if (currentPosition - _lastPosition > 0) { // 向上滑动触发
+        // 设置滚动效果
+        if (currentPosition - _lastPosition > 0 && currentPosition <= _gapDis) { // 向上滑动触发
             _lastPosition = currentPosition;
             _listView.frame = CGRectMake(0, _fixedH-currentPosition, SCREEN_WIDTH, SCREEN_HEIGHT-69);
         } else if (_lastPosition - currentPosition > 0) { // 向下滑动触发
-            logdebug(@"_lastPosition:%d    currentPosition:%d",_lastPosition,currentPosition);
+            
             _lastPosition = currentPosition;
-            _listView.frame = CGRectMake(0, _fixedH+(_gapDis-currentPosition)/2-166, SCREEN_WIDTH, SCREEN_HEIGHT-69);
+            _listView.frame = CGRectMake(0, _fixedH-_gapDis+(_gapDis-currentPosition), SCREEN_WIDTH, SCREEN_HEIGHT-69);
         }
         
+        // 交替 显示/隐藏 分数
         if (scrollView.contentOffset.y >= 120) {
             _sourceLabel.hidden = NO;
             for (UIButton *btn in _tradeBtnArray) {
@@ -411,23 +414,29 @@
                 _customView.hidden = NO;
             }
         }
+        
+        // 打开列表的滚动属性
+        if (scrollView.contentOffset.y < _gapDis) {
+//            _tableView.scrollEnabled = NO;
+//            _bgScrollView.scrollEnabled = YES;
+        } else {
+//            _tableView.scrollEnabled = YES;
+//            _bgScrollView.scrollEnabled = NO;
+        }
     }
     
-    if (scrollView.contentOffset.y == _gapDis) {
-        _tableView.scrollEnabled = YES;
-    }
+    
 }
 // 结束拖拽时调用
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     
-    logdebug(@"gapDis:%d",_gapDis);
-    
-    if (scrollView.contentOffset.y >= _gapDis-50 && scrollView.tag == 888) {
+    if (scrollView.contentOffset.y >= _gapDis-100 && scrollView.tag == 888) {
         [UIView animateWithDuration:0.3 animations:^{
+            _listView.frame = CGRectMake(0, _fixedH-_gapDis, SCREEN_WIDTH, SCREEN_HEIGHT-69);
             _bgScrollView.contentOffset = CGPointMake(0, _gapDis);
         }];
-        logdebug(@"currentGapDis:%d",_gapDis);
     }
+    
 }
 
 // 减速到停止时调用
@@ -445,6 +454,10 @@
         }
         _lineLabel.frame = CGRectMake(SCREEN_WIDTH/3*_currentIndex, 38, SCREEN_WIDTH/3, 2);
     }
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
 }
 
 - (void)didReceiveMemoryWarning {
