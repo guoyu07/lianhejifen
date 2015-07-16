@@ -1559,7 +1559,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/联合积分/PrefixHeader.pch";
 				INFOPLIST_FILE = "联合积分/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1583,7 +1583,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/联合积分/PrefixHeader.pch";
 				INFOPLIST_FILE = "联合积分/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

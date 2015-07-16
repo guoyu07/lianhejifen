@@ -39,6 +39,7 @@
     NSInteger       _lastPosition;     // 滚动视图的上一次偏移量
     NSInteger       _fixedH;           // listView的固定高度
     NSInteger       _gapDis;           // 滚动视图的实际偏移量
+    NSMutableArray  *_tableViewArr;
 }
 @end
 
@@ -58,6 +59,7 @@
 - (void)prepareData {
     _btnArray = [[NSMutableArray alloc] init];
     _tradeBtnArray = [[NSMutableArray alloc] init];
+    _tableViewArr = [[NSMutableArray alloc] init];
 
     _dataArray = [NSMutableArray arrayWithObjects:@"u56.jpg",@"u48.png",@"u58.jpg",@"u60.jpg",@"u64.jpg",@"u68.jpg",@"u72.jpg",@"u56.jpg",@"u58.jpg",@"u60.jpg",@"u64.jpg",@"u68.jpg", nil];
     _dataArrayT = [NSMutableArray arrayWithObjects:@"极速注册中国银行信用卡",@"招行信用卡美国亚马逊海购最高", nil];
@@ -175,7 +177,8 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tag = 444 + i;
-//        _tableView.scrollEnabled = NO;
+        _tableView.scrollEnabled = NO;
+        [_tableViewArr addObject:_tableView];
         [_topScrollView addSubview:_tableView];
     }
 }
@@ -376,11 +379,9 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     
     if (scrollView.contentOffset.y < _gapDis && scrollView.tag == 888) {
-//        _tableView.scrollEnabled = NO;
-//        _bgScrollView.scrollEnabled = YES;
+        
     } else {
-//        _bgScrollView.scrollEnabled = NO;
-//        _tableView.scrollEnabled = YES;
+        
     }
     
 }
@@ -417,14 +418,23 @@
         
         // 打开列表的滚动属性
         if (scrollView.contentOffset.y < _gapDis) {
-//            _tableView.scrollEnabled = NO;
-//            _bgScrollView.scrollEnabled = YES;
+            for (UITableView *currentTableView in _tableViewArr) {
+                currentTableView.scrollEnabled = NO;
+            }
         } else {
-//            _tableView.scrollEnabled = YES;
-//            _bgScrollView.scrollEnabled = NO;
+            for (UITableView *currentTableView in _tableViewArr) {
+                currentTableView.scrollEnabled = YES;
+            }
         }
     }
     
+    if ([scrollView isKindOfClass:[UITableView class]]) {
+        if (scrollView.contentOffset.y < 0) {
+            for (UITableView *currentTableView in _tableViewArr) {
+                currentTableView.scrollEnabled = NO;
+            }
+        }
+    }
     
 }
 // 结束拖拽时调用

@@ -12,6 +12,7 @@
 {
     NSMutableArray *_labelArr;
     NSMutableArray *_buttonArr;
+    NSMutableArray *_buttonArr1;
     UITextField    *_quantityTextField;
     NSMutableDictionary *_buttonDic;
     
@@ -23,6 +24,7 @@
 //        [self createUI];
         _labelArr = [[NSMutableArray alloc] init];
         _buttonArr = [[NSMutableArray alloc] init];
+        _buttonArr1 = [[NSMutableArray alloc] init];
         _buttonDic = [[NSMutableDictionary alloc] init];
     }
     return self;
@@ -76,7 +78,7 @@
                 button.layer.borderColor = [[UIColor grayColor] CGColor];
                 button.layer.borderWidth = 1.0;
                 button.tag = 222 + i;
-                [_buttonArr addObject:button];
+                [_buttonArr1 addObject:button];
                 [self addSubview:button];
             }
         }
@@ -119,21 +121,24 @@
  */
 - (void)buttonClicked:(UIButton *)btn {
     
-    for (UIButton *currentBtn in _buttonArr) {
-        if (btn.tag < 200) {
-            if (currentBtn.tag == btn.tag) {
-                currentBtn.selected = YES;
-            } else {
-                currentBtn.selected = NO;
-            }
-        } else {
+    if (btn.tag < 222) {
+        for (UIButton *currentBtn in _buttonArr) {
             if (currentBtn.tag == btn.tag) {
                 currentBtn.selected = YES;
             } else {
                 currentBtn.selected = NO;
             }
         }
+    } else {
+        for (UIButton *currentBtn1 in _buttonArr1) {
+            if (currentBtn1.tag == btn.tag) {
+                currentBtn1.selected = YES;
+            } else {
+                currentBtn1.selected = NO;
+            }
+        }
     }
+    
 }
 
 - (void)calculateBtnClicked:(UIButton *)btn {
@@ -141,7 +146,7 @@
         if ([_quantityTextField.text intValue] > 1) { // 判断数量是否大于零
             _quantityTextField.text = [NSString stringWithFormat:@"%d",[_quantityTextField.text intValue]-1];
         }
-    } else if ([_quantityTextField.text intValue] < 5){    // 数量加1
+    } else if ([_quantityTextField.text intValue] < 5){ // 数量加1
         _quantityTextField.text = [NSString stringWithFormat:@"%d",[_quantityTextField.text intValue]+1];
     } else if ([_quantityTextField.text intValue] >= 5) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"数量超出范围" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
