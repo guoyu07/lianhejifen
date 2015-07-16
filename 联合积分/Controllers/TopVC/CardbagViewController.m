@@ -15,6 +15,7 @@
 #import "DonationViewController.h"
 #import "SendViewController.h"
 #import "AboutViewController.h"
+#import "CardbagDetailViewController.h"
 @interface CardbagViewController ()<UITableViewDataSource,UITableViewDelegate,MyProtocalDelegate>
 {
     UITableView *cardTableView; //卡包中包含的积分类别
@@ -274,8 +275,12 @@
     }else
     {
         
+        CardbagDetailViewController *detail =[[CardbagDetailViewController alloc]init];
+        CardModel *item =[dataArray objectAtIndex:indexPath.row];
         
+        detail.titleName =item.cardName;
         
+        [self.navigationController pushViewController:detail animated:YES];
         
     }
     

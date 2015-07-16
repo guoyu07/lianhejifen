@@ -52,8 +52,7 @@
     [self.view addSubview:cardNum];
     
     UIImageView *iconImageView =[[UIImageView  alloc]initWithFrame:CGRectMake(SCREEN_WIDTH-60, 120, 40, 40)];
-    iconImageView.backgroundColor =RGBCOLOR(228, 35, 117);
-    iconImageView.image =[UIImage imageNamed:@""];
+    iconImageView.image =[UIImage imageNamed:@"camera"];
     
     [self.view addSubview:iconImageView];
     UIButton *addButton =[GZRControl createButtonWithFrame:CGRectMake(30, 170, SCREEN_WIDTH-60, 60) ImageName:@"" Target:self Action:@selector(addButtonClick:) Title:@"继续" titleColor:[UIColor whiteColor] backColor:RGBCOLOR(228, 35, 117) cornerRadius:1 masks:YES];

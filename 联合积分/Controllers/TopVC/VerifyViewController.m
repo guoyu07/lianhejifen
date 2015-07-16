@@ -55,8 +55,8 @@
     cardNum.keyboardType =UIKeyboardTypeNumberPad;
     [self.view addSubview:cardNum];
     
-    UIButton *verifyButton =[GZRControl createButtonWithFrame:CGRectMake(SCREEN_WIDTH-100, 120, 80, 30) ImageName:@"" Target:self Action:@selector(verifyButtonClick:) Title:@"发送验证码" titleColor:[UIColor blackColor] backColor:[UIColor grayColor]cornerRadius:0 masks:YES];
-    
+    UIButton *verifyButton =[GZRControl createButtonWithFrame:CGRectMake(SCREEN_WIDTH-100, 120, 80, 30) ImageName:@"" Target:self Action:@selector(verifyButtonClick:) Title:@"发送验证码" titleColor:[UIColor blackColor] backColor:[UIColor whiteColor]cornerRadius:0 masks:YES];
+    verifyButton.layer.borderWidth =1.0;
     verifyButton.titleLabel.font =[UIFont systemFontOfSize:15];
     [self.view addSubview: verifyButton];
     

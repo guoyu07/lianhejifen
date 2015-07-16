@@ -14,7 +14,7 @@
     
     NSMutableArray *orderArray;
     
-    
+    UIView *_jumpView;
     
 }
 @end
@@ -25,10 +25,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor =[UIColor whiteColor];
-    
     [self createNa];
     [self createData];
     [self createUI];
+    
     
 }
 
@@ -97,7 +97,7 @@
     }
 
     
-    UIButton *relationButton = [GZRControl createButtonWithFrame:CGRectMake(10, 89+i*40,SCREEN_WIDTH-20, (SCREEN_HEIGHT-109-i*40)/2) ImageName:@"" Target:self Action:@selector(relationButtonClick:) Title:@"联系商家" titleColor: [UIColor blackColor]backColor:[UIColor whiteColor] cornerRadius:0 masks:YES];
+    UIButton *relationButton = [GZRControl createButtonWithFrame:CGRectMake(10, 89+i*40,SCREEN_WIDTH-20, (SCREEN_HEIGHT-159-i*40)/2) ImageName:@"" Target:self Action:@selector(relationButtonClick:) Title:@"联系商家" titleColor: [UIColor blackColor]backColor:[UIColor whiteColor] cornerRadius:0 masks:YES];
     relationButton.titleLabel.font =[UIFont systemFontOfSize:20];
     
     relationButton.layer.borderWidth = 1.0;//边框
@@ -105,8 +105,8 @@
 
     [self.view addSubview:relationButton];
     
-        UIButton *refundButton = [GZRControl createButtonWithFrame:CGRectMake(10, 89+i*40+(SCREEN_HEIGHT-109-i*40)/2+10,SCREEN_WIDTH-20, (SCREEN_HEIGHT-109-i*40)/2) ImageName:@"" Target:self Action:@selector(refundButtonClick:) Title:@"申请退款" titleColor: [UIColor redColor]backColor:[UIColor whiteColor] cornerRadius:0 masks:YES];
-    
+    UIButton *refundButton = [GZRControl createButtonWithFrame:CGRectMake(10, 89+i*40+(SCREEN_HEIGHT-159-i*40)/2+10,SCREEN_WIDTH-20, (SCREEN_HEIGHT-159-i*40)/2) ImageName:@"" Target:self Action:@selector(refundButtonClick:) Title:@"申请退款" titleColor: [UIColor redColor]backColor:[UIColor whiteColor] cornerRadius:0 masks:YES];
+    [refundButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     refundButton.titleLabel.font =[UIFont systemFontOfSize:20];
     refundButton.layer.borderWidth = 1.0;//边框
     refundButton.layer.borderColor = [[UIColor grayColor] CGColor];
@@ -115,7 +115,73 @@
     
 }
 
+/**
+ *  创建申请退款弹窗
+ */
+-(void)createJumpView
+{
+    _jumpView =[[UIView alloc]initWithFrame:CGRectMake(40, 200, SCREEN_WIDTH-80,160 )];
+    _jumpView.backgroundColor =[UIColor whiteColor];
+    _jumpView.layer.borderWidth =1.0;
+    
+    [self.view addSubview:_jumpView];
 
+    UIButton *contactBtn =[GZRControl createButtonWithFrame:CGRectMake(10, 20, 20, 20) ImageName:@"" Target:self Action:@selector(buttonClick:) Title:@"" titleColor:[UIColor blackColor] backColor:[UIColor whiteColor] cornerRadius:1 masks:YES];
+    
+    
+    [_jumpView addSubview:contactBtn];
+    
+    UILabel *contactLabel =[GZRControl createLabelWithFrame:CGRectMake(30, 20,50 ,20 ) Font:17 Text:@"QQ" TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentCenter];
+    
+    [_jumpView addSubview:contactLabel];
+    
+    UITextField *contactTextFiled =[[UITextField alloc]initWithFrame:CGRectMake(90, 20, SCREEN_WIDTH-200, 30)];
+    
+    [_jumpView addSubview:contactTextFiled];
+    
+    UIView *lineView =[[UIView alloc]initWithFrame:CGRectMake(90, 45, SCREEN_WIDTH-200, 1)];
+    
+    lineView.backgroundColor =[UIColor grayColor];
+    
+    [_jumpView addSubview:lineView];
+    
+    UILabel *reasonLabel =[GZRControl createLabelWithFrame:CGRectMake(10, 70, 80, 30) Font:17 Text:@"退款原因:" TextColor:[UIColor blackColor] TextAligent:NSTextAlignmentLeft];
+    
+    [_jumpView addSubview:reasonLabel];
+    
+    UITextField *reasonTextFiled =[[UITextField alloc]initWithFrame:CGRectMake(90, 70, SCREEN_WIDTH-200, 30)];
+    
+    [_jumpView addSubview:reasonTextFiled];
+    
+    UIView *reasonLineView =[[UIView alloc]initWithFrame:CGRectMake(90, 95, SCREEN_WIDTH-200, 1)];
+    
+    reasonLineView.backgroundColor =[UIColor grayColor];
+    
+    [_jumpView addSubview:reasonLineView];
+
+    
+    UIButton *sureBtn =[GZRControl createButtonWithFrame:CGRectMake(0, _jumpView.frame.size.height-40,SCREEN_WIDTH-80 , 40) ImageName:@"" Target:self Action:@selector(sureButtonClick:) Title:@"确定" titleColor:[UIColor blackColor] backColor:[UIColor whiteColor] cornerRadius:1 masks:YES];
+    
+    sureBtn.layer.borderWidth =1.0;
+ 
+    [_jumpView addSubview:sureBtn];
+    
+}
+-(void)sureButtonClick:(UIButton *)btn
+{
+    
+    [_jumpView removeFromSuperview];
+    
+    
+}
+
+-(void)buttonClick:(UIButton *)btn
+{
+    
+    
+    
+    
+}
 -(void)relationButtonClick:(UIButton *)btn
 {
     logdebug(@"联系商家");
@@ -124,6 +190,8 @@
 -(void)refundButtonClick:(UIButton *)btn
 {
     logdebug(@"申请退款");
+    
+    [self createJumpView];
     
 }
 - (void)didReceiveMemoryWarning {
