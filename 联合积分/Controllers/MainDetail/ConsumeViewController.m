@@ -10,8 +10,9 @@
 #import "ChooseView.h"
 #import "ShopView.h"
 #import "MapViewController.h"
+#import "OtherCell.h"
 
-@interface ConsumeViewController ()<UIScrollViewDelegate,ChooseViewDelegate>
+@interface ConsumeViewController ()<UIScrollViewDelegate,ChooseViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     UIScrollView  *_bgScrollView;
     UIPageControl *_pageControl;    // 页码指示器
@@ -20,6 +21,8 @@
     NSMutableArray *_btnArray;      // 存储操作按钮
     
     ChooseView     *_chooseView;    // 承载选择项的view视图
+    
+    UITableView    *_tableView;
 }
 @end
 
@@ -30,14 +33,20 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self configRootView];
-    [self prepareData];
     [self createNav];
-    if (self.isVouchers) {  // 显示商品展示视图
-        [self createVouchersView];
-    } else {    // 显示代金券展示视图
+    logdebug(@"currentIndex:%d",self.flageIndex);
+    if (self.flageIndex == 2 || self.flageIndex == 3) {
+        [self createTableView];
+    } else if (self.flageIndex == 0) { // 显示商品展示视图
+        [self configRootView];
+        [self prepareData];
         [self createGoodsView];
+    } else if(self.flageIndex == 1) { // 显示代金券展示视图
+        [self configRootView];
+        [self prepareData];
+        [self createVouchersView];
     }
+    
 }
 
 - (void)createNav {
@@ -54,7 +63,7 @@
 }
 
 - (void)backBtnClicked {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 /**
@@ -308,6 +317,48 @@
 //    [UIView animateWithDuration:0.5 animations:^{
 //        _chooseView.frame = CGRectMake(0, SCREEN_HEIGHT, _chooseView.frame.size.width, _chooseView.frame.size.height);
 //    }];
+}
+
+// 创建表格视图
+- (void)createTableView {
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 69, SCREEN_WIDTH, SCREEN_HEIGHT-69) style:UITableViewStylePlain];
+    _tableView.separatorStyle = UITableViewCellAccessoryNone;
+//    _tableView.backgroundColor = [UIColor clearColor];
+    _tableView.dataSource = self;
+    _tableView.delegate = self;
+    [self.view addSubview:_tableView];
+}
+
+#pragma mark - tableViewDataSource && tableViewDelegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (self.flageIndex == 3) {
+        return 8;
+    } else if(self.flageIndex == 2){
+        return 6;
+    } else {
+        return 0;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 150;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellId = @"OtherCell";
+    OtherCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (!cell) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"OtherCell" owner:self options:nil] lastObject];
+    }
+    cell.bodyImageView.layer.cornerRadius = 5;
+    cell.bodyImageView.layer.masksToBounds = YES;
+    if (self.flageIndex == 2) {
+        cell.bodyImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d",indexPath.row + 10]];
+    } else if (self.flageIndex == 3) {
+        cell.bodyImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d",indexPath.row]];
+    }
+    
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning {

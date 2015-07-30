@@ -41,7 +41,7 @@
 }
 
 - (void)backBtnClicked {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)prepareData {

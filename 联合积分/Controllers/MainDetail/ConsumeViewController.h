@@ -15,4 +15,6 @@
 // 判断是否是代金券内容
 @property (nonatomic,assign) BOOL isVouchers;
 
+@property (nonatomic,assign) NSInteger flageIndex;
+
 @end
