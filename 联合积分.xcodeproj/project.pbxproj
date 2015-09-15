@@ -270,6 +270,7 @@
 		72F8313B1B68A06C005A96F2 /* OtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72F8313A1B68A06C005A96F2 /* OtherCell.xib */; };
 		72F8313E1B68BB87005A96F2 /* fangchan.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F8313C1B68BB87005A96F2 /* fangchan.png */; };
 		72F8313F1B68BB87005A96F2 /* qiche.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F8313D1B68BB87005A96F2 /* qiche.png */; };
+		72F831521B69EE6F005A96F2 /* ParentsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F831511B69EE6F005A96F2 /* ParentsView.m */; };
 		72FA0EEF1B4A522B00044A6E /* EarnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FA0EEE1B4A522B00044A6E /* EarnViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -556,6 +557,7 @@
 		72A4A6821B60EA3B00218D15 /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
 		72E458211B443A08004AAF09 /* SellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellViewController.h; sourceTree = "<group>"; };
 		72E458221B443A08004AAF09 /* SellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SellViewController.m; sourceTree = "<group>"; };
+		72E6BD351B848B4900A37575 /* 联合积分.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "联合积分.entitlements"; sourceTree = "<group>"; };
 		72E85F401B4503CD00ECB862 /* ConsumeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsumeViewController.h; sourceTree = "<group>"; };
 		72E85F411B4503CD00ECB862 /* ConsumeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsumeViewController.m; sourceTree = "<group>"; };
 		72E85F431B453BC400ECB862 /* FinancialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinancialViewController.h; sourceTree = "<group>"; };
@@ -617,6 +619,8 @@
 		72F8313A1B68A06C005A96F2 /* OtherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherCell.xib; sourceTree = "<group>"; };
 		72F8313C1B68BB87005A96F2 /* fangchan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fangchan.png; sourceTree = "<group>"; };
 		72F8313D1B68BB87005A96F2 /* qiche.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qiche.png; sourceTree = "<group>"; };
+		72F831501B69EE6F005A96F2 /* ParentsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParentsView.h; path = "联合积分/Views/ParentsView.h"; sourceTree = SOURCE_ROOT; };
+		72F831511B69EE6F005A96F2 /* ParentsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParentsView.m; path = "联合积分/Views/ParentsView.m"; sourceTree = SOURCE_ROOT; };
 		72FA0EED1B4A522B00044A6E /* EarnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EarnViewController.h; sourceTree = "<group>"; };
 		72FA0EEE1B4A522B00044A6E /* EarnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EarnViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -702,6 +706,8 @@
 				720CB2D31B4E0D170066FC49 /* ChooseView.m */,
 				720CB3561B4F63080066FC49 /* ShopView.h */,
 				720CB3571B4F63080066FC49 /* ShopView.m */,
+				72F831501B69EE6F005A96F2 /* ParentsView.h */,
+				72F831511B69EE6F005A96F2 /* ParentsView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -809,6 +815,7 @@
 		7262669D1B395C4200B3302D /* 联合积分 */ = {
 			isa = PBXGroup;
 			children = (
+				72E6BD351B848B4900A37575 /* 联合积分.entitlements */,
 				729F9D231B3FFEF200741CC5 /* Images */,
 				725897441B3A835B002098E2 /* Category */,
 				726266C41B3964DB00B3302D /* Libs */,
@@ -1230,6 +1237,14 @@
 					7262669A1B395C4200B3302D = {
 						CreatedOnToolsVersion = 6.3.2;
 						DevelopmentTeam = H9KYW78QDY;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+						};
 					};
 					726266B31B395C4200B3302D = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -1496,6 +1511,7 @@
 				4B8921711B55E9E70001D4FB /* SendViewController.m in Sources */,
 				72E458231B443A08004AAF09 /* SellViewController.m in Sources */,
 				720CB34E1B4F5E7E0066FC49 /* PaymentCell.m in Sources */,
+				72F831521B69EE6F005A96F2 /* ParentsView.m in Sources */,
 				72F37E3A1B3BC634001D8A58 /* NSString+Hashing.m in Sources */,
 				72F37E331B3BAA73001D8A58 /* UIImageView+AFNetworking.m in Sources */,
 				726266A11B395C4200B3302D /* main.m in Sources */,
@@ -1661,7 +1677,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/联合积分/PrefixHeader.pch";
 				INFOPLIST_FILE = "联合积分/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1689,7 +1705,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/联合积分/PrefixHeader.pch";
 				INFOPLIST_FILE = "联合积分/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

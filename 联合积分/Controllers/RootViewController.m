@@ -18,14 +18,16 @@
 #import "FinancialViewController.h"
 #import "BuyViewController.h"
 #import "EarnViewController.h"
+#import "ParentsView.h"
 
 @interface RootViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 
 {
+    ParentsView     *_parentsView;     // 创建承载所有界面的父视图
     UILabel         *_sourceLabel;     // 导航中显示积分的label标签
-    UIScrollView    *_bgScrollView;    // 承载所有界面的底层滚动视图
     UIScrollView    *_topScrollView;   // 承载展示列表的横向滚动视图
-    UIView          *_listView;        // 承载横向滚动的view
+    UIView          *_buttonView;
+    UIView          *_slideView;
     UITableView     *_tableView;
     CustomView      *_customView;      // 自定义图形显示
     NSMutableArray  *_btnArray;
@@ -37,7 +39,8 @@
     NSMutableArray  *_dataArrayT;
     
     NSInteger       _lastPosition;     // 滚动视图的上一次偏移量
-    NSInteger       _fixedH;           // listView的固定高度
+    NSInteger       _buttonY;           // 选择按钮的固定Y坐标
+    
     NSInteger       _gapDis;           // 滚动视图的实际偏移量
     NSMutableArray  *_tableViewArr;
 }
@@ -102,18 +105,21 @@
 }
 
 - (void)configUI {
-    _bgScrollView = [GZRControl makeScrollViewWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, SCREEN_HEIGHT-20) andSize:CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT*0.3+SCREEN_HEIGHT+50)];
-    _bgScrollView.backgroundColor = RGBCOLOR(228, 35, 117);
-    _bgScrollView.pagingEnabled = NO;
-    _bgScrollView.delegate = self;
-    _bgScrollView.tag = 888;
-    [self.view addSubview:_bgScrollView];
+    _parentsView = [[ParentsView alloc] initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH , SCREEN_HEIGHT-20)];
+    _parentsView.backgroundColor = RGBCOLOR(228, 35, 117);
+    _parentsView.userInteractionEnabled = YES;
+    [self.view addSubview:_parentsView];
+    
+    _slideView = [[UIView alloc] init];
+    _slideView.backgroundColor = [UIColor clearColor];
+    [_parentsView addSubview:_slideView];
     
     _customView = [[CustomView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH-SCREEN_HEIGHT*0.5*0.6)/2, 49, SCREEN_HEIGHT*0.5*0.6, SCREEN_HEIGHT*0.5*0.6)];
     _customView.backgroundColor = [UIColor clearColor];
     _customView.strArray = @[@"当前积分",@"10267",@"积分价值￥102.67"];
-    [_bgScrollView addSubview:_customView];
+    [_slideView addSubview:_customView];
     
+    _slideView.frame = CGRectMake(0, 0, SCREEN_WIDTH, CGRectGetMaxY(_customView.frame) + 70);
     
     NSArray *title = [NSArray arrayWithObjects:@"卖出",@"收购", nil];
     for (int i=0; i<2; i++) {
@@ -126,17 +132,15 @@
         buttonItem.tag = 222 + i;
         
         [_tradeBtnArray addObject:buttonItem];
-        [_bgScrollView addSubview:buttonItem];
+        [_slideView addSubview:buttonItem];
     }
     
-    _listView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_customView.frame)+10+40+20, SCREEN_WIDTH, SCREEN_HEIGHT-69)];
-    _listView.backgroundColor = RGBCOLOR(228, 35, 117);
-    [_bgScrollView addSubview:_listView];
+    _buttonView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_slideView.frame), SCREEN_WIDTH, 40)];
+    _buttonView.backgroundColor = RGBCOLOR(228, 35, 117);
+    [_parentsView addSubview:_buttonView];
     
-    _fixedH = _listView.frame.origin.y;
-    _gapDis = (_fixedH-49)/2;
-    
-    _bgScrollView.contentSize = CGSizeMake(SCREEN_WIDTH, _bgScrollView.frame.size.height+_gapDis);
+    _buttonY = _buttonView.frame.origin.y;
+    _gapDis  = _slideView.frame.size.height - 49;
     
     NSArray *listArray = [NSArray arrayWithObjects:@"花积分",@"积分理财",@"赚积分", nil];
     UIButton *listButton;
@@ -147,16 +151,23 @@
             listButton.selected = YES;
         }
         listButton.tag = 333 + i;
-        [_listView addSubview:listButton];
+        
         [_btnArray addObject:listButton];
+        [_buttonView addSubview:listButton];
     }
     
-    _lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 38, SCREEN_WIDTH/3, 2)];
-    _lineLabel.backgroundColor = [UIColor blackColor];
-    [_listView addSubview:_lineLabel];
+    _parentsView.buttonView = [_tradeBtnArray objectAtIndex:0];
+    _parentsView.buttonView1 = [_tradeBtnArray objectAtIndex:1];
+    _parentsView.buttonView2 = [_btnArray objectAtIndex:0];
+    _parentsView.buttonView3 = [_btnArray objectAtIndex:1];
+    _parentsView.buttonView4 = [_btnArray objectAtIndex:2];
     
-    _topScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 40, SCREEN_WIDTH, SCREEN_HEIGHT-69)];
-    _topScrollView.contentSize = CGSizeMake(SCREEN_WIDTH*3, SCREEN_HEIGHT-69-40);
+    _lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 36, SCREEN_WIDTH/3, 2)];
+    _lineLabel.backgroundColor = [UIColor blackColor];
+    [_buttonView addSubview:_lineLabel];
+    
+    _topScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 89, SCREEN_WIDTH, SCREEN_HEIGHT-89-20)];
+    _topScrollView.contentSize = CGSizeMake(SCREEN_WIDTH*3, SCREEN_HEIGHT-89-20);
     _topScrollView.backgroundColor = [UIColor clearColor];
     _topScrollView.showsHorizontalScrollIndicator = NO;
     _topScrollView.showsVerticalScrollIndicator = NO;
@@ -164,7 +175,7 @@
     _topScrollView.bounces = NO;
     _topScrollView.delegate = self;
     _topScrollView.tag = 999;
-    [_listView addSubview:_topScrollView];
+    [_parentsView addSubview:_topScrollView];
     
     [self createListViews];
 }
@@ -172,14 +183,16 @@
 - (void)createListViews {
     self.automaticallyAdjustsScrollViewInsets = NO;
     for (int i=0; i<3; i++) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH * i, 0, SCREEN_WIDTH, SCREEN_HEIGHT-69-40) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH * i, 0, SCREEN_WIDTH, SCREEN_HEIGHT-89-20) style:UITableViewStylePlain];
+        _tableView.contentInset = UIEdgeInsetsMake(CGRectGetMaxY(_customView.frame)+110-89, 0, 0, 0);
         _tableView.separatorStyle = UITableViewCellAccessoryNone;
+        _tableView.backgroundColor = [UIColor clearColor];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tag = 444 + i;
-        _tableView.scrollEnabled = NO;
         [_tableViewArr addObject:_tableView];
         [_topScrollView addSubview:_tableView];
+        
     }
 }
 
@@ -196,9 +209,6 @@
         BuyViewController *buy =[[BuyViewController alloc]init];
         
         [self.navigationController pushViewController:buy animated:YES];
-        
-        
-        
     }
 
 }
@@ -217,7 +227,7 @@
         }
     }
     
-    _lineLabel.frame = CGRectMake(SCREEN_WIDTH/3*index, 38, SCREEN_WIDTH/3, 2);
+    _lineLabel.frame = CGRectMake(SCREEN_WIDTH/3*index, 36, SCREEN_WIDTH/3, 2);
     [_topScrollView setContentOffset:CGPointMake(SCREEN_WIDTH * index, 0) animated:YES];
 }
 
@@ -391,79 +401,69 @@
 }
 
 #pragma mark - scrollView Delegate
-// 即将开始拖拽的时候
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    
-    if (scrollView.contentOffset.y < _gapDis && scrollView.tag == 888) {
-        
-    } else {
-        
-    }
-    
-}
+
 // 拖拽过程中实时调用
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    if (scrollView.tag == 888) {
-        logdebug(@"xxxxx:%f yyyyyy:%f",scrollView.contentOffset.x,scrollView.contentOffset.y);
-        
-        NSInteger currentPosition = scrollView.contentOffset.y;
-        // 设置滚动效果
-        if (currentPosition - _lastPosition > 0 && currentPosition <= _gapDis) { // 向上滑动触发
-            _lastPosition = currentPosition;
-            _listView.frame = CGRectMake(0, _fixedH-currentPosition, SCREEN_WIDTH, SCREEN_HEIGHT-69);
-        } else if (_lastPosition - currentPosition > 0) { // 向下滑动触发
-            
-            _lastPosition = currentPosition;
-            _listView.frame = CGRectMake(0, _fixedH-_gapDis+(_gapDis-currentPosition), SCREEN_WIDTH, SCREEN_HEIGHT-69);
+    NSInteger currentPosition = scrollView.contentOffset.y + _gapDis;
+    
+    logdebug(@"xxxxxxxxx:%f   yyyyyyyyy:%f",scrollView.contentOffset.x,scrollView.contentOffset.y);
+    
+    if ([scrollView isKindOfClass:[UITableView class]]) {
+        for (UITableView *currentTableView in _tableViewArr) {
+            [currentTableView setContentOffset:scrollView.contentOffset];
         }
         
-        // 交替 显示/隐藏 分数
-        if (scrollView.contentOffset.y >= 120) {
-            _sourceLabel.hidden = NO;
-            for (UIButton *btn in _tradeBtnArray) {
-                btn.hidden = YES;
-                _customView.hidden = YES;
-            }
-        } else {
-            _sourceLabel.hidden = YES;
-            for (UIButton *btn in _tradeBtnArray) {
-                btn.hidden = NO;
-                _customView.hidden = NO;
-            }
-        }
-        
-        // 打开列表的滚动属性
-        if (scrollView.contentOffset.y < _gapDis) {
-            for (UITableView *currentTableView in _tableViewArr) {
-                currentTableView.scrollEnabled = NO;
+        if (currentPosition - _lastPosition >0 && currentPosition <= _gapDis) {
+            _lastPosition = currentPosition;
+            
+            _buttonView.frame = CGRectMake(0, _buttonY - currentPosition, SCREEN_WIDTH, 40);
+            _customView.frame = CGRectMake((SCREEN_WIDTH-SCREEN_HEIGHT*0.5*0.6)/2, 49 - currentPosition/2, SCREEN_HEIGHT*0.5*0.6, SCREEN_HEIGHT*0.5*0.6);
+            int i = 0;
+            for (UIButton *currentButton in _tradeBtnArray) {
+                currentButton.frame = CGRectMake((SCREEN_WIDTH-250)/2+i*130, CGRectGetMaxY(_customView.frame)+10, 120, 40);
+                i++;
             }
             
-//            scrollView.scrollEnabled = YES;
-        } else {
-            for (UITableView *currentTableView in _tableViewArr) {
-                currentTableView.scrollEnabled = YES;
+        } else if (_lastPosition - currentPosition > 0) {
+            _lastPosition = currentPosition;
+            _buttonView.frame = CGRectMake(0, _buttonY - _gapDis + (_gapDis - currentPosition), SCREEN_WIDTH, 40);
+            _customView.frame = CGRectMake((SCREEN_WIDTH-SCREEN_HEIGHT*0.5*0.6)/2, 49 - _gapDis + (_gapDis - currentPosition/2), SCREEN_HEIGHT*0.5*0.6, SCREEN_HEIGHT*0.5*0.6);
+            
+            int i = 0;
+            for (UIButton *currentButton in _tradeBtnArray) {
+                currentButton.frame = CGRectMake((SCREEN_WIDTH-250)/2+i*130, CGRectGetMaxY(_customView.frame)+10, 120, 40);
+                i++;
             }
             
-//            scrollView.scrollEnabled = NO;
         }
     }
     
-    if ([scrollView isKindOfClass:[UITableView class]]) {
-        if (scrollView.contentOffset.y < 0) {
-            for (UITableView *currentTableView in _tableViewArr) {
-                currentTableView.scrollEnabled = NO;
-            }
+    if (scrollView.contentOffset.y >= -38 && [scrollView isKindOfClass:[UITableView class]]) {
+        _sourceLabel.hidden = NO;
+        for (UIButton *btn in _tradeBtnArray) {
+            btn.hidden = YES;
+            _customView.hidden = YES;
+        }
+    } else if ([scrollView isKindOfClass:[UITableView class]]){
+        _sourceLabel.hidden = YES;
+        for (UIButton *btn in _tradeBtnArray) {
+            btn.hidden = NO;
+            _customView.hidden = NO;
         }
     }
+    
     
 }
 // 结束拖拽时调用
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     
-    if (scrollView.contentOffset.y >= _gapDis-100 && scrollView.tag == 888) {
+    if ([scrollView isKindOfClass:[UITableView class]] && scrollView.contentOffset.y >= -144 && scrollView.contentOffset.y <= 0) {
         [UIView animateWithDuration:0.3 animations:^{
-            _listView.frame = CGRectMake(0, _fixedH-_gapDis, SCREEN_WIDTH, SCREEN_HEIGHT-69);
-            _bgScrollView.contentOffset = CGPointMake(0, _gapDis);
+            scrollView.contentOffset = CGPointMake(0, 0);
+        }];
+    } else if([scrollView isKindOfClass:[UITableView class]] && scrollView.contentOffset.y <= -144) {
+        [UIView animateWithDuration:0.3 animations:^{
+            scrollView.contentOffset = CGPointMake(0, -(CGRectGetMaxY(_slideView.frame)-49));
         }];
     }
 }
@@ -481,13 +481,10 @@
                 btn.selected = NO;
             }
         }
-        _lineLabel.frame = CGRectMake(SCREEN_WIDTH/3*_currentIndex, 38, SCREEN_WIDTH/3, 2);
+        _lineLabel.frame = CGRectMake(SCREEN_WIDTH/3*_currentIndex, 36, SCREEN_WIDTH/3, 2);
     }
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
